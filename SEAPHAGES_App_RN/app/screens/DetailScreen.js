@@ -14,8 +14,10 @@ const DetailScreen = ({ fakes }) => {
     return (
         <View style={styles.container}>
             {fakes.map((item) => {
-                return <Text>{item._id}, {item.sampleName}, {item.latitude}, {item.longitude}</Text>
+                return
+                <Text>{item._id}, {item.sampleName}, {item.latitude}, {item.longitude}</Text>
             })}
+            <Text>Testing</Text>
         </View>
     );
 };
