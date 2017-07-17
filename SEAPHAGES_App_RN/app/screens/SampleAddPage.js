@@ -4,48 +4,73 @@
 
 import React, { Component } from 'react';
 import { View, TouchableHighlight, Text, TouchableOpacity, TextInput, StyleSheet } from 'react-native';
-import { Container, Content, List, ListItem, InputGroup, Input, Icon } from 'native-base';
-import { Button, goBack, NavigationOptions } from 'react-navigation';
+import { Container, Content, Form, Item, Input, Label, Button, Icon } from 'native-base';
+import { goBack, NavigationOptions } from 'react-navigation';
 
 
 class SampleAddPage extends Component {
     //lines establish whether or not the modal window is visible, and write a function to make the modal visible (this is called later on lines 172 & 205
+    constructor(props) {
+        super(props);
+        //set the initial region data for the map
+        this.state = {
+            region: {
+                latitude: null,
+                longitude: null,
+            },
+
+        };
+
+    }
+    componentDidMount() {
+        navigator.geolocation.getCurrentPosition(
+            (position) => {
+                this.setState(
+                    {
+                        latitude: position.coords.latitude,
+                        longitude: position.coords.longitude,
+                    },
+                );
+
+            },
+
+        );
+    }
+
 
     render() {
+        /*let myLat = value.toString(this.state.latitude);
+        console.log(myLat)*/
+
         return (
-                <Container>
-                    <Content>
-                        <List>
-                            <ListItem>
-                                <InputGroup>
-                                    <Icon name='pizza' />
-                                    <Input placeholder='Sample Name' />
-                                </InputGroup>
-                            </ListItem>
-
-                            <ListItem>
-                                <InputGroup>
-                                    <Icon name='ios-navigate' />
-                                    <Input inlineLabel label='Sample Latitude' placeholder='Sample Latitude'/>
-                                </InputGroup>
-                            </ListItem>
-
-                            <ListItem>
-                                <InputGroup >
-                                    <Icon name='ios-navigate-outline' />
-                                    <Input inlineLabel label='Sample Longitude' placeholder='Sample Longitude' />
-                                </InputGroup>
-                            </ListItem>
-
-                            <ListItem>
-                                <InputGroup >
-                                    <Input stackedLabel label='Details' placeholder='Details' />
-                                </InputGroup>
-                            </ListItem>
-
-                        </List>
-                    </Content>
-                </Container>
+            <Container>
+                <Content>
+                    <Form>
+                        <Item floatingLabel>
+                            <Label>Sample Name</Label>
+                            <Input />
+                        </Item>
+                        <Item disabled>
+                            <Label>Latitude</Label>
+                            <Input disabled placeholder={String(this.state.latitude)}/>
+                        </Item>
+                        <Item disabled>
+                            <Label>Longitude</Label>
+                            <Input disabled placeholder={String(this.state.longitude)}/>
+                        </Item>
+                        <Item floatingLabel last>
+                            <Label>Details</Label>
+                            <Input />
+                        </Item>
+                    </Form>
+                </Content>
+                <Button icon rounded
+                        onPress = {() => {
+                            this.handleAddSamplePress()
+                        }}>
+                    <Icon name='md-add' />
+                </Button>
+            </Container>
         );
     }
 };
