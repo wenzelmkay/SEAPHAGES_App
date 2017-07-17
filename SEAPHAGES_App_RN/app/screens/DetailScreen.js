@@ -1,6 +1,3 @@
-//importing different pages
-
-
 import React, { Component, PropTypes } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
@@ -14,10 +11,8 @@ const DetailScreen = ({ fakes }) => {
     return (
         <View style={styles.container}>
             {fakes.map((item) => {
-                return
-                <Text>{item._id}, {item.sampleName}, {item.latitude}, {item.longitude}</Text>
+                return <Text>{item._id}, {item.sampleName}, {item.latitude}, {item.longitude}</Text>
             })}
-            <Text>Testing</Text>
         </View>
     );
 };
