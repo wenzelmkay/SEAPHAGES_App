@@ -98,9 +98,9 @@ class MapPage extends React.Component {
                         myLon: position.coords.longitude,
                     },
                 );
-
             },
-
+ (error) => console.log(new Date(), error),
+                    {enableHighAccuracy: true, timeout: 10000, maximumAge: 3000}
         );
 
         this.watchID = navigator.geolocation.watchPosition((position) => {
@@ -145,18 +145,16 @@ class MapPage extends React.Component {
                 </MapView>
 
                 <Container>
-                    <Content>
-                        <Button rounded
-                                onPress = {() => {
-                            this.handleAddSamplePress()
-                        }}>
-                            <Icon name='arrow-back' />
-                            <Text>Add Sample</Text>
-                        </Button>
-                    </Content>
+                  <Content>
+                    <Button rounded
+                      onPress = {() => {
+                        this.handleAddSamplePress()
+                      }}>
+                      <Icon name='arrow-back' />
+                        <Text>Add Sample</Text>
+                    </Button>
+                  </Content>
                 </Container>
-
-
             </View>
 
         );
