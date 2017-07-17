@@ -16,10 +16,6 @@ class HomePage extends Component {
                     A mobile tool for in-the-field collection of soil sample data.
                 </Text>
 
-                <Text style = {{fontSize: 15, paddingBottom: 50, color: '#515356', textAlign: 'center'}}>
-                    R. Behrooz, J. Colman, & M. Wenzel
-                </Text>
-
                 <Image
                     style={{height: 50, padding: 30,}}
                     source={{uri: 'https://seaphages.org/static/images/SEAPHAGES_Logo.png'}}

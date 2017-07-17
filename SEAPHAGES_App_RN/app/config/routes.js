@@ -8,7 +8,12 @@ import { Icon } from 'native-base';
 import HomePage from '../screens/HomePage.js';
 import MapPage from '../screens/MapPage.js';
 import SampleAddPage from '../screens/SampleAddPage.js';
+import UserAccountPage from '../screens/UserAccountPage.js';
 import DetailScreen from '../screens/DetailScreen.js';
+import SplashPage from '../screens/SplashPage.js';
+import SignInPage from '../screens/SignInPage.js';
+import CreateAccountPage from '../screens/CreateAccountPage.js';
+
 
 export const Tabs = TabNavigator({
     HomePage: {
@@ -25,13 +30,41 @@ export const Tabs = TabNavigator({
             tabBarIcon: <Icon ios="ios-beaker" android="md-pint" size={35} />,
         }
     },
-    DetailScreen: {
+    UserAccountPage: {
+        screen: UserAccountPage,
+        navigationOptions: {
+            tabBarLabel:'User Account',
+            tabBarIcon: <Icon name="pizza" size={35} />,
+        }
+    },
+    /*SignInPage: {
+        screen: SignInPage,
+        navigationOptions: {
+            tabBarLabel:'Sign In',
+            tabBarIcon: <Icon name="pizza" size={35} />,
+        }
+    },*/
+    /*CreateAccountPage: {
+        screen: CreateAccountPage,
+        navigationOptions: {
+            tabBarLabel:'Create Account',
+            tabBarIcon: <Icon name="pizza" size={35} />,
+        }
+    },*/
+    /*DetailScreen: {
         screen: DetailScreen,
         navigationOptions: {
             tabBarLabel:'Test',
             tabBarIcon: <Icon ios="ios-happy" android="md-happy" size={35} />,
         }
-    },
+    },*/
+    /*SplashPage: {
+        screen: SplashPage,
+        navigationOptions: {
+            tabBarLabel:'Splash',
+            tabBarIcon: <Icon name="pizza" size={35} />,
+        }
+    },*/
 });
 
 export const SampleAddStack = StackNavigator({

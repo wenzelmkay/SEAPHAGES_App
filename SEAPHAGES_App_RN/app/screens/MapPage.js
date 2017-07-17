@@ -42,38 +42,10 @@ class MapPage extends React.Component {
                 latitudeDelta: LATITUDE_DELTA,
                 longitudeDelta: LONGITUDE_DELTA,
             },
-            //make an empty array called markers; to later be populated with data from the database
-            markers: [],
 
         };
-        //this.onRegionChange = this.onRegionChange.bind(this);
+
     }
-
-    //To fetch sample data from the database, and store it in the empty markers array (line 69)
-    listenForItems(itemsRef) {
-        itemsRef.on('value', (snap) => {
-            // get children from database and push as into items array
-            const items = [];
-            snap.forEach((child) => {
-                items.push({
-                    sampleName: child.val().sampleName,
-                    latitude: child.val().latitude,
-                    longitude: child.val().longitude,
-                    details: child.val().details,
-                    _key: child.key
-                });
-            });
-            //confirms that items has been populated with data
-            console.log(items);
-            //push items data into markers array
-            this.setState({
-                markers: items,
-            });
-            //confirms markers has been populated with data
-            console.log(this.state.markers);
-
-        });
-    };
 
     //callback whenever the location changes so that it automatically refreshes.
     //watchID: ?number = null;
@@ -92,12 +64,7 @@ class MapPage extends React.Component {
                         }
                     },
                 );
-                this.setState(
-                    {
-                        myLat: position.coords.latitude,
-                        myLon: position.coords.longitude,
-                    },
-                );
+
             },
  (error) => console.log(new Date(), error),
                     {enableHighAccuracy: true, timeout: 10000, maximumAge: 3000}
@@ -145,15 +112,15 @@ class MapPage extends React.Component {
                 </MapView>
 
                 <Container>
-                  <Content>
-                    <Button rounded
-                      onPress = {() => {
-                        this.handleAddSamplePress()
-                      }}>
-                      <Icon name='arrow-back' />
-                        <Text>Add Sample</Text>
-                    </Button>
-                  </Content>
+
+                    <Content>
+                        <Button icon rounded
+                                         onPress = {() => {
+                                             this.handleAddSamplePress()
+                                         }}>
+                            <Icon name='md-add' />
+                        </Button>
+                    </Content>
                 </Container>
             </View>
 

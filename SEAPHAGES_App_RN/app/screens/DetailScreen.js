@@ -1,6 +1,3 @@
-//importing different pages
-
-
 import React, { Component, PropTypes } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 

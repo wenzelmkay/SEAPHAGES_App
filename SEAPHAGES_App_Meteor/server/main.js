@@ -1,5 +1,5 @@
 import { Meteor } from 'meteor/meteor';
-//import '/imports/api/soilSamples';
+import '/imports/api/soilSamples';
 
 Meteor.startup(() => {
   // code to run on server at startup
