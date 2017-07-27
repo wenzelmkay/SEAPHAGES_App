@@ -110,16 +110,13 @@ class MapPage extends React.Component {
 
                 </MapView>
                 <Container>
-                    <Content>
-                        <Grid>
-                            <Button icon rounded
-                                    onPress = {() => {
-                                        this.handleOpenModalPress()
-                                    }}>
-                                <Icon name='md-add' />
-                            </Button>
-                        </Grid>
-                    </Content>
+                        <Button style={styles.button}
+                            icon rounded
+                             onPress = {() => {
+                                 this.handleOpenModalPress()
+                             }}>
+                            <Icon name='md-add' />
+                        </Button>
                 </Container>
             </View>
 
@@ -140,7 +137,7 @@ const styles = StyleSheet.create({
         right: 0,
         bottom: 0,
         justifyContent: 'flex-end',
-        alignItems: 'center',
+        //alignItems: 'center',
     },
     map: {
         position: 'absolute',
@@ -153,6 +150,17 @@ const styles = StyleSheet.create({
         position: 'absolute',
         bottom:0,
         left:0,
+    },
+    button:{
+        borderRadius: 20,
+        padding: 10,
+        backgroundColor: '#266bf7',
+        borderColor: '#515356',
+        borderWidth: 0,
+        margin: 0,
+        position: 'absolute',
+        bottom:5,
+        right:5,
     },
     headerText : {
         fontSize: 30,
