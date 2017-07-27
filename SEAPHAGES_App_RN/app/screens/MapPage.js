@@ -109,15 +109,13 @@ class MapPage extends React.Component {
                     ))}
 
                 </MapView>
-                <Container>
-                        <Button style={styles.button}
-                            icon rounded
-                             onPress = {() => {
-                                 this.handleOpenModalPress()
-                             }}>
-                            <Icon name='md-add' />
-                        </Button>
-                </Container>
+                <Button style={styles.button}
+                    icon rounded
+                     onPress = {() => {
+                         this.handleOpenModalPress()
+                     }}>
+                    <Icon name='md-add' />
+                </Button>
             </View>
 
         );
