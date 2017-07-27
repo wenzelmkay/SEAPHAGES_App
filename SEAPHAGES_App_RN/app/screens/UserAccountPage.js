@@ -9,28 +9,48 @@ import {
     Text,
     View
 } from 'react-native';
+import { Container, Header, Body, Title, Content, Form, Item, Input, Label, Button, Icon } from 'native-base';
+import { Col, Row, Grid } from "react-native-easy-grid";
 
 class UserAccountPage extends Component {
     render() {
         return (
-            <View style={styles.container}>
-                <Text style={styles.welcome}>
-                    Under Construction
-                </Text>
-                <Text style={styles.instructions}>
-                    Coming Soon
-                </Text>
-            </View>
+            <Container>
+                <Header>
+                    <Body>
+                    <Title>Testing 123!</Title>
+                    </Body>
+                </Header>
+                <Content>
+                    <Grid>
+                        <Row style={{ height: 500 }}>
+                        </Row>
+                        <Row>
+                            <Col></Col>
+                            <Col></Col>
+                            <Col></Col>
+                            <Col>
+                                <Button icon rounded>
+                                    <Icon name='ios-person-add-outline' />
+                                </Button>
+                            </Col>
+                        </Row>
+                    </Grid>
+                </Content>
+            </Container>
+
+
+
         );
     }
 }
 
 const styles = StyleSheet.create({
-    container: {
+    content: {
         flex: 1,
-        justifyContent: 'center',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
         alignItems: 'center',
-        backgroundColor: '#F5FCFF',
     },
     welcome: {
         fontSize: 20,

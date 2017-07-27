@@ -44,20 +44,20 @@ export const Tabs = TabNavigator({
             tabBarIcon: <Icon name="person" size={35} />,
         }
     },
-    /*SignInPage: {
+    SignInPage: {
         screen: SignInPage,
         navigationOptions: {
             tabBarLabel:'Sign In',
             tabBarIcon: <Icon name="pizza" size={35} />,
         }
-    },*/
-    /*CreateAccountPage: {
+    },
+    CreateAccountPage: {
         screen: CreateAccountPage,
         navigationOptions: {
             tabBarLabel:'Create Account',
             tabBarIcon: <Icon name="pizza" size={35} />,
         }
-    },*/
+    },
     /*DetailScreen: {
         screen: DetailScreen,
         navigationOptions: {
@@ -87,7 +87,7 @@ export const Root = StackNavigator({
     Tabs: {
         screen: Tabs,
     },
-    Settings: {
+    modalCall: {
         screen: SampleAddStack,
     },
 }, {
