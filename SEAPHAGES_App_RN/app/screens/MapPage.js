@@ -15,7 +15,8 @@ import {
     Modal,
     TextInput,
 } from 'react-native';
-import { Container, Content, Button, Icon,} from 'native-base';
+import { Container, Content, Button, Icon, Header, Body, Title, Form, Item, Input, Label } from 'native-base';
+import { Col, Row, Grid } from "react-native-easy-grid";
 import Meteor, { createContainer } from 'react-native-meteor';
 
 
@@ -27,8 +28,8 @@ const LONGITUDE_DELTA = LATITUDE_DELTA * ASPECT_RATIO;
 
 
 class MapPage extends React.Component {
-    handleAddSamplePress = () => {
-        this.props.navigation.navigate('Settings');
+    handleOpenModalPress = () => {
+        this.props.navigation.navigate('modalCall');
     };
 
     //set initial properties & states for the whole app
@@ -100,27 +101,26 @@ class MapPage extends React.Component {
                         <MapView.Marker key={i}
                                         pinColor={"orange"}
                                         coordinate={{latitude: marker.latitude, longitude: marker.longitude}}
-                                        title={marker.sampleName}
-                                        description={marker.details}>
+                                        title={marker.title}
+                                        description={marker.description}>
                             <View style={styles.pin}>
                             </View>
                         </MapView.Marker>
                     ))}
 
                 </MapView>
-
                 <Container>
                     <Content>
-                        <Button icon rounded
-                                         onPress = {() => {
-                                             this.handleAddSamplePress()
-                                         }}>
-                            <Icon name='md-add' />
-                        </Button>
+                        <Grid>
+                            <Button icon rounded
+                                    onPress = {() => {
+                                        this.handleOpenModalPress()
+                                    }}>
+                                <Icon name='md-add' />
+                            </Button>
+                        </Grid>
                     </Content>
                 </Container>
-
-
             </View>
 
         );
