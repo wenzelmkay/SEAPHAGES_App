@@ -109,7 +109,7 @@ class MapPage extends React.Component {
                     ))}
 
                 </MapView>
-                <Container>
+
                         <Button style={styles.button}
                             icon rounded
                              onPress = {() => {
@@ -117,7 +117,7 @@ class MapPage extends React.Component {
                              }}>
                             <Icon name='md-add' />
                         </Button>
-                </Container>
+
             </View>
 
         );
@@ -145,11 +145,6 @@ const styles = StyleSheet.create({
         left: 0,
         right: 0,
         bottom: 0,
-    },
-    buttonContainer:{
-        position: 'absolute',
-        bottom:0,
-        left:0,
     },
     button:{
         borderRadius: 20,

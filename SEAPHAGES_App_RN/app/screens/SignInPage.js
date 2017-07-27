@@ -30,15 +30,18 @@ class SignInPage extends Component {
                             <Input />
                         </Item>
                     </Form>
-                    <Button icon rounded>
-                        <Icon name='ios-key-outline' />
+                    <Button block rounded>
                         <Text>Sign In</Text>
                     </Button>
-                    <Button icon rounded>
-                        <Icon name='ios-person-add-outline' />
-                        <Text>Create an Account</Text>
+                    <Body>
+                        <Text>Don't have an account?</Text>
+                    </Body>
+                    <Button style={styles.createanaccountbutton} transparent>
+                        <Text>Register</Text>
                     </Button>
                 </Content>
+
+
             </Container>
         );
     }
@@ -46,10 +49,12 @@ class SignInPage extends Component {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#F5FCFF',
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        justifyContent: 'flex-end',
     },
     welcome: {
         fontSize: 20,
@@ -61,6 +66,17 @@ const styles = StyleSheet.create({
         color: '#333333',
         marginBottom: 5,
     },
+    signinbutton: {
+        margin: 0,
+        position: 'absolute',
+        top:220,
+        left:125,
+    },
+    createanaccountbutton: {
+        position: 'absolute',
+        top: 320,
+        left: 100,
+    }
 });
 
 export default SignInPage;
