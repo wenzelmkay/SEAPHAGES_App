@@ -44,7 +44,13 @@ export const Tabs = TabNavigator({
             tabBarIcon: <Icon name="person" size={35} />,
         }
     },
-
+    SignInPage: {
+        screen: SignInPage,
+        navigationOptions: {
+            tabBarLabel:'Sign In',
+            tabBarIcon: <Icon name="pizza" size={35} />,
+        }
+    },
     CreateAccountPage: {
         screen: CreateAccountPage,
         navigationOptions: {
