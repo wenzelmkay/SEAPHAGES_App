@@ -42,6 +42,7 @@ class SampleAddPage extends Component {
         /*let myLat = value.toString(this.state.latitude);
         console.log(myLat)*/
 
+
         return (
             <Container>
                 <Content>
@@ -64,16 +65,18 @@ class SampleAddPage extends Component {
                         </Item>
                     </Form>
                 </Content>
-                <Button icon rounded
+                <Button style={styles.button} icon rounded
                         onPress = {() => {
                             this.handleAddSamplePress()
                         }}>
-                    <Icon name='md-add' />
+                    <Icon name='checkmark' />
                 </Button>
             </Container>
+
         );
     }
 };
+
 
 const styles = StyleSheet.create({
     container: {
@@ -93,12 +96,15 @@ const styles = StyleSheet.create({
         bottom: 0,
     },
     button:{
-        borderRadius: 10,
+        borderRadius: 20,
         padding: 10,
-        backgroundColor: '#f7c05b',
+        backgroundColor: '#266bf7',
         borderColor: '#515356',
-        borderWidth: 2,
-        margin: 50,
+        borderWidth: 0,
+        margin: 5,
+        position: 'absolute',
+        bottom:5,
+        right:5,
     },
     buttonText: {
         color: '#515356',
@@ -121,6 +127,7 @@ const styles = StyleSheet.create({
         color: '#a7abb2',
 
     },
+
 });
 
 
