@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-import { TabNavigator, StackNavigator } from 'react-navigation';
+import { TabNavigator, StackNavigator, } from 'react-navigation';
 import { Icon } from 'native-base';
 
 import HomePage from '../screens/HomePage.js';
@@ -13,66 +13,80 @@ import DetailScreen from '../screens/DetailScreen.js';
 import SplashPage from '../screens/SplashPage.js';
 import SignInPage from '../screens/SignInPage.js';
 import CreateAccountPage from '../screens/CreateAccountPage.js';
+import colors from '../config/colors';
 
 
-export const Tabs = TabNavigator({
-    HomePage: {
-        screen: HomePage,
-        navigationOptions: {
-            tabBarLabel:'Home',
-            tabBarIcon: <Icon name="home" size={35} />,
+export const Tabs = TabNavigator(
+    {
+        HomePage: {
+            screen: HomePage,
+            navigationOptions: {
+                tabBarLabel:'Home',
+                tabBarIcon: <Icon name="home" size={35} />,
+            }
+        },
+        MapPage: {
+            screen: MapPage,
+            navigationOptions: {
+                tabBarLabel:'Map',
+                tabBarIcon: <Icon name="globe" size={35} />,
+            }
+        },
+        UserAccountPage: {
+            screen: UserAccountPage,
+            navigationOptions: {
+                tabBarLabel:'User',
+                tabBarIcon: <Icon name="settings" size={35} />,
+            }
+        },
+        SignInPage: {
+            screen: SignInPage,
+            navigationOptions: {
+                tabBarLabel:'Sign In',
+                tabBarIcon: <Icon name="person" size={35} />,
+            }
+        },
+        SignInPage: {
+            screen: SignInPage,
+            navigationOptions: {
+                tabBarLabel:'Sign In',
+                tabBarIcon: <Icon name="pizza" size={35} />,
+            }
+        },
+        CreateAccountPage: {
+            screen: CreateAccountPage,
+            navigationOptions: {
+                tabBarLabel:'Create',
+                tabBarIcon: <Icon name="pizza" size={35} />,
+            }
+        },
+        /*DetailScreen: {
+            screen: DetailScreen,
+            navigationOptions: {
+                tabBarLabel:'Test',
+                tabBarIcon: <Icon ios="ios-happy" android="md-happy" size={35} />,
+            }
+        },*/
+        /*SplashPage: {
+            screen: SplashPage,
+            navigationOptions: {
+                tabBarLabel:'Splash',
+                tabBarIcon: <Icon name="pizza" size={35} />,
+            }
+        },*/
+        },
+    {
+        tabBarPosition: 'bottom',
+        tabBarOptions: {
+            activeTintColor: colors.textWhite,
+            inactiveTintColor: colors.textLight,
+            activeBackgroundColor: colors.darkPrimary,
+            style: {
+                backgroundColor: colors.primary,
+            },
         }
     },
-    MapPage: {
-        screen: MapPage,
-        navigationOptions: {
-            tabBarLabel:'Map',
-            tabBarIcon: <Icon name="globe" size={35} />,
-        }
-    },
-    UserAccountPage: {
-        screen: UserAccountPage,
-        navigationOptions: {
-            tabBarLabel:'User Account',
-            tabBarIcon: <Icon name="settings" size={35} />,
-        }
-    },
-    SignInPage: {
-        screen: SignInPage,
-        navigationOptions: {
-            tabBarLabel:'Sign In',
-            tabBarIcon: <Icon name="person" size={35} />,
-        }
-    },
-    SignInPage: {
-        screen: SignInPage,
-        navigationOptions: {
-            tabBarLabel:'Sign In',
-            tabBarIcon: <Icon name="pizza" size={35} />,
-        }
-    },
-    CreateAccountPage: {
-        screen: CreateAccountPage,
-        navigationOptions: {
-            tabBarLabel:'Create Account',
-            tabBarIcon: <Icon name="pizza" size={35} />,
-        }
-    },
-    /*DetailScreen: {
-        screen: DetailScreen,
-        navigationOptions: {
-            tabBarLabel:'Test',
-            tabBarIcon: <Icon ios="ios-happy" android="md-happy" size={35} />,
-        }
-    },*/
-    /*SplashPage: {
-        screen: SplashPage,
-        navigationOptions: {
-            tabBarLabel:'Splash',
-            tabBarIcon: <Icon name="pizza" size={35} />,
-        }
-    },*/
-});
+);
 
 export const SampleAddStack = StackNavigator({
     SampleAddPage: {
