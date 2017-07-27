@@ -20,21 +20,28 @@ export const Tabs = TabNavigator({
         screen: HomePage,
         navigationOptions: {
             tabBarLabel:'Home',
-            tabBarIcon: <Icon name="pizza" size={35} />,
+            tabBarIcon: <Icon name="home" size={35} />,
         }
     },
     MapPage: {
         screen: MapPage,
         navigationOptions: {
             tabBarLabel:'Map',
-            tabBarIcon: <Icon ios="ios-beaker" android="md-pint" size={35} />,
+            tabBarIcon: <Icon name="globe" size={35} />,
         }
     },
     UserAccountPage: {
         screen: UserAccountPage,
         navigationOptions: {
             tabBarLabel:'User Account',
-            tabBarIcon: <Icon name="pizza" size={35} />,
+            tabBarIcon: <Icon name="settings" size={35} />,
+        }
+    },
+    SignInPage: {
+        screen: SignInPage,
+        navigationOptions: {
+            tabBarLabel:'Sign In',
+            tabBarIcon: <Icon name="person" size={35} />,
         }
     },
     /*SignInPage: {
