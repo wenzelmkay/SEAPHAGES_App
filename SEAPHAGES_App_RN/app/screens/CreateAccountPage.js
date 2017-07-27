@@ -4,23 +4,19 @@
 
 
 import React, { Component } from 'react';
-import {
-    StyleSheet,
-    Text,
-    View
-} from 'react-native';
-import { Container, Header, Body, Title, Content, Form, Item, Input, Label, Button, Icon, Left } from 'native-base';
+import { Container, Header, Body, Title, Content, Form, Item, Input, Label, Button, Icon, Left, Text } from 'native-base';
+import styles from '../config/styles';
 
 class CreateAccountPage extends Component {
     render() {
         return (
             <Container>
-                <Header>
+                <Header style = {styles.header}>
                         <Button transparent>
                             <Icon name='arrow-back' />
                         </Button>
                     <Body>
-                    <Title>Create an Account</Title>
+                    <Title style = {styles.headerTitle}>Create an Account</Title>
                     </Body>
                 </Header>
                 <Content>
@@ -46,33 +42,15 @@ class CreateAccountPage extends Component {
                             <Input />
                         </Item>
                     </Form>
-                    <Button icon rounded>
-                        <Icon name='ios-key-outline' />
-                        <Text>Register</Text>
-                    </Button>
                 </Content>
+                <Button block
+                        style= {styles.buttonBlock}>
+                    <Icon name='ios-key-outline' />
+                    <Text style = {styles.buttonText}> Register</Text>
+                </Button>
             </Container>
         );
     }
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#F5FCFF',
-    },
-    welcome: {
-        fontSize: 20,
-        textAlign: 'center',
-        margin: 10,
-    },
-    instructions: {
-        textAlign: 'center',
-        color: '#333333',
-        marginBottom: 5,
-    },
-});
 
 export default CreateAccountPage;

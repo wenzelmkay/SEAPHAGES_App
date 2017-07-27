@@ -3,22 +3,18 @@
  */
 
 import React, { Component } from 'react';
-import {
-    StyleSheet,
-    Text,
-    View
-} from 'react-native';
-import { Container, Header, Body, Title, Content, Form, Item, Input, Label, Button, Icon } from 'native-base';
+import { Container, Header, Body, Title, Content, Form, Item, Input, Label, Button, Icon, Text } from 'native-base';
+import styles from '../config/styles';
 
 class SignInPage extends Component {
     render() {
         return (
             <Container>
-                <Header>
+                <Header style = {styles.header}>
                     <Body>
-                    <Title>Sign In</Title>
+                    <Title style = {styles.headerTitle}>Sign In</Title>
                     </Body>
-                </Header>
+                </Header >
                 <Content>
                     <Form>
                         <Item floatingLabel>
@@ -43,24 +39,5 @@ class SignInPage extends Component {
         );
     }
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#F5FCFF',
-    },
-    welcome: {
-        fontSize: 20,
-        textAlign: 'center',
-        margin: 10,
-    },
-    instructions: {
-        textAlign: 'center',
-        color: '#333333',
-        marginBottom: 5,
-    },
-});
 
 export default SignInPage;

@@ -3,21 +3,12 @@
 import MapView, {Marker} from 'react-native-maps';
 import React, { Component } from 'react';
 import {
-    AppRegistry,
-    StyleSheet,
     View,
     Dimensions,
-    Navigator,
-    TouchableHighlight,
-    Text,
-    Alert,
-    TouchableOpacity,
-    Modal,
-    TextInput,
 } from 'react-native';
-import { Container, Content, Button, Icon, Header, Body, Title, Form, Item, Input, Label } from 'native-base';
-import { Col, Row, Grid } from "react-native-easy-grid";
+import { Container, Content, Button, Icon, Header, Body, Title, Form, Item, Input, Label, Text } from 'native-base';
 import Meteor, { createContainer } from 'react-native-meteor';
+import styles from '../config/styles';
 
 
 //const is like a variable but it can not be reassigned
@@ -85,10 +76,10 @@ class MapPage extends React.Component {
     render() {
         const { samples } = this.props;
         return (
-            <View style ={styles.container}>
+            <View style ={styles.containerMap}>
                 <MapView
                     //styles.map is very important! it lets the map display!
-                    style = {styles.map}
+                    style = {styles.stylesMap}
                     ref = "map"
                     mapType = {"standard"}
                     region={this.state.currentRegion}
@@ -109,7 +100,7 @@ class MapPage extends React.Component {
                     ))}
 
                 </MapView>
-                <Button style={styles.button}
+                <Button style={styles.buttonRound}
                     icon rounded
                      onPress = {() => {
                          this.handleOpenModalPress()
@@ -125,58 +116,6 @@ class MapPage extends React.Component {
         navigator.geolocation.clearWatch(this.watchID);
     }
 };
-
-//const is like a variable but it can not be reassigned; Routes assigns a title and index number to each scene in app.
-const styles = StyleSheet.create({
-    container: {
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-        justifyContent: 'flex-end',
-        //alignItems: 'center',
-    },
-    map: {
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-    },
-    buttonContainer:{
-        position: 'absolute',
-        bottom:0,
-        left:0,
-    },
-    button:{
-        borderRadius: 20,
-        padding: 10,
-        backgroundColor: '#266bf7',
-        borderColor: '#515356',
-        borderWidth: 0,
-        margin: 0,
-        position: 'absolute',
-        bottom:5,
-        right:5,
-    },
-    headerText : {
-        fontSize: 30,
-        color: '#515356',
-        fontWeight: 'bold',
-    },
-    fieldNameText: {
-        fontSize: 20,
-        color: '#515356',
-        paddingTop: 20,
-    },
-    inputText: {
-        fontSize: 15,
-        textDecorationLine: 'underline',
-        color: '#a7abb2',
-
-    },
-});
 
 export default createContainer(() => {
     Meteor.subscribe('fakeSamples');

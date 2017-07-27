@@ -3,10 +3,10 @@
  */
 
 import React, { Component } from 'react';
-import { View, TouchableHighlight, Text, TouchableOpacity, TextInput, StyleSheet } from 'react-native';
-import { Container, Content, Form, Item, Input, Label, Button, Icon } from 'native-base';
+import { Container, Content, Form, Item, Input, Label, Button, Icon, Text } from 'native-base';
 import { goBack, NavigationOptions, NavigationActions } from 'react-navigation';
 import Meteor from 'react-native-meteor';
+import styles from '../config/styles';
 
 const backAction = NavigationActions.back({
     key: null
@@ -62,9 +62,6 @@ class SampleAddPage extends Component {
 
 
     render() {
-        /*let myLat = value.toString(this.state.latitude);
-        console.log(myLat)*/
-
         return (
             <Container>
                 <Content>
@@ -92,8 +89,7 @@ class SampleAddPage extends Component {
                     </Form>
                 </Content>
 
-                <Button style={styles.button}
-                    icon rounded
+                <Button block style={styles.buttonBlock}
                         onPress = {() => {
                             console.log(this.state.title),
                             console.log(this.state.description),
@@ -102,6 +98,7 @@ class SampleAddPage extends Component {
                             this.handleSubmitSamplePress()
                         }}>
 
+                    <Text>Submit Sample</Text>
                     <Icon name='checkmark' />
                 </Button>
             </Container>
@@ -109,59 +106,5 @@ class SampleAddPage extends Component {
         );
     }
 };
-
-
-const styles = StyleSheet.create({
-    container: {
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-        justifyContent: 'flex-end',
-        alignItems: 'center',
-    },
-    map: {
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-    },
-    button:{
-        borderRadius: 20,
-        padding: 10,
-        backgroundColor: '#266bf7',
-        borderColor: '#515356',
-        borderWidth: 0,
-        margin: 5,
-        position: 'absolute',
-        bottom:5,
-        right:5,
-    },
-    buttonText: {
-        color: '#515356',
-        fontWeight: 'bold',
-        textAlign: 'center',
-    },
-    headerText : {
-        fontSize: 30,
-        color: '#515356',
-        fontWeight: 'bold',
-    },
-    fieldNameText: {
-        fontSize: 20,
-        color: '#515356',
-        paddingTop: 20,
-    },
-    inputText: {
-        fontSize: 15,
-        textDecorationLine: 'underline',
-        color: '#a7abb2',
-
-    },
-
-});
-
 
 export default SampleAddPage
