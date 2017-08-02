@@ -2,17 +2,26 @@
  * Created by wenzelmk on 7/17/17.
  */
 
-
 import React, { Component } from 'react';
 import { Container, Header, Body, Title, Content, Form, Item, Input, Label, Button, Icon, Left, Text } from 'native-base';
 import styles from '../config/styles';
+import { AppRegistry } from 'react-native';
+import { StackNavigator, NavigationActions } from 'react-navigation';
+import SignInPage from '../screens/SignInPage.js';
 
-class CreateAccountPage extends Component {
+
+class CreateAccountPage extends React.Component {
+    static navigationOptions = {
+        title: 'Create an Account',
+    }
     render() {
+        const { navigate } = this.props.navigation
         return (
             <Container>
                 <Header style = {styles.header}>
-                        <Button transparent>
+                        <Button transparent
+                                onPress={() => navigate('SignInPage')}
+                                title='Go back to Sign In Page'>
                             <Icon name='arrow-back' />
                         </Button>
                     <Body>
@@ -51,6 +60,8 @@ class CreateAccountPage extends Component {
             </Container>
         );
     }
+
 }
+
 
 export default CreateAccountPage;
