@@ -26,13 +26,20 @@ class SignInPage extends Component {
                             <Input />
                         </Item>
                     </Form>
-                    <Button icon rounded>
+                    <Button
+                        icon
+                        block
+                        style = {styles.buttonBlock}>
                         <Icon name='ios-key-outline' />
                         <Text>Sign In</Text>
                     </Button>
-                    <Button icon rounded>
-                        <Icon name='ios-person-add-outline' />
-                        <Text>Create an Account</Text>
+                    <Button
+                        icon
+                        block
+                        bordered
+                        style = {styles.buttonBordered}>
+                        <Icon style = {styles.buttonBorderedText} name='ios-person-add-outline' />
+                        <Text style = {styles.buttonBorderedText}>Create an Account</Text>
                     </Button>
                 </Content>
             </Container>

@@ -46,7 +46,7 @@ class CreateAccountPage extends Component {
                 <Button block
                         style= {styles.buttonBlock}>
                     <Icon name='ios-key-outline' />
-                    <Text style = {styles.buttonText}> Register</Text>
+                    <Text>Register</Text>
                 </Button>
             </Container>
         );

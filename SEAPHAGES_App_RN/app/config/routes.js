@@ -84,6 +84,7 @@ export const Tabs = TabNavigator(
             style: {
                 backgroundColor: colors.primary,
             },
+            showIcon: true,
         }
     },
 );
