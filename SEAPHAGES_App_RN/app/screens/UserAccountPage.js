@@ -18,7 +18,7 @@ class UserAccountPage extends Component {
             <Container>
                 <Header>
                     <Body>
-                    <Title>Testing 123!</Title>
+                    <Title>Account Settings</Title>
                     </Body>
                 </Header>
                 <Content>

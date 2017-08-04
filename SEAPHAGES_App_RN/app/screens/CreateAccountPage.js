@@ -5,22 +5,18 @@
 import React, { Component } from 'react';
 import { Container, Header, Body, Title, Content, Form, Item, Input, Label, Button, Icon, Left, Text } from 'native-base';
 import styles from '../config/styles';
-import { AppRegistry } from 'react-native';
-import { StackNavigator, NavigationActions } from 'react-navigation';
-import SignInPage from '../screens/SignInPage.js';
+import { NavigationActions } from 'react-navigation';
 
 
-class CreateAccountPage extends React.Component {
-    static navigationOptions = {
-        title: 'Create an Account',
-    }
+const backAction = NavigationActions.back({key: null});
+
+class CreateAccountPage extends Component {
     render() {
-        const { navigate } = this.props.navigation
         return (
             <Container>
                 <Header style = {styles.header}>
-                        <Button transparent
-                                onPress={() => navigate('SignInPage')}
+                        <Button transparent light
+                                onPress={() => this.props.navigation.dispatch(backAction)}
                                 title='Go back to Sign In Page'>
                             <Icon name='arrow-back' />
                         </Button>
