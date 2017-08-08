@@ -104,7 +104,7 @@ export const Root = StackNavigator({
     modalCall: {
         screen: SampleAddStack,
     },
-    CreateAccountPageCall: {
+    createAccountPageCall: {
         screen: SignInStack,
     },
 }, {

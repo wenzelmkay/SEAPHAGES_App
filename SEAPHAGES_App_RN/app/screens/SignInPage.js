@@ -7,6 +7,10 @@ import { Container, Header, Body, Title, Content, Form, Item, Input, Label, Butt
 import styles from '../config/styles';
 
 class SignInPage extends Component {
+    handleCreateAccountPress = () => {
+        this.props.navigation.navigate('createAccountPageCall');
+    };
+
     render() {
         return (
             <Container>
@@ -37,7 +41,8 @@ class SignInPage extends Component {
                         icon
                         block
                         bordered
-                        style = {styles.buttonBordered}>
+                        style = {styles.buttonBordered}
+                        onPress={() =>  this.handleCreateAccountPress() + console.log('PRESSED')}>
                         <Icon style = {styles.buttonBorderedText} name='ios-person-add-outline' />
                         <Text style = {styles.buttonBorderedText}>Create an Account</Text>
                     </Button>
