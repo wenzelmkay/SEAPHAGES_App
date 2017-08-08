@@ -4,7 +4,6 @@ import React from 'react';
 
 import { TabNavigator, StackNavigator, } from 'react-navigation';
 import { Icon } from 'native-base';
-
 import HomePage from '../screens/HomePage.js';
 import MapPage from '../screens/MapPage.js';
 import SampleAddPage from '../screens/SampleAddPage.js';
@@ -16,50 +15,38 @@ import CreateAccountPage from '../screens/CreateAccountPage.js';
 import colors from '../config/colors';
 
 
+
 export const Tabs = TabNavigator(
     {
         HomePage: {
             screen: HomePage,
             navigationOptions: {
-                tabBarLabel:'Home',
-                tabBarIcon: <Icon name="home" size={35} />,
+                tabBarLabel: 'Home',
+                tabBarIcon: <Icon style={[styles.icon, {color: '#ebeeff'}]} name="home" size={35}/>,
             }
         },
         MapPage: {
             screen: MapPage,
             navigationOptions: {
                 tabBarLabel:'Map',
-                tabBarIcon: <Icon name="globe" size={35} />,
+                tabBarIcon: <Icon style={[styles.icon, {color: '#ebeeff'}]} name="globe" size={35} />,
             }
         },
         UserAccountPage: {
             screen: UserAccountPage,
             navigationOptions: {
                 tabBarLabel:'User',
-                tabBarIcon: <Icon name="settings" size={35} />,
+                tabBarIcon: <Icon style={[styles.icon, {color: '#ebeeff'}]} name="settings" size={35} />,
             }
         },
         SignInPage: {
             screen: SignInPage,
             navigationOptions: {
                 tabBarLabel:'Sign In',
-                tabBarIcon: <Icon name="person" size={35} />,
+                tabBarIcon: <Icon style={[styles.icon, {color: '#ebeeff'}]} name="person" size={35} />,
             }
         },
-        SignInPage: {
-            screen: SignInPage,
-            navigationOptions: {
-                tabBarLabel:'Sign In',
-                tabBarIcon: <Icon name="pizza" size={35} />,
-            }
-        },
-        CreateAccountPage: {
-            screen: CreateAccountPage,
-            navigationOptions: {
-                tabBarLabel:'Create',
-                tabBarIcon: <Icon name="pizza" size={35} />,
-            }
-        },
+
         /*DetailScreen: {
             screen: DetailScreen,
             navigationOptions: {
@@ -96,7 +83,19 @@ export const SampleAddStack = StackNavigator({
             title: 'Add Sample',
         },
     },
+}, {
+    headerMode: 'none',
 });
+
+
+export const SignInStack = StackNavigator({
+    CreateAccountPage: {
+        screen: CreateAccountPage,
+    },
+}, {
+    headerMode: 'none',
+});
+
 
 export const Root = StackNavigator({
     Tabs: {
@@ -105,10 +104,21 @@ export const Root = StackNavigator({
     modalCall: {
         screen: SampleAddStack,
     },
+    CreateAccountPageCall: {
+        screen: SignInStack,
+    },
 }, {
-    mode: 'modal',
+    mode: 'card',
     headerMode: 'none',
 });
+
+
+
+
+
+
+
+
 
 
 
