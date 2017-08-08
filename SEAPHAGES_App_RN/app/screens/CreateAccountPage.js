@@ -2,17 +2,22 @@
  * Created by wenzelmk on 7/17/17.
  */
 
-
 import React, { Component } from 'react';
 import { Container, Header, Body, Title, Content, Form, Item, Input, Label, Button, Icon, Left, Text } from 'native-base';
 import styles from '../config/styles';
+import { NavigationActions } from 'react-navigation';
+
+
+const backAction = NavigationActions.back({key: null});
 
 class CreateAccountPage extends Component {
     render() {
         return (
             <Container>
                 <Header style = {styles.header}>
-                        <Button transparent>
+                        <Button transparent light
+                                onPress={() => this.props.navigation.dispatch(backAction)}
+                                title='Go back to Sign In Page'>
                             <Icon name='arrow-back' />
                         </Button>
                     <Body>
@@ -46,11 +51,13 @@ class CreateAccountPage extends Component {
                 <Button block
                         style= {styles.buttonBlock}>
                     <Icon name='ios-key-outline' />
-                    <Text style = {styles.buttonText}> Register</Text>
+                    <Text>Register</Text>
                 </Button>
             </Container>
         );
     }
+
 }
+
 
 export default CreateAccountPage;

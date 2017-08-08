@@ -34,8 +34,15 @@ export default styles = StyleSheet.create({
         borderColor: '#515356',
         margin: 10,
     },
-    buttonText: {
-        color: colors.textWhite
+    buttonBordered:{
+        borderColor: colors.secondary,
+        margin: 10,
+    },
+    buttonFilledText: {
+        color: colors.textWhite,
+    },
+    buttonBorderedText: {
+        color: colors.secondary,
     },
     header: {
         backgroundColor: colors.primary

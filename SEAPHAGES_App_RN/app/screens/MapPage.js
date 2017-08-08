@@ -85,17 +85,15 @@ class MapPage extends React.Component {
                     region={this.state.currentRegion}
                     onRegionChange={this.onRegionChange}
                     //displays a dot at user's location
-                    //showsUserLocation = {true}
+                    showsUserLocation = {true}
                     showsCompass = {true}>
 
                     {samples.map((marker, i) => (
                         <MapView.Marker key={i}
-                                        pinColor={"orange"}
+                                        pinColor={"blue"}
                                         coordinate={{latitude: marker.latitude, longitude: marker.longitude}}
                                         title={marker.title}
                                         description={marker.description}>
-                            <View style={styles.pin}>
-                            </View>
                         </MapView.Marker>
                     ))}
 
