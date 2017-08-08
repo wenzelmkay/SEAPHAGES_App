@@ -71,7 +71,7 @@ class SampleAddPage extends Component {
                         <Icon name='arrow-back' />
                     </Button>
                     <Body>
-                        <Title style = {styles.headerTitle}>Add Sample</Title>
+                    <Title style = {styles.headerTitle}>Add Sample</Title>
                     </Body>
                 </Header>
                 <Content>

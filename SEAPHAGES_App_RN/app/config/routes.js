@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-import { TabNavigator, StackNavigator, } from 'react-navigation';
+import { TabNavigator, StackNavigator } from 'react-navigation';
 import { Icon } from 'native-base';
 import HomePage from '../screens/HomePage.js';
 import MapPage from '../screens/MapPage.js';
@@ -22,28 +22,28 @@ export const Tabs = TabNavigator(
             screen: HomePage,
             navigationOptions: {
                 tabBarLabel: 'Home',
-                tabBarIcon: <Icon style={[styles.icon, {color: '#ebeeff'}]} name="home" size={35}/>,
+                tabBarIcon: <Icon style={{color: '#ebeeff'}} name="home" size={35}/>,
             }
         },
         MapPage: {
             screen: MapPage,
             navigationOptions: {
                 tabBarLabel:'Map',
-                tabBarIcon: <Icon style={[styles.icon, {color: '#ebeeff'}]} name="globe" size={35} />,
+                tabBarIcon: <Icon style={{color: '#ebeeff'}} name="globe" size={35} />,
             }
         },
         UserAccountPage: {
             screen: UserAccountPage,
             navigationOptions: {
                 tabBarLabel:'User',
-                tabBarIcon: <Icon style={[styles.icon, {color: '#ebeeff'}]} name="settings" size={35} />,
+                tabBarIcon: <Icon style={{color: '#ebeeff'}} name="settings" size={35} />,
             }
         },
         SignInPage: {
             screen: SignInPage,
             navigationOptions: {
                 tabBarLabel:'Sign In',
-                tabBarIcon: <Icon style={[styles.icon, {color: '#ebeeff'}]} name="person" size={35} />,
+                tabBarIcon: <Icon style={{color: '#ebeeff'}} name="person" size={35} />,
             }
         },
 
@@ -70,9 +70,13 @@ export const Tabs = TabNavigator(
             activeBackgroundColor: colors.darkPrimary,
             style: {
                 backgroundColor: colors.primary,
+                height: 60,
+                //paddingTopWidth: 10,
+                //padding: 10,
+                },
+            showIcon: true,
             },
         }
-    },
 );
 
 export const SampleAddStack = StackNavigator({
@@ -107,7 +111,7 @@ export const Root = StackNavigator({
         screen: SignInStack,
     },
 }, {
-    mode: 'card',
+    mode: 'modal',
     headerMode: 'none',
 });
 

@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="meteor-packages-auto-import-browser" type="javaScript">
+  <library name="meteor-packages-auto-import-browser">
     <CLASSES>
       <root url="file://$USER_HOME$/.meteor/packages/htmljs/1.0.11/web.browser/html.js" />
       <root url="file://$USER_HOME$/.meteor/packages/htmljs/1.0.11/web.browser/visitors.js" />

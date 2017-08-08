@@ -9,7 +9,7 @@ import styles from '../config/styles';
 
 
 class SignInPage extends Component {
-    handleOpenModalPress = () => {
+    NavigatetoCAP = () => {
         this.props.navigation.navigate('CreateAccountPageCall');
     };
 
@@ -32,17 +32,22 @@ class SignInPage extends Component {
                             <Input />
                         </Item>
                     </Form>
-                    <Button block
+                    <Button
+                            icon
+                            block
                             style= {styles.buttonBlock}>
                         <Icon name='ios-key-outline' />
                         <Text>Sign In</Text>
                     </Button>
-                    <Button block
-                            onPress={() =>  this.handleOpenModalPress() + console.log('PRESSED')}
+                    <Button
+                            icon
+                            block
+                            bordered
+                            onPress={() =>  this.NavigatetoCAP() + console.log('PRESSED')}
                             title="Go to Create Account Page"
-                            style= {styles.buttonBlock}>
-                        <Icon name='ios-person-add-outline' />
-                        <Text>Create an Account</Text>
+                            style= {styles.buttonBordered}>
+                        <Icon style = {styles.buttonBorderedText} name='ios-person-add-outline' />
+                        <Text style = {styles.buttonBorderedText}> Create an Account</Text>
                     </Button>
                 </Content>
             </Container>
