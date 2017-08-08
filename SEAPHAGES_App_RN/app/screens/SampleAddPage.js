@@ -3,7 +3,7 @@
  */
 
 import React, { Component } from 'react';
-import { Container, Content, Form, Item, Input, Label, Button, Icon, Text } from 'native-base';
+import { Container, Header, Body, Title, Content, Form, Item, Input, Label, Button, Icon, Text } from 'native-base';
 import { goBack, NavigationOptions, NavigationActions } from 'react-navigation';
 import Meteor from 'react-native-meteor';
 import styles from '../config/styles';
@@ -64,6 +64,16 @@ class SampleAddPage extends Component {
     render() {
         return (
             <Container>
+                <Header style = {styles.header}>
+                    <Button transparent light
+                            onPress={() => this.props.navigation.dispatch(backAction)}
+                            title='Go back to Map Page'>
+                        <Icon name='arrow-back' />
+                    </Button>
+                    <Body>
+                        <Title style = {styles.headerTitle}>Add Sample</Title>
+                    </Body>
+                </Header>
                 <Content>
                     <Form>
                         <Item floatingLabel>
