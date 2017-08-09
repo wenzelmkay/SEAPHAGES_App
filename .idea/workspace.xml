@@ -6,23 +6,14 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/meteor_packages_auto_import_browser.xml" afterPath="$PROJECT_DIR$/.idea/libraries/meteor_packages_auto_import_browser.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/meteor_packages_auto_import_npm.xml" afterPath="$PROJECT_DIR$/.idea/libraries/meteor_packages_auto_import_npm.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SEAPHAGES_App_Meteor/.meteor/.finished-upgraders" afterPath="$PROJECT_DIR$/SEAPHAGES_App_Meteor/.meteor/.finished-upgraders" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SEAPHAGES_App_Meteor/.meteor/packages" afterPath="$PROJECT_DIR$/SEAPHAGES_App_Meteor/.meteor/packages" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SEAPHAGES_App_Meteor/.meteor/release" afterPath="$PROJECT_DIR$/SEAPHAGES_App_Meteor/.meteor/release" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SEAPHAGES_App_Meteor/.meteor/versions" afterPath="$PROJECT_DIR$/SEAPHAGES_App_Meteor/.meteor/versions" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SEAPHAGES_App_Meteor/imports/api/soilSamples.js" afterPath="$PROJECT_DIR$/SEAPHAGES_App_Meteor/imports/api/soilSamples.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SEAPHAGES_App_Meteor/package.json" afterPath="$PROJECT_DIR$/SEAPHAGES_App_Meteor/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SEAPHAGES_App_RN/android/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/SEAPHAGES_App_RN/android/app/src/main/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SEAPHAGES_App_RN/app/config/routes.js" afterPath="$PROJECT_DIR$/SEAPHAGES_App_RN/app/config/routes.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SEAPHAGES_App_RN/app/config/settings.js" afterPath="$PROJECT_DIR$/SEAPHAGES_App_RN/app/config/settings.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/CreateAccountPage.js" afterPath="$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/CreateAccountPage.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/MapPage.js" afterPath="$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/MapPage.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/SampleAddPage.js" afterPath="$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/SampleAddPage.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/SignInPage.js" afterPath="$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/SignInPage.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/UserAccountPage.js" afterPath="$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/UserAccountPage.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SEAPHAGES_App_RN/ios/SEAPHAGES_App_RN.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/SEAPHAGES_App_RN/ios/SEAPHAGES_App_RN.xcodeproj/project.pbxproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SEAPHAGES_App_RN/ios/SEAPHAGES_App_RN/Info.plist" afterPath="$PROJECT_DIR$/SEAPHAGES_App_RN/ios/SEAPHAGES_App_RN/Info.plist" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SEAPHAGES_App_RN/package.json" afterPath="$PROJECT_DIR$/SEAPHAGES_App_RN/package.json" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -40,8 +31,8 @@
       <file leaf-file-name="routes.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/config/routes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-529">
-              <caret line="2" column="7" lean-forward="false" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+            <state relative-caret-position="1770">
+              <caret line="118" column="0" lean-forward="false" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
               <folding>
                 <element signature="e#35#61#0" expanded="true" />
               </folding>
@@ -49,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SignInPage.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/SignInPage.js">
+      <file leaf-file-name="CreateAccountPage.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/CreateAccountPage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-184">
-              <caret line="10" column="110" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="110" />
+            <state relative-caret-position="377">
+              <caret line="57" column="66" lean-forward="false" selection-start-line="57" selection-start-column="66" selection-end-line="57" selection-end-column="66" />
               <folding>
                 <element signature="e#44#85#0" expanded="true" />
               </folding>
@@ -61,23 +52,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="soilSamples.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_Meteor/imports/api/soilSamples.js">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="18" column="31" lean-forward="false" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+            <state relative-caret-position="45">
+              <caret line="3" column="7" lean-forward="false" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
+              <folding>
+                <element signature="e#36#75#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MapPage.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/MapPage.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="521">
+              <caret line="104" column="23" lean-forward="false" selection-start-line="102" selection-start-column="31" selection-end-line="104" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MapPage.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/MapPage.js">
+      <file leaf-file-name="SignInPage.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/SignInPage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="122" column="28" lean-forward="false" selection-start-line="122" selection-start-column="28" selection-end-line="122" selection-end-column="28" />
+            <state relative-caret-position="270">
+              <caret line="20" column="63" lean-forward="false" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="63" />
               <folding>
-                <element signature="e#26#76#0" expanded="true" />
+                <element signature="e#44#85#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -86,59 +89,21 @@
       <file leaf-file-name="SampleAddPage.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/SampleAddPage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="123">
-              <caret line="91" column="26" lean-forward="true" selection-start-line="91" selection-start-column="26" selection-end-line="91" selection-end-column="26" />
+            <state relative-caret-position="446">
+              <caret line="95" column="93" lean-forward="false" selection-start-line="95" selection-start-column="93" selection-end-line="95" selection-end-column="93" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/Components/FloatingButton/index.js">
+      <file leaf-file-name="UserAccountPage.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/UserAccountPage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FloatingButton.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/Components/FloatingButton/FloatingButton.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="styles.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/Components/FloatingButton/styles.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settings.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/config/settings.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/android/app/src/main/AndroidManifest.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="690">
+              <caret line="48" column="72" lean-forward="false" selection-start-line="48" selection-start-column="72" selection-end-line="48" selection-end-column="72" />
+              <folding>
+                <element signature="e#45#86#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -158,6 +123,11 @@
       <find>settings</find>
       <find>newSample</find>
       <find>coordinat</find>
+      <find>tabBar</find>
+      <find>pizz</find>
+      <find>text</find>
+      <find>creat</find>
+      <find>backa</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -173,18 +143,22 @@
         <option value="$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/DetailScreen.js" />
         <option value="$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/SplashPage.js" />
         <option value="$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/HomePage.js" />
-        <option value="$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/CreateAccountPage.js" />
-        <option value="$PROJECT_DIR$/SEAPHAGES_App_RN/app/config/routes.js" />
-        <option value="$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/SignInPage.js" />
-        <option value="$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/UserAccountPage.js" />
-        <option value="$PROJECT_DIR$/SEAPHAGES_App_RN/android/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/SEAPHAGES_App_Meteor/imports/api/soilSamples.js" />
-        <option value="$PROJECT_DIR$/SEAPHAGES_App_RN/app/config/settings.js" />
+        <option value="$PROJECT_DIR$/SEAPHAGES_App_RN/app/config/colors.js" />
         <option value="$PROJECT_DIR$/SEAPHAGES_App_RN/app/Components/FloatingButton/index.js" />
         <option value="$PROJECT_DIR$/SEAPHAGES_App_RN/app/Components/FloatingButton/FloatingButton.js" />
         <option value="$PROJECT_DIR$/SEAPHAGES_App_RN/app/Components/FloatingButton/styles.js" />
+        <option value="$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/styles.js" />
         <option value="$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/SampleAddPage.js" />
         <option value="$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/MapPage.js" />
+        <option value="$PROJECT_DIR$/SEAPHAGES_App_RN/app/config/styles.js" />
+        <option value="$PROJECT_DIR$/SEAPHAGES_App_RN/android/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/SEAPHAGES_App_RN/app/config/settings.js" />
+        <option value="$PROJECT_DIR$/SEAPHAGES_App_Meteor/imports/startup/server/accounts.js" />
+        <option value="$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/SignInPage.js" />
+        <option value="$PROJECT_DIR$/SEAPHAGES_App_RN/app/config/routes.js" />
+        <option value="$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/CreateAccountPage.js" />
+        <option value="$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/UserAccountPage.js" />
       </list>
     </option>
   </component>
@@ -201,8 +175,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="4" />
     <option name="y" value="23" />
-    <option name="width" value="1074" />
-    <option name="height" value="877" />
+    <option name="width" value="1100" />
+    <option name="height" value="1057" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -220,6 +194,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -309,19 +284,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="SEAPHAGES_App_RN" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FloatingButton" />
+              <option name="myItemId" value="SEAPHAGES_App_Meteor" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -336,6 +299,40 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="SEAPHAGES_App_Meteor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="imports" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="startup" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SEAPHAGES_App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SEAPHAGES_App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SEAPHAGES_App_Meteor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="imports" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="startup" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -361,9 +358,26 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SEAPHAGES_App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SEAPHAGES_App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SEAPHAGES_App_Meteor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -375,15 +389,16 @@
     <property name="js.meteor.library.was.enabled" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/SEAPHAGES_App_RN/app/config" />
+      <recent name="$PROJECT_DIR$/SEAPHAGES_App_RN/app" />
+      <recent name="$PROJECT_DIR$/SEAPHAGES_App_RN" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/SEAPHAGES_App_Meteor" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens" />
       <recent name="$PROJECT_DIR$/SEAPHAGES_App_RN/app/config" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/SEAPHAGES_App_RN/app" />
-      <recent name="$PROJECT_DIR$/SEAPHAGES_App_RN" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -484,17 +499,23 @@
       <workItem from="1500516673450" duration="431000" />
       <workItem from="1500568163214" duration="1355000" />
       <workItem from="1500575191911" duration="8576000" />
+      <workItem from="1501175707101" duration="10292000" />
+      <workItem from="1501261692318" duration="368000" />
+      <workItem from="1501782519941" duration="1237000" />
+      <workItem from="1501808984811" duration="35000" />
+      <workItem from="1502218250358" duration="2162000" />
+      <workItem from="1502227217779" duration="10813000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45430000" />
+    <option name="totallyTimeSpent" value="70337000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="4" y="23" width="1074" height="877" extended-state="0" />
+    <frame x="4" y="23" width="1100" height="1057" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21557455" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21037999" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -512,6 +533,25 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25082874" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
@@ -521,33 +561,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/CreateAccountPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="7" column="15" lean-forward="false" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/SignInPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="41" column="24" lean-forward="false" selection-start-line="15" selection-start-column="12" selection-end-line="41" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/SampleAddPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="42" column="10" lean-forward="false" selection-start-line="42" selection-start-column="10" selection-end-line="42" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -566,7 +584,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="18" column="31" lean-forward="true" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -574,7 +591,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="870">
           <caret line="63" column="9" lean-forward="false" selection-start-line="63" selection-start-column="9" selection-end-line="71" selection-end-column="25" />
-          <folding />
+          <folding>
+            <element signature="e#44#85#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -582,7 +601,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -591,7 +609,7 @@
         <state relative-caret-position="1635">
           <caret line="125" column="10" lean-forward="true" selection-start-line="125" selection-start-column="10" selection-end-line="125" selection-end-column="10" />
           <folding>
-            <element signature="e#26#76#0" expanded="true" />
+            <element signature="e#26#76#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -607,7 +625,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="18" column="31" lean-forward="false" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -616,7 +633,7 @@
         <state relative-caret-position="1035">
           <caret line="85" column="30" lean-forward="false" selection-start-line="85" selection-start-column="30" selection-end-line="85" selection-end-column="30" />
           <folding>
-            <element signature="e#26#76#0" expanded="true" />
+            <element signature="e#26#76#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -639,7 +656,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="2" lean-forward="false" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -675,7 +691,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="18" column="31" lean-forward="false" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -684,7 +699,7 @@
         <state relative-caret-position="1035">
           <caret line="85" column="30" lean-forward="false" selection-start-line="85" selection-start-column="30" selection-end-line="85" selection-end-column="30" />
           <folding>
-            <element signature="e#26#76#0" expanded="true" />
+            <element signature="e#26#76#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -707,7 +722,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -802,10 +816,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/index.js">
+    <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_Meteor/imports/api/soilSamples.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="7" lean-forward="false" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
+        <state relative-caret-position="240">
+          <caret line="18" column="31" lean-forward="false" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/Components/FloatingButton/FloatingButton.js" />
+    <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/Components/FloatingButton/index.js" />
+    <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/Components/FloatingButton/styles.js" />
+    <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/config/styles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="42" column="6" lean-forward="false" selection-start-line="42" selection-start-column="6" selection-end-line="42" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/android/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/config/colors.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="15" column="2" lean-forward="false" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#42#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_Meteor/imports/startup/server/accounts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/config/settings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="23" lean-forward="false" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -817,86 +876,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/CreateAccountPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="7" column="15" lean-forward="false" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/UserAccountPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="56" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/android/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/config/settings.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/Components/FloatingButton/styles.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/Components/FloatingButton/FloatingButton.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/Components/FloatingButton/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_Meteor/imports/api/soilSamples.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="18" column="31" lean-forward="false" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/config/routes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-529">
-          <caret line="2" column="7" lean-forward="false" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+        <state relative-caret-position="1770">
+          <caret line="118" column="0" lean-forward="false" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
           <folding>
             <element signature="e#35#61#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/MapPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="521">
+          <caret line="104" column="23" lean-forward="false" selection-start-line="102" selection-start-column="31" selection-end-line="104" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="7" lean-forward="false" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
+          <folding>
+            <element signature="e#36#75#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/CreateAccountPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="57" column="66" lean-forward="false" selection-start-line="57" selection-start-column="66" selection-end-line="57" selection-end-column="66" />
+          <folding>
+            <element signature="e#44#85#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/SignInPage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-184">
-          <caret line="10" column="110" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="110" />
+        <state relative-caret-position="270">
+          <caret line="20" column="63" lean-forward="false" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="63" />
           <folding>
             <element signature="e#44#85#0" expanded="true" />
           </folding>
@@ -905,18 +926,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/SampleAddPage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="91" column="26" lean-forward="true" selection-start-line="91" selection-start-column="26" selection-end-line="91" selection-end-column="26" />
+        <state relative-caret-position="446">
+          <caret line="95" column="93" lean-forward="false" selection-start-line="95" selection-start-column="93" selection-end-line="95" selection-end-column="93" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/MapPage.js">
+    <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/UserAccountPage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="122" column="28" lean-forward="false" selection-start-line="122" selection-start-column="28" selection-end-line="122" selection-end-column="28" />
+        <state relative-caret-position="690">
+          <caret line="48" column="72" lean-forward="false" selection-start-line="48" selection-start-column="72" selection-end-line="48" selection-end-column="72" />
           <folding>
-            <element signature="e#26#76#0" expanded="true" />
+            <element signature="e#45#86#0" expanded="true" />
           </folding>
         </state>
       </provider>
