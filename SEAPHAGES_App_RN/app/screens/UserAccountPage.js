@@ -7,12 +7,26 @@ import React, { Component } from 'react';
 import {
     StyleSheet,
     Text,
-    View
+    View,
+    Alert,
 } from 'react-native';
 import { Container, Header, Body, Title, Content, Form, Item, Input, Label, Button, Icon } from 'native-base';
 import { Col, Row, Grid } from "react-native-easy-grid";
+import Meteor from 'react-native-meteor';
 
 class UserAccountPage extends Component {
+    alertTest = () => {
+        Alert.alert(
+            'Alert Title',
+            'My Alert Msg',
+            [
+                {text: 'Ask me later', onPress: () => console.log('Ask me later pressed')},
+                {text: 'Cancel', onPress: () => console.log('Cancel Pressed'), style: 'cancel'},
+                {text: 'OK', onPress: () => console.log('OK Pressed')},
+            ],
+            { cancelable: false }
+        )
+    };
     render() {
         return (
             <Container>
@@ -30,7 +44,9 @@ class UserAccountPage extends Component {
                             <Col></Col>
                             <Col></Col>
                             <Col>
-                                <Button icon rounded>
+                                <Button icon
+                                        rounded
+                                        onPress={console.log(this.userID)}>
                                     <Icon name='ios-person-add-outline' />
                                 </Button>
                             </Col>

@@ -7,8 +7,22 @@ import { Container, Header, Body, Title, Content, Form, Item, Input, Label, Butt
 import styles from '../config/styles';
 
 class SignInPage extends Component {
+
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            usernameOrEmail: '',
+            password: '',
+        };
+    }
+
     handleCreateAccountPress = () => {
         this.props.navigation.navigate('createAccountPageCall');
+    };
+
+    handleSignInPress = () => {
+      this.props.navigation.navigate('signedInStackCall');
     };
 
     render() {
@@ -22,18 +36,25 @@ class SignInPage extends Component {
                 <Content>
                     <Form>
                         <Item floatingLabel>
-                            <Label>Username</Label>
-                            <Input />
+                            <Label>Username or Email</Label>
+                            <Input
+                                onChangeText={(usernameOrEmail) => this.setState({ usernameOrEmail })}
+                                value={this.state.usernameOrEmail}/>
                         </Item>
-                        <Item floatingLabel last>
+                        <Item floatingLabel
+                              last>
                             <Label>Password</Label>
-                            <Input />
+                            <Input secureTextEntry={true}
+                                   onChangeText={(password) => this.setState({ password })}
+                                   value={this.state.password}
+                            />
                         </Item>
                     </Form>
                     <Button
                         icon
                         block
-                        style = {styles.buttonBlock}>
+                        style = {styles.buttonBlock}
+                        onPress={() =>  this.handleSignInPress()}>
                         <Icon name='ios-key-outline' />
                         <Text>Sign In</Text>
                     </Button>
@@ -42,7 +63,7 @@ class SignInPage extends Component {
                         block
                         bordered
                         style = {styles.buttonBordered}
-                        onPress={() =>  this.handleCreateAccountPress() + console.log('PRESSED')}>
+                        onPress={() =>  this.handleCreateAccountPress()}>
                         <Icon style = {styles.buttonBorderedText} name='ios-person-add-outline' />
                         <Text style = {styles.buttonBorderedText}>Create an Account</Text>
                     </Button>
