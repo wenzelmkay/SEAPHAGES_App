@@ -29,14 +29,14 @@ export const Tabs = TabNavigator(
             screen: MapPage,
             navigationOptions: {
                 tabBarLabel:'Map',
-                tabBarIcon: <Icon style={[styles.icon, {color: '#ebeeff'}]} name="globe" size={35} />,
+                tabBarIcon: <Icon style={[styles.icon, {color: '#ebeeff'}]} name="pin" size={35} />,
             }
         },
         UserAccountPage: {
             screen: UserAccountPage,
             navigationOptions: {
                 tabBarLabel:'User',
-                tabBarIcon: <Icon style={[styles.icon, {color: '#ebeeff'}]} name="settings" size={35} />,
+                tabBarIcon: <Icon style={[styles.icon, {color: '#ebeeff'}]} name="person" size={35} />,
             }
         },
         SignInPage: {
