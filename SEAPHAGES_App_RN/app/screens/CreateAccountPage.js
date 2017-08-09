@@ -3,7 +3,7 @@
  */
 
 import React, { Component } from 'react';
-import { Container, Header, Body, Title, Content, Form, Item, Input, Label, Button, Icon, Left, Text } from 'native-base';
+import { Container, Header, Body, Title, Content, Form, Item, Input, Label, Button, Icon, Left, Card, Text } from 'native-base';
 import styles from '../config/styles';
 import { NavigationActions } from 'react-navigation';
 
@@ -11,63 +11,52 @@ import { NavigationActions } from 'react-navigation';
 const backAction = NavigationActions.back({key: null});
 
 class CreateAccountPage extends Component {
-    /* if (password (input.password) does not contain >6 letters, a number, and/or a special character) {
-        return
-            <Item error>
-                <Input placeholder='Insufficient Password'/>
-                <Icon name='close-circle' />
-            </Item>
-            }
-        else {
-        return
-            <Item success>
-                <Input placeholder='Sufficient Password'/>
-                <Icon name='checkmark-circle' />
-            </Item>
-                        }
-     */
     render() {
         return (
             <Container>
                 <Header style = {styles.header}>
-                        <Button transparent light
-                                onPress={() => this.props.navigation.dispatch(backAction)}
-                                title='Go back to Sign In Page'>
-                            <Icon name='arrow-back' />
-                        </Button>
+                    <Button transparent light
+                            onPress={() => this.props.navigation.dispatch(backAction)}
+                            title='Go back to Sign In Page'>
+                        <Icon name='arrow-back' />
+                    </Button>
                     <Body>
                     <Title style = {styles.headerTitle}>Create an Account</Title>
                     </Body>
                 </Header>
-                <Content>
-                    <Form>
-                        <Item floatingLabel>
-                            <Label>Full Name</Label>
-                            <Input />
-                        </Item>
-                        <Item floatingLabel>
-                            <Label>Username</Label>
-                            <Input />
-                        </Item>
-                        <Item floatingLabel>
-                            <Label>Email</Label>
-                            <Input />
-                        </Item>
-                        <Item floatingLabel>
-                            <Label>Password</Label>
-                            <Input />
-                        </Item>
-                        <Item floatingLabel last>
-                            <Label>Password (again)</Label>
-                            <Input />
-                        </Item>
-                    </Form>
+                <Content
+                    style = {styles.contentStyle}>
+                    <Card
+                        style={styles.cardStyle}>
+                        <Form>
+                            <Item floatingLabel>
+                                <Label>Full Name</Label>
+                                <Input />
+                            </Item>
+                            <Item floatingLabel>
+                                <Label>Username</Label>
+                                <Input />
+                            </Item>
+                            <Item floatingLabel>
+                                <Label>Email</Label>
+                                <Input />
+                            </Item>
+                            <Item floatingLabel>
+                                <Label>Password</Label>
+                                <Input />
+                            </Item>
+                            <Item floatingLabel last>
+                                <Label>Password (again)</Label>
+                                <Input />
+                            </Item>
+                        </Form>
+                        <Button block
+                                style= {styles.buttonBlock}>
+                            <Icon name='ios-key-outline' />
+                            <Text>Register</Text>
+                        </Button>
+                    </Card>
                 </Content>
-                <Button block
-                        style= {styles.buttonBlock}>
-                    <Icon name='ios-key-outline' />
-                    <Text>Register</Text>
-                </Button>
             </Container>
         );
     }
