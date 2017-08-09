@@ -3,7 +3,7 @@
  */
 
 import React, { Component } from 'react';
-import { Container, Header, Body, Title, Content, Form, Item, Input, Label, Button, Icon, Text } from 'native-base';
+import { Container, Header, Body, Title, Content, Form, Item, Input, Label, Button, Icon, Card, Text } from 'native-base';
 import styles from '../config/styles';
 
 class SignInPage extends Component {
@@ -33,7 +33,10 @@ class SignInPage extends Component {
                     <Title style = {styles.headerTitle}>Sign In</Title>
                     </Body>
                 </Header >
+
                 <Content>
+                    <Card
+                        style={styles.cardStyle}>
                     <Form>
                         <Item floatingLabel>
                             <Label>Username or Email</Label>
@@ -50,6 +53,7 @@ class SignInPage extends Component {
                             />
                         </Item>
                     </Form>
+              
                     <Button
                         icon
                         block
@@ -67,6 +71,7 @@ class SignInPage extends Component {
                         <Icon style = {styles.buttonBorderedText} name='ios-person-add-outline' />
                         <Text style = {styles.buttonBorderedText}>Create an Account</Text>
                     </Button>
+                    </Card>
                 </Content>
             </Container>
         );

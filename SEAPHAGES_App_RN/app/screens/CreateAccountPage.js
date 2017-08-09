@@ -3,8 +3,8 @@
  */
 
 import React, { Component } from 'react';
+import { Container, Header, Body, Title, Content, Form, Item, Input, Label, Button, Icon, Left, Card, Text } from 'native-base';
 import { Alert } from 'react-native';
-import { Container, Header, Body, Title, Content, Form, Item, Input, Label, Button, Icon, Left, Text } from 'native-base';
 import styles from '../config/styles';
 import { NavigationActions, } from 'react-navigation';
 import { Accounts } from 'react-native-meteor';
@@ -77,44 +77,48 @@ class CreateAccountPage extends Component {
                     <Title style = {styles.headerTitle}>Create an Account</Title>
                     </Body>
                 </Header>
+
                 <Content>
-                    <Form>
-                        <Item floatingLabel>
-                            <Label>Full Name</Label>
-                            <Input
-                                onChangeText={(name) => this.setState({ name })}
-                                value={this.state.name}/>
-                        </Item>
-                        <Item floatingLabel>
-                            <Label>Username</Label>
-                            <Input
-                                onChangeText={(username) => this.setState({ username })}
-                                value={this.state.username}/>
-                        </Item>
-                        <Item floatingLabel>
-                            <Label>Email</Label>
-                            <Input
-                                onChangeText={(email) => this.setState({ email })}
-                                value={this.state.email}/>
-                        </Item>
-                        <Item floatingLabel>
-                            <Label>Password</Label>
-                            <Input
-                                secureTextEntry={true}
-                                onChangeText={(password) => this.setState({ password })}
-                                value={this.state.password}
-                            />
-                        </Item>
-                        <Item
-                            floatingLabel
-                            last>
-                            <Label>Confirm Password</Label>
-                            <Input
-                                secureTextEntry={true}
-                                onChangeText={(passwordConfirm) => this.setState({ passwordConfirm })}
-                                value={this.state.passwordConfirm}/>
-                        </Item>
-                    </Form>
+                    <Card
+                        style={styles.cardStyle}>
+                        <Form>
+                            <Item floatingLabel>
+                                <Label>Full Name</Label>
+                                <Input
+                                    onChangeText={(name) => this.setState({ name })}
+                                    value={this.state.name}/>
+                            </Item>
+                            <Item floatingLabel>
+                                <Label>Username</Label>
+                                <Input
+                                    onChangeText={(username) => this.setState({ username })}
+                                    value={this.state.username}/>
+                            </Item>
+                            <Item floatingLabel>
+                                <Label>Email</Label>
+                                <Input
+                                    onChangeText={(email) => this.setState({ email })}
+                                    value={this.state.email}/>
+                            </Item>
+                            <Item floatingLabel>
+                                <Label>Password</Label>
+                                <Input
+                                    secureTextEntry={true}
+                                    onChangeText={(password) => this.setState({ password })}
+                                    value={this.state.password}
+                                />
+                            </Item>
+                            <Item
+                                floatingLabel
+                                last>
+                                <Label>Confirm Password</Label>
+                                <Input
+                                    secureTextEntry={true}
+                                    onChangeText={(passwordConfirm) => this.setState({ passwordConfirm })}
+                                    value={this.state.passwordConfirm}/>
+                            </Item>
+                        </Form>
+                      </Card>
                 </Content>
                 <Button block
                         style= {styles.buttonBlock}

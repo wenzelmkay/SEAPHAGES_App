@@ -50,4 +50,11 @@ export default styles = StyleSheet.create({
     headerTitle: {
         color: colors.textWhite,
     },
+    contentStyle: {
+        padding: 10,
+    },
+    cardStyle: {
+
+    },
+
 });
