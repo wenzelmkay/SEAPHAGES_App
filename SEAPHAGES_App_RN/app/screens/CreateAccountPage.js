@@ -11,6 +11,21 @@ import { NavigationActions } from 'react-navigation';
 const backAction = NavigationActions.back({key: null});
 
 class CreateAccountPage extends Component {
+    /* if (password (input.password) does not contain >6 letters, a number, and/or a special character) {
+        return
+            <Item error>
+                <Input placeholder='Insufficient Password'/>
+                <Icon name='close-circle' />
+            </Item>
+            }
+        else {
+        return
+            <Item success>
+                <Input placeholder='Sufficient Password'/>
+                <Icon name='checkmark-circle' />
+            </Item>
+                        }
+     */
     render() {
         return (
             <Container>
@@ -51,7 +66,7 @@ class CreateAccountPage extends Component {
                 <Button block
                         style= {styles.buttonBlock}>
                     <Icon name='ios-key-outline' />
-                    <Text style = {styles.buttonText}> Register</Text>
+                    <Text>Register</Text>
                 </Button>
             </Container>
         );

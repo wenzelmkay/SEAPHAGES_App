@@ -9,8 +9,8 @@ import styles from '../config/styles';
 
 
 class SignInPage extends Component {
-    NavigatetoCAP = () => {
-        this.props.navigation.navigate('CreateAccountPageCall');
+    handleCreateAccountPress = () => {
+        this.props.navigation.navigate('createAccountPageCall');
     };
 
     render() {
@@ -33,21 +33,20 @@ class SignInPage extends Component {
                         </Item>
                     </Form>
                     <Button
-                            icon
-                            block
-                            style= {styles.buttonBlock}>
+                        icon
+                        block
+                        style = {styles.buttonBlock}>
                         <Icon name='ios-key-outline' />
                         <Text>Sign In</Text>
                     </Button>
                     <Button
-                            icon
-                            block
-                            bordered
-                            onPress={() =>  this.NavigatetoCAP() + console.log('PRESSED')}
-                            title="Go to Create Account Page"
-                            style= {styles.buttonBordered}>
+                        icon
+                        block
+                        bordered
+                        style = {styles.buttonBordered}
+                        onPress={() =>  this.handleCreateAccountPress() + console.log('PRESSED')}>
                         <Icon style = {styles.buttonBorderedText} name='ios-person-add-outline' />
-                        <Text style = {styles.buttonBorderedText}> Create an Account</Text>
+                        <Text style = {styles.buttonBorderedText}>Create an Account</Text>
                     </Button>
                 </Content>
             </Container>

@@ -4,39 +4,51 @@
 
 
 import React, { Component } from 'react';
-import {
-    StyleSheet,
-    Text,
-    View
-} from 'react-native';
-import { Container, Header, Body, Title, Content, Form, Item, Input, Label, Button, Icon } from 'native-base';
-import { Col, Row, Grid } from "react-native-easy-grid";
+import Image from 'react-native';
+import { Container, Header, Body, Title, Content, Form, Item, Input, Label, Button, Icon, Card, CardItem, Text } from 'native-base';
+import { NavigationActions } from 'react-navigation';
+import styles from '../config/styles';
+
+const backAction = NavigationActions.back({key: null});
 
 class UserAccountPage extends Component {
     render() {
         return (
             <Container>
-                <Header>
+                <Header style = {styles.header}>
+                    <Button transparent light
+                            onPress={() => this.props.navigation.dispatch(backAction)}
+                            title='Go Back'>
+                        <Icon name='arrow-back' />
+                    </Button>
                     <Body>
-                    <Title>Account Settings</Title>
+                        <Title style = {styles.headerTitle}>Account Settings</Title>
                     </Body>
                 </Header>
                 <Content>
-                    <Grid>
-                        <Row style={{ height: 500 }}>
-                        </Row>
-                        <Row>
-                            <Col></Col>
-                            <Col></Col>
-                            <Col></Col>
-                            <Col>
-                                <Button icon rounded>
-                                    <Icon name='ios-person-add-outline' />
-                                </Button>
-                            </Col>
-                        </Row>
-                    </Grid>
+                    <Card>
+                        <CardItem>
+                            <Body>
+                                <Text> Name </Text>
+                                <Text> Username </Text>
+                                <Text> E-mail </Text>
+                            </Body>
+                        </CardItem>
+                    </Card>
+                    <Card>
+                        <CardItem>
+                            <Body>
+                                <Text> Samples </Text>
+                            </Body>
+                        </CardItem>
+                    </Card>
+
                 </Content>
+                    <Button block
+                            style={styles.buttonBlock}
+                            onPress={() => null}>
+                        <Text>Sign Out</Text>
+                    </Button>
             </Container>
 
 
@@ -45,23 +57,5 @@ class UserAccountPage extends Component {
     }
 }
 
-const styles = StyleSheet.create({
-    content: {
-        flex: 1,
-        flexDirection: 'column',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-    },
-    welcome: {
-        fontSize: 20,
-        textAlign: 'center',
-        margin: 10,
-    },
-    instructions: {
-        textAlign: 'center',
-        color: '#333333',
-        marginBottom: 5,
-    },
-});
 
 export default UserAccountPage;

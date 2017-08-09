@@ -22,28 +22,28 @@ export const Tabs = TabNavigator(
             screen: HomePage,
             navigationOptions: {
                 tabBarLabel: 'Home',
-                tabBarIcon: <Icon style={{color: '#ebeeff'}} name="home" size={35}/>,
+                tabBarIcon: <Icon style={[styles.icon, {color: '#ebeeff'}]} name="ios-home" size={35}/>,
             }
         },
         MapPage: {
             screen: MapPage,
             navigationOptions: {
                 tabBarLabel:'Map',
-                tabBarIcon: <Icon style={{color: '#ebeeff'}} name="globe" size={35} />,
+                tabBarIcon: <Icon style={[styles.icon, {color: '#ebeeff'}]} name="ios-pin" size={35} />,
             }
         },
         UserAccountPage: {
             screen: UserAccountPage,
             navigationOptions: {
                 tabBarLabel:'User',
-                tabBarIcon: <Icon style={{color: '#ebeeff'}} name="settings" size={35} />,
+                tabBarIcon: <Icon style={[styles.icon, {color: '#ebeeff'}]} name="ios-person" size={35} />,
             }
         },
         SignInPage: {
             screen: SignInPage,
             navigationOptions: {
                 tabBarLabel:'Sign In',
-                tabBarIcon: <Icon style={{color: '#ebeeff'}} name="person" size={35} />,
+                tabBarIcon: <Icon style={[styles.icon, {color: '#ebeeff'}]} name="ios-pizza" size={35} />,
             }
         },
 
@@ -76,6 +76,7 @@ export const Tabs = TabNavigator(
                 },
             showIcon: true,
             },
+            showIcon: true,
         }
 );
 
@@ -100,6 +101,7 @@ export const SignInStack = StackNavigator({
 });
 
 
+
 export const Root = StackNavigator({
     Tabs: {
         screen: Tabs,
@@ -107,11 +109,11 @@ export const Root = StackNavigator({
     modalCall: {
         screen: SampleAddStack,
     },
-    CreateAccountPageCall: {
+    createAccountPageCall: {
         screen: SignInStack,
     },
 }, {
-    mode: 'modal',
+    mode: 'card',
     headerMode: 'none',
 });
 

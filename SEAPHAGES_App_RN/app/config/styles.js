@@ -39,7 +39,7 @@ export default styles = StyleSheet.create({
         margin: 10,
     },
     buttonFilledText: {
-        color: colors.textWhite
+        color: colors.textWhite,
     },
     buttonBorderedText: {
         color: colors.secondary,
