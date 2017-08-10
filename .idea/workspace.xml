@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bfc9904c-4f6e-45fd-9969-1b20c23c4941" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/CreateAccountPage.js" afterPath="$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/CreateAccountPage.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/SampleAddPage.js" afterPath="$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/SampleAddPage.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/SignInPage.js" afterPath="$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/SignInPage.js" />
-    </list>
+    <list default="true" id="bfc9904c-4f6e-45fd-9969-1b20c23c4941" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -317,12 +312,12 @@
       <workItem from="1502113343382" duration="11508000" />
       <workItem from="1502134915885" duration="1350000" />
       <workItem from="1502221245269" duration="4894000" />
-      <workItem from="1502294235678" duration="5754000" />
+      <workItem from="1502294235678" duration="5809000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109113000" />
+    <option name="totallyTimeSpent" value="109168000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="47" y="30" width="1291" height="776" extended-state="0" />
