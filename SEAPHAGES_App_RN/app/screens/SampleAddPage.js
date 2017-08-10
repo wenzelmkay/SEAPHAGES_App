@@ -74,7 +74,12 @@ class SampleAddPage extends Component {
                         <Title style = {styles.headerTitle}>Add Sample</Title>
                     </Body>
                 </Header>
+<<<<<<< HEAD
                 <Content>
+=======
+                <Content
+                    style = {styles.contentStyle}>
+>>>>>>> wenzelmk/master
                     <Card
                         style={styles.cardStyle}>
                         <Form>
@@ -99,6 +104,7 @@ class SampleAddPage extends Component {
                                 />
                             </Item>
                         </Form>
+<<<<<<< HEAD
 
                         <Button block style={styles.buttonBlock}
                                 onPress = {() => {
@@ -114,6 +120,8 @@ class SampleAddPage extends Component {
                         </Button>
                     </Card>
                 </Content>
+=======
+>>>>>>> wenzelmk/master
 
                 <Button block style={styles.buttonBlock}
                         onPress = {() => {
@@ -127,6 +135,8 @@ class SampleAddPage extends Component {
                     <Text>Submit Sample</Text>
                     <Icon name='checkmark' />
                 </Button>
+                    </Card>
+            </Content>
             </Container>
 
         );

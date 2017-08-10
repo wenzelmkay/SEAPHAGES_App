@@ -9,8 +9,22 @@ import styles from '../config/styles';
 
 
 class SignInPage extends Component {
+
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            usernameOrEmail: '',
+            password: '',
+        };
+    }
+
     handleCreateAccountPress = () => {
         this.props.navigation.navigate('createAccountPageCall');
+    };
+
+    handleSignInPress = () => {
+      this.props.navigation.navigate('signedInStackCall');
     };
 
     render() {
@@ -21,6 +35,7 @@ class SignInPage extends Component {
                     <Title style = {styles.headerTitle}>Sign In</Title>
                     </Body>
                 </Header >
+<<<<<<< HEAD
                 <Content>
                     <Card
                         style={styles.cardStyle}>
@@ -52,6 +67,46 @@ class SignInPage extends Component {
                             <Icon style = {styles.buttonBorderedText} name='ios-person-add-outline' />
                             <Text style = {styles.buttonBorderedText}>Create an Account</Text>
                         </Button>
+=======
+
+                <Content style = {styles.contentStyle}>
+                    <Card
+                        style={styles.cardStyle}>
+                    <Form>
+                        <Item floatingLabel>
+                            <Label>Username or Email</Label>
+                            <Input
+                                onChangeText={(usernameOrEmail) => this.setState({ usernameOrEmail })}
+                                value={this.state.usernameOrEmail}/>
+                        </Item>
+                        <Item floatingLabel
+                              last>
+                            <Label>Password</Label>
+                            <Input secureTextEntry={true}
+                                   onChangeText={(password) => this.setState({ password })}
+                                   value={this.state.password}
+                            />
+                        </Item>
+                    </Form>
+              
+                    <Button
+                        icon
+                        block
+                        style = {styles.buttonBlock}
+                        onPress={() =>  this.handleSignInPress()}>
+                        <Icon name='ios-key-outline' />
+                        <Text>Sign In</Text>
+                    </Button>
+                    <Button
+                        icon
+                        block
+                        bordered
+                        style = {styles.buttonBordered}
+                        onPress={() =>  this.handleCreateAccountPress()}>
+                        <Icon style = {styles.buttonBorderedText} name='ios-person-add-outline' />
+                        <Text style = {styles.buttonBorderedText}>Create an Account</Text>
+                    </Button>
+>>>>>>> wenzelmk/master
                     </Card>
                 </Content>
             </Container>

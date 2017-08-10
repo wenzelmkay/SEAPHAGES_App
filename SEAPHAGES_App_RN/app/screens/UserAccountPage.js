@@ -2,7 +2,6 @@
  * Created by wenzelmk on 7/17/17.
  */
 
-
 import React, { Component } from 'react';
 import Image from 'react-native';
 import { Container, Header, Body, Title, Content, Form, Item, Input, Label, Button, Icon, Card, CardItem, Text } from 'native-base';
@@ -22,33 +21,55 @@ class UserAccountPage extends Component {
                         <Icon name='arrow-back' />
                     </Button>
                     <Body>
+<<<<<<< HEAD
                         <Title style = {styles.headerTitle}>Account Settings</Title>
+=======
+                    <Title style = {styles.headerTitle}>Account Settings</Title>
+>>>>>>> wenzelmk/master
                     </Body>
                 </Header>
                 <Content>
                     <Card>
                         <CardItem>
                             <Body>
+<<<<<<< HEAD
                                 <Text> Name </Text>
                                 <Text> Username </Text>
                                 <Text> E-mail </Text>
+=======
+                            <Text> Name </Text>
+                            <Text> Username </Text>
+                            <Text> E-mail </Text>
+>>>>>>> wenzelmk/master
                             </Body>
                         </CardItem>
                     </Card>
                     <Card>
                         <CardItem>
                             <Body>
+<<<<<<< HEAD
                                 <Text> Samples </Text>
+=======
+                            <Text> Samples </Text>
+>>>>>>> wenzelmk/master
                             </Body>
                         </CardItem>
                     </Card>
 
                 </Content>
+<<<<<<< HEAD
                     <Button block
                             style={styles.buttonBlock}
                             onPress={() => null}>
                         <Text>Sign Out</Text>
                     </Button>
+=======
+                <Button block
+                        style={styles.buttonBlock}
+                        onPress={() => null}>
+                    <Text>Sign Out</Text>
+                </Button>
+>>>>>>> wenzelmk/master
             </Container>
 
 
