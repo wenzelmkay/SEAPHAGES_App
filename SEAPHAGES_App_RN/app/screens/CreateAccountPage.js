@@ -78,7 +78,9 @@ class CreateAccountPage extends Component {
                     </Body>
                 </Header>
 
-                <Content>
+                <Content
+                    style = {styles.contentStyle}
+                >
                     <Card
                         style={styles.cardStyle}>
                         <Form>
