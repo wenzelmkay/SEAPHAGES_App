@@ -5,6 +5,9 @@
 import React, { Component } from 'react';
 import { Container, Header, Body, Title, Content, Form, Item, Input, Label, Button, Icon, Card, Text } from 'native-base';
 import styles from '../config/styles';
+import { Alert } from 'react-native';
+import Meteor, { createContainer } from 'react-native-meteor';
+import { NavigationActions, } from 'react-navigation';
 
 class SignInPage extends Component {
 
@@ -22,7 +25,36 @@ class SignInPage extends Component {
     };
 
     handleSignInPress = () => {
-      this.props.navigation.navigate('signedInStackCall');
+        const { usernameOrEmail, password } = this.state;
+
+        if (usernameOrEmail.length === 0 || password.length ===0) {
+            return (
+                Alert.alert(
+                    'There is a problem!',
+                    'Please make sure you have filled in all fields!',
+                    [
+                        {text: 'Okay!', onPress: () => console.log('OK Pressed')},
+                    ],
+                    { cancelable: false }
+                ))
+        }
+
+        this.setState({ loading: true });
+        return Meteor.loginWithPassword(usernameOrEmail, password, (err) => {
+            this.setState({ loading: false });
+            if (err) {
+                console.log('error', 'Error', err.reason);
+            } else {
+                /*const resetAction = NavigationActions.reset({
+                    index: 0,
+                    actions: [
+                        NavigationActions.navigate({ routeName: 'signedInStackCall' }),
+                    ],
+                });
+                this.props.navigation.dispatch(resetAction);*/
+                this.props.navigation.navigate('signedInStackCall')
+            }
+        });
     };
 
     render() {
@@ -35,8 +67,7 @@ class SignInPage extends Component {
                 </Header >
 
                 <Content style = {styles.contentStyle}>
-                    <Card
-                        style={styles.cardStyle}>
+                    <Card>
                     <Form>
                         <Item floatingLabel>
                             <Label>Username or Email</Label>
