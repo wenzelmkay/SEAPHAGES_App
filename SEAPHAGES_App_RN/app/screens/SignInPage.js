@@ -9,8 +9,6 @@ import { Alert } from 'react-native';
 import Meteor, { createContainer } from 'react-native-meteor';
 import { NavigationActions, } from 'react-navigation';
 
-
-
 class SignInPage extends Component {
 
     constructor(props) {
@@ -104,14 +102,11 @@ class SignInPage extends Component {
                         <Icon style = {styles.buttonBorderedText} name='ios-person-add-outline' />
                         <Text style = {styles.buttonBorderedText}>Create an Account</Text>
                     </Button>
-
                     </Card>
                 </Content>
             </Container>
-
         );
     }
 }
 
 export default SignInPage;
-

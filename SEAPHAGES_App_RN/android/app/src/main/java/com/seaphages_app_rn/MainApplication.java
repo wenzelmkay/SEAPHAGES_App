@@ -3,7 +3,6 @@ package com.seaphages_app_rn;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
-import com.cboy.rn.splashscreen.SplashScreenReactPackage;
 import com.airbnb.android.react.maps.MapsPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.facebook.react.ReactNativeHost;
@@ -26,7 +25,6 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
-            new SplashScreenReactPackage(),
             new MapsPackage(),
             new VectorIconsPackage()
       );
