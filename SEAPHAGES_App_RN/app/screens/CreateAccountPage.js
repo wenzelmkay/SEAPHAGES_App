@@ -4,7 +4,10 @@
 
 import React, { Component } from 'react';
 import { Container, Header, Body, Title, Content, Form, Item, Input, Label, Button, Icon, Left, Card, Text } from 'native-base';
+<<<<<<< HEAD
+=======
 import { Alert } from 'react-native';
+>>>>>>> wenzelmk/master
 import styles from '../config/styles';
 import { NavigationActions, } from 'react-navigation';
 import Meteor, { Accounts, createContainer } from 'react-native-meteor';
@@ -67,24 +70,57 @@ class CreateAccountPage extends Component {
         return (
             <Container>
                 <Header style = {styles.header}>
-                        <Button transparent light
-                                onPress={() => this.props.navigation.dispatch(backAction)}
-                                title='Go back to Sign In Page'>
-                            <Icon name='arrow-back' />
-                        </Button>
+                    <Button transparent light
+                            onPress={() => this.props.navigation.dispatch(backAction)}
+                            title='Go back to Sign In Page'>
+                        <Icon name='arrow-back' />
+                    </Button>
                     <Body>
                     <Title style = {styles.headerTitle}>Create an Account</Title>
                     </Body>
                 </Header>
+<<<<<<< HEAD
+                <Content
+                    style = {styles.contentStyle}>
+=======
 
                 <Content
                     style = {styles.contentStyle}
                 >
+>>>>>>> wenzelmk/master
                     <Card
                         style={styles.cardStyle}>
                         <Form>
                             <Item floatingLabel>
                                 <Label>Full Name</Label>
+<<<<<<< HEAD
+                                <Input />
+                            </Item>
+                            <Item floatingLabel>
+                                <Label>Username</Label>
+                                <Input />
+                            </Item>
+                            <Item floatingLabel>
+                                <Label>Email</Label>
+                                <Input />
+                            </Item>
+                            <Item floatingLabel>
+                                <Label>Password</Label>
+                                <Input />
+                            </Item>
+                            <Item floatingLabel last>
+                                <Label>Password (again)</Label>
+                                <Input />
+                            </Item>
+                        </Form>
+                        <Button block
+                                style= {styles.buttonBlock}>
+                            <Icon name='ios-key-outline' />
+                            <Text>Register</Text>
+                        </Button>
+                    </Card>
+                </Content>
+=======
                                 <Input
                                     onChangeText={(name) => this.setState({ name })}
                                     value={this.state.name}/>
@@ -127,6 +163,7 @@ class CreateAccountPage extends Component {
                     <Icon name='ios-key-outline' />
                     <Text>Create Account</Text>
                 </Button>
+>>>>>>> wenzelmk/master
             </Container>
         );
     }

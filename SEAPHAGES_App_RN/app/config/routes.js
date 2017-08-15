@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-import { TabNavigator, StackNavigator, } from 'react-navigation';
+import { TabNavigator, StackNavigator } from 'react-navigation';
 import { Icon } from 'native-base';
 import HomePage from '../screens/HomePage.js';
 import MapPage from '../screens/MapPage.js';
@@ -50,7 +50,6 @@ export const Tabs = TabNavigator(
             },
             showIcon: true,
         }
-    },
 );
 
 export const SignInStack = StackNavigator({

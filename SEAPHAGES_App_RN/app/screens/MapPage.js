@@ -131,3 +131,4 @@ export default createContainer(() => {
         samples: Meteor.collection('fakeSamples').find(),
     };
 }, MapPage);
+

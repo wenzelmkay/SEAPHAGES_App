@@ -76,8 +76,12 @@ class SampleAddPage extends Component {
                         <Title style = {styles.headerTitle}>Add Sample</Title>
                     </Body>
                 </Header>
+<<<<<<< HEAD
+                <Content>
+=======
                 <Content
                     style = {styles.contentStyle}>
+>>>>>>> wenzelmk/master
                     <Card
                         style={styles.cardStyle}>
                         <Form>
@@ -106,6 +110,24 @@ class SampleAddPage extends Component {
                                 />
                             </Item>
                         </Form>
+<<<<<<< HEAD
+
+                        <Button block style={styles.buttonBlock}
+                                onPress = {() => {
+                                    console.log(this.state.title),
+                                        console.log(this.state.description),
+                                        console.log(this.state.latitude),
+                                        console.log(this.state.longitude)
+                                    this.handleSubmitSamplePress()
+                                }}>
+
+                            <Text>Submit Sample</Text>
+                            <Icon name='checkmark' />
+                        </Button>
+                    </Card>
+                </Content>
+=======
+>>>>>>> wenzelmk/master
 
                 <Button block style={styles.buttonBlock}
                         onPress = {() => {
