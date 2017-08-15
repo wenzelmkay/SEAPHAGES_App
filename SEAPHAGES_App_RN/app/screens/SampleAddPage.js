@@ -7,6 +7,7 @@ import { Container, Header, Body, Title, Content, Form, Item, Input, Label, Butt
 import { goBack, NavigationOptions, NavigationActions } from 'react-navigation';
 import Meteor from 'react-native-meteor';
 import styles from '../config/styles';
+import moment from 'moment';
 
 const backAction = NavigationActions.back({
     key: null
@@ -34,6 +35,7 @@ class SampleAddPage extends Component {
             title: this.state.title,
             latitude: this.state.latitude,
             longitude: this.state.longitude,
+            dateAndTime: new Date(),
             description: this.state.description,
         };
 
@@ -86,6 +88,10 @@ class SampleAddPage extends Component {
                                 />
                             </Item>
                             <Item disabled stackedLabel>
+                                <Label>Date and Time</Label>
+                                <Input disabled placeholder={moment(new Date()).format("MMM Do YYYY, h:mm a")}/>
+                            </Item>
+                            <Item disabled stackedLabel>
                                 <Label>Latitude</Label>
                                 <Input disabled placeholder={String(this.state.latitude)} value={String(this.state.latitude)}/>
                             </Item>
@@ -103,10 +109,6 @@ class SampleAddPage extends Component {
 
                 <Button block style={styles.buttonBlock}
                         onPress = {() => {
-                            console.log(this.state.title),
-                            console.log(this.state.description),
-                            console.log(this.state.latitude),
-                            console.log(this.state.longitude)
                             this.handleSubmitSamplePress()
                         }}>
 

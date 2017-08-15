@@ -53,8 +53,12 @@ export default styles = StyleSheet.create({
     contentStyle: {
         padding: 10,
     },
-    cardStyle: {
-
+    callout:{
+        flex: 1,
+        paddingRight: 10,
+        paddingBottom: 10,
+        marginRight: 10,
+        marginBottom: 10
     },
 
 });
