@@ -9,11 +9,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="meteor-packages-auto-import-browser" level="project" />
     <orderEntry type="library" name="meteor-packages-auto-import-npm" level="project" />
-<<<<<<< HEAD
     <orderEntry type="library" name="meteor-packages-auto-import-browser" level="project" />
-=======
->>>>>>> wenzelmk/master
   </component>
 </module>

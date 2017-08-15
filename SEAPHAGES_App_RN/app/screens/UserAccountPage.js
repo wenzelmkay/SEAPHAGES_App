@@ -7,10 +7,26 @@ import Image from 'react-native';
 import { Container, Header, Body, Title, Content, Form, Item, Input, Label, Button, Icon, Card, CardItem, Text } from 'native-base';
 import { NavigationActions } from 'react-navigation';
 import styles from '../config/styles';
+import Meteor from 'react-native-meteor';
+
+
 
 const backAction = NavigationActions.back({key: null});
 
 class UserAccountPage extends Component {
+
+    handleSignOutPress = () => {
+        Meteor.logout(() => {
+            const resetAction = NavigationActions.reset({
+                index: 0,
+                actions: [
+                    NavigationActions.navigate({ routeName: 'signInStack' }),
+                ],
+            });
+            this.props.navigation.dispatch(resetAction);
+        });
+    };
+
     render() {
         return (
             <Container>
@@ -28,7 +44,7 @@ class UserAccountPage extends Component {
 >>>>>>> wenzelmk/master
                     </Body>
                 </Header>
-                <Content>
+                <Content style = {styles.contentStyle}>
                     <Card>
                         <CardItem>
                             <Body>
@@ -66,7 +82,7 @@ class UserAccountPage extends Component {
 =======
                 <Button block
                         style={styles.buttonBlock}
-                        onPress={() => null}>
+                        onPress={this.handleSignOutPress}>
                     <Text>Sign Out</Text>
                 </Button>
 >>>>>>> wenzelmk/master

@@ -13,6 +13,45 @@ import CreateAccountPage from '../screens/CreateAccountPage.js';
 import colors from '../config/colors';
 
 
+export const Tabs = TabNavigator(
+    {
+        HomePage: {
+            screen: HomePage,
+            navigationOptions: {
+                tabBarLabel: 'Home',
+                tabBarIcon: <Icon style={[styles.icon, {color: '#ebeeff'}]} name="ios-home" />,
+            }
+        },
+        MapPage: {
+            screen: MapPage,
+            navigationOptions: {
+                tabBarLabel:'Map',
+                tabBarIcon: <Icon style={[styles.icon, {color: '#ebeeff'}]} name="ios-pin" />,
+            }
+        },
+        UserAccountPage: {
+            screen: UserAccountPage,
+            navigationOptions: {
+                tabBarLabel:'User',
+                tabBarIcon: <Icon style={[styles.icon, {color: '#ebeeff'}]} name="ios-person" />,
+            }
+        },
+        },
+
+    {
+        tabBarPosition: 'bottom',
+        tabBarOptions: {
+            activeTintColor: colors.textWhite,
+            inactiveTintColor: colors.textLight,
+            activeBackgroundColor: colors.darkPrimary,
+            style: {
+                backgroundColor: colors.primary,
+                height: 65,
+            },
+            showIcon: true,
+        }
+);
+
 export const SignInStack = StackNavigator({
     SignIn: {
         screen: SignInPage,
@@ -26,71 +65,16 @@ export const SignInStack = StackNavigator({
             title: "Sign Up"
         }
     },
-    }, {
-        headerMode: 'none',
-    });
-
-
-export const Tabs = TabNavigator(
-    {
-        HomePage: {
-            screen: HomePage,
-            navigationOptions: {
-                tabBarLabel: 'Home',
-                tabBarIcon: <Icon style={[styles.icon, {color: '#ebeeff'}]} name="ios-home" size={35}/>,
-            }
-        },
-        MapPage: {
-            screen: MapPage,
-            navigationOptions: {
-                tabBarLabel:'Map',
-<<<<<<< HEAD
-                tabBarIcon: <Icon style={[styles.icon, {color: '#ebeeff'}]} name="ios-pin" size={35} />,
-=======
-                tabBarIcon: <Icon style={[styles.icon, {color: '#ebeeff'}]} name="pin" size={35} />,
->>>>>>> wenzelmk/master
-            }
-        },
-        UserAccountPage: {
-            screen: UserAccountPage,
-            navigationOptions: {
-                tabBarLabel:'User',
-<<<<<<< HEAD
-                tabBarIcon: <Icon style={[styles.icon, {color: '#ebeeff'}]} name="ios-person" size={35} />,
-            }
-        },
-        SignInPage: {
-            screen: SignInPage,
-            navigationOptions: {
-                tabBarLabel:'Sign In',
-                tabBarIcon: <Icon style={[styles.icon, {color: '#ebeeff'}]} name="ios-pizza" size={35} />,
-=======
-                tabBarIcon: <Icon style={[styles.icon, {color: '#ebeeff'}]} name="person" size={35} />,
->>>>>>> wenzelmk/master
-            }
-        },
-        },
-    {
-        tabBarPosition: 'bottom',
-        tabBarOptions: {
-            activeTintColor: colors.textWhite,
-            inactiveTintColor: colors.textLight,
-            activeBackgroundColor: colors.darkPrimary,
-            style: {
-                backgroundColor: colors.primary,
-                height: 60,
-                //paddingTopWidth: 10,
-                //padding: 10,
-                },
-            showIcon: true,
-            },
-            showIcon: true,
-        }
-);
+}, {
+    headerMode: 'none',
+});
 
 export const SignedInStack = StackNavigator({
     Tabs: {
         screen: Tabs,
+    },
+    signInStack: {
+        screen: SignInStack,
     },
 }, {
     headerMode: 'none',
@@ -114,20 +98,8 @@ export const Root = StackNavigator({
     createAccountPageCall: {
         screen: CreateAccountPage,
     },
-<<<<<<< HEAD
-}, {
-    headerMode: 'none',
-});
-
-
-
-export const Root = StackNavigator({
-    Tabs: {
-        screen: Tabs,
-=======
     signedInStackCall:{
       screen: SignedInStack,
->>>>>>> wenzelmk/master
     },
     modalCall: {
         screen: SampleAddStack,
