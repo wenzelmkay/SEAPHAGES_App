@@ -17,3 +17,4 @@ Meteor.publish('fakeSamples', () => {
 });
 
 export default ( FakeSamples );
+

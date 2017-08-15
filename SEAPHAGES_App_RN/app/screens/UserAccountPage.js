@@ -2,57 +2,68 @@
  * Created by wenzelmk on 7/17/17.
  */
 
-
 import React, { Component } from 'react';
-import {
-    StyleSheet,
-    Text,
-    View,
-    Alert,
-} from 'react-native';
-import { Container, Header, Body, Title, Content, Form, Item, Input, Label, Button, Icon } from 'native-base';
-import { Col, Row, Grid } from "react-native-easy-grid";
+import Image from 'react-native';
+import { Container, Header, Body, Title, Content, Form, Item, Input, Label, Button, Icon, Card, CardItem, Text } from 'native-base';
+import { NavigationActions } from 'react-navigation';
+import styles from '../config/styles';
 import Meteor from 'react-native-meteor';
 
+
+
+const backAction = NavigationActions.back({key: null});
+
 class UserAccountPage extends Component {
-    alertTest = () => {
-        Alert.alert(
-            'Alert Title',
-            'My Alert Msg',
-            [
-                {text: 'Ask me later', onPress: () => console.log('Ask me later pressed')},
-                {text: 'Cancel', onPress: () => console.log('Cancel Pressed'), style: 'cancel'},
-                {text: 'OK', onPress: () => console.log('OK Pressed')},
-            ],
-            { cancelable: false }
-        )
+
+    handleSignOutPress = () => {
+        Meteor.logout(() => {
+            const resetAction = NavigationActions.reset({
+                index: 0,
+                actions: [
+                    NavigationActions.navigate({ routeName: 'signInStack' }),
+                ],
+            });
+            this.props.navigation.dispatch(resetAction);
+        });
     };
+
     render() {
         return (
             <Container>
-                <Header>
+                <Header style = {styles.header}>
+                    <Button transparent light
+                            onPress={() => this.props.navigation.dispatch(backAction)}
+                            title='Go Back'>
+                        <Icon name='arrow-back' />
+                    </Button>
                     <Body>
-                    <Title>Testing 123!</Title>
+                    <Title style = {styles.headerTitle}>Account Settings</Title>
                     </Body>
                 </Header>
-                <Content>
-                    <Grid>
-                        <Row style={{ height: 500 }}>
-                        </Row>
-                        <Row>
-                            <Col></Col>
-                            <Col></Col>
-                            <Col></Col>
-                            <Col>
-                                <Button icon
-                                        rounded
-                                        onPress={console.log(this.userID)}>
-                                    <Icon name='ios-person-add-outline' />
-                                </Button>
-                            </Col>
-                        </Row>
-                    </Grid>
+                <Content style = {styles.contentStyle}>
+                    <Card>
+                        <CardItem>
+                            <Body>
+                            <Text> Name </Text>
+                            <Text> Username </Text>
+                            <Text> E-mail </Text>
+                            </Body>
+                        </CardItem>
+                    </Card>
+                    <Card>
+                        <CardItem>
+                            <Body>
+                            <Text> Samples </Text>
+                            </Body>
+                        </CardItem>
+                    </Card>
+
                 </Content>
+                <Button block
+                        style={styles.buttonBlock}
+                        onPress={this.handleSignOutPress}>
+                    <Text>Sign Out</Text>
+                </Button>
             </Container>
 
 
@@ -61,23 +72,5 @@ class UserAccountPage extends Component {
     }
 }
 
-const styles = StyleSheet.create({
-    content: {
-        flex: 1,
-        flexDirection: 'column',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-    },
-    welcome: {
-        fontSize: 20,
-        textAlign: 'center',
-        margin: 10,
-    },
-    instructions: {
-        textAlign: 'center',
-        color: '#333333',
-        marginBottom: 5,
-    },
-});
 
 export default UserAccountPage;

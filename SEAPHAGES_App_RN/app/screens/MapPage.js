@@ -16,6 +16,7 @@ const {width, height} = Dimensions.get('window');
 const ASPECT_RATIO = width / height;
 const LATITUDE_DELTA = 0.03;
 const LONGITUDE_DELTA = LATITUDE_DELTA * ASPECT_RATIO;
+import moment from 'moment';
 
 
 class MapPage extends React.Component {
@@ -80,20 +81,28 @@ class MapPage extends React.Component {
                 <MapView
                     //styles.map is very important! it lets the map display!
                     style = {styles.stylesMap}
+                    showsCompass = {true}
                     ref = "map"
                     mapType = {"standard"}
                     region={this.state.currentRegion}
                     onRegionChange={this.onRegionChange}
-                    //displays a dot at user's location
                     showsUserLocation = {true}
-                    showsCompass = {true}>
+                    >
 
                     {samples.map((marker, i) => (
                         <MapView.Marker key={i}
                                         pinColor={"blue"}
                                         coordinate={{latitude: marker.latitude, longitude: marker.longitude}}
-                                        title={marker.title}
-                                        description={marker.description}>
+                                        //title={marker.title}
+                                        //description={marker.description}
+                                        >
+                            <MapView.Callout>
+                                <View style={styles.callout}>
+                                    <Text>{marker.title}</Text>
+                                    <Text>{moment(marker.dateAndTime).format("MMM Do YYYY, h:mm a")}</Text>
+                                    <Text>{marker.description}</Text>
+                                </View>
+                            </MapView.Callout>
                         </MapView.Marker>
                     ))}
 

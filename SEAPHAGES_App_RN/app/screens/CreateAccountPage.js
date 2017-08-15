@@ -7,14 +7,13 @@ import { Container, Header, Body, Title, Content, Form, Item, Input, Label, Butt
 import { Alert } from 'react-native';
 import styles from '../config/styles';
 import { NavigationActions, } from 'react-navigation';
-import { Accounts } from 'react-native-meteor';
+import Meteor, { Accounts, createContainer } from 'react-native-meteor';
 
 
 const backAction = NavigationActions.back({key: null});
 
 const missingInfoAlert = () => {
 };
-
 
 class CreateAccountPage extends Component {
 
@@ -55,7 +54,7 @@ class CreateAccountPage extends Component {
                 const resetAction = NavigationActions.reset({
                     index: 0,
                     actions: [
-                        NavigationActions.navigate({ routeName: 'signInStack' }),
+                        NavigationActions.navigate({ routeName: 'signedInStackCall' }),
                     ],
                 });
                 this.props.navigation.dispatch(resetAction);
@@ -78,7 +77,9 @@ class CreateAccountPage extends Component {
                     </Body>
                 </Header>
 
-                <Content>
+                <Content
+                    style = {styles.contentStyle}
+                >
                     <Card
                         style={styles.cardStyle}>
                         <Form>
@@ -122,9 +123,7 @@ class CreateAccountPage extends Component {
                 </Content>
                 <Button block
                         style= {styles.buttonBlock}
-                        onPress={
-                            this.createAccount
-                        }>
+                        onPress={this.createAccount}>
                     <Icon name='ios-key-outline' />
                     <Text>Create Account</Text>
                 </Button>
