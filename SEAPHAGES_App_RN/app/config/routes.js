@@ -2,69 +2,83 @@
 
 import React from 'react';
 
-import { TabNavigator, StackNavigator } from 'react-navigation';
+import { TabNavigator, StackNavigator, } from 'react-navigation';
 import { Icon } from 'native-base';
-
 import HomePage from '../screens/HomePage.js';
 import MapPage from '../screens/MapPage.js';
 import SampleAddPage from '../screens/SampleAddPage.js';
 import UserAccountPage from '../screens/UserAccountPage.js';
-import DetailScreen from '../screens/DetailScreen.js';
-import SplashPage from '../screens/SplashPage.js';
 import SignInPage from '../screens/SignInPage.js';
 import CreateAccountPage from '../screens/CreateAccountPage.js';
+import colors from '../config/colors';
 
 
-export const Tabs = TabNavigator({
-    HomePage: {
-        screen: HomePage,
-        navigationOptions: {
-            tabBarLabel:'Home',
-            tabBarIcon: <Icon name="pizza" size={35} />,
+export const Tabs = TabNavigator(
+    {
+        HomePage: {
+            screen: HomePage,
+            navigationOptions: {
+                tabBarLabel: 'Home',
+                tabBarIcon: <Icon style={[styles.icon, {color: '#ebeeff'}]} name="ios-home" />,
+            }
+        },
+        MapPage: {
+            screen: MapPage,
+            navigationOptions: {
+                tabBarLabel:'Map',
+                tabBarIcon: <Icon style={[styles.icon, {color: '#ebeeff'}]} name="ios-pin" />,
+            }
+        },
+        UserAccountPage: {
+            screen: UserAccountPage,
+            navigationOptions: {
+                tabBarLabel:'User',
+                tabBarIcon: <Icon style={[styles.icon, {color: '#ebeeff'}]} name="ios-person" />,
+            }
+        },
+        },
+
+    {
+        tabBarPosition: 'bottom',
+        tabBarOptions: {
+            activeTintColor: colors.textWhite,
+            inactiveTintColor: colors.textLight,
+            activeBackgroundColor: colors.darkPrimary,
+            style: {
+                backgroundColor: colors.primary,
+                height: 65,
+            },
+            showIcon: true,
         }
     },
-    MapPage: {
-        screen: MapPage,
-        navigationOptions: {
-            tabBarLabel:'Map',
-            tabBarIcon: <Icon ios="ios-beaker" android="md-pint" size={35} />,
-        }
-    },
-    UserAccountPage: {
-        screen: UserAccountPage,
-        navigationOptions: {
-            tabBarLabel:'User Account',
-            tabBarIcon: <Icon name="pizza" size={35} />,
-        }
-    },
-    /*SignInPage: {
+);
+
+export const SignInStack = StackNavigator({
+    SignIn: {
         screen: SignInPage,
         navigationOptions: {
-            tabBarLabel:'Sign In',
-            tabBarIcon: <Icon name="pizza" size={35} />,
+            title: "Sign In"
         }
-    },*/
-    /*CreateAccountPage: {
+    },
+    SignUp: {
         screen: CreateAccountPage,
         navigationOptions: {
-            tabBarLabel:'Create Account',
-            tabBarIcon: <Icon name="pizza" size={35} />,
+            title: "Sign Up"
         }
-    },*/
-    /*DetailScreen: {
-        screen: DetailScreen,
-        navigationOptions: {
-            tabBarLabel:'Test',
-            tabBarIcon: <Icon ios="ios-happy" android="md-happy" size={35} />,
-        }
-    },*/
-    /*SplashPage: {
-        screen: SplashPage,
-        navigationOptions: {
-            tabBarLabel:'Splash',
-            tabBarIcon: <Icon name="pizza" size={35} />,
-        }
-    },*/
+    },
+}, {
+    headerMode: 'none',
+});
+
+export const SignedInStack = StackNavigator({
+    Tabs: {
+        screen: Tabs,
+    },
+    signInStack: {
+        screen: SignInStack,
+    },
+}, {
+    headerMode: 'none',
 });
 
 export const SampleAddStack = StackNavigator({
@@ -74,19 +88,35 @@ export const SampleAddStack = StackNavigator({
             title: 'Add Sample',
         },
     },
+}, {
+    headerMode: 'none',
 });
 
 export const Root = StackNavigator({
-    Tabs: {
-        screen: Tabs,
+    signInStack: {
+      screen: SignInStack,
     },
-    Settings: {
+    createAccountPageCall: {
+        screen: CreateAccountPage,
+    },
+    signedInStackCall:{
+      screen: SignedInStack,
+    },
+    modalCall: {
         screen: SampleAddStack,
     },
 }, {
-    mode: 'modal',
+    mode: 'card',
     headerMode: 'none',
 });
+
+
+
+
+
+
+
+
 
 
 

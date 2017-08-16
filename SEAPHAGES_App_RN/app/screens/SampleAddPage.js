@@ -3,10 +3,15 @@
  */
 
 import React, { Component } from 'react';
-import { View, TouchableHighlight, Text, TouchableOpacity, TextInput, StyleSheet } from 'react-native';
-import { Container, Content, Form, Item, Input, Label, Button, Icon } from 'native-base';
-import { goBack, NavigationOptions } from 'react-navigation';
+import { Container, Header, Body, Title, Content, Form, Item, Input, Label, Button, Icon, Card, Text } from 'native-base';
+import { goBack, NavigationOptions, NavigationActions } from 'react-navigation';
+import Meteor from 'react-native-meteor';
+import styles from '../config/styles';
+import moment from 'moment';
 
+const backAction = NavigationActions.back({
+    key: null
+    });
 
 class SampleAddPage extends Component {
     //lines establish whether or not the modal window is visible, and write a function to make the modal visible (this is called later on lines 172 & 205
@@ -18,10 +23,30 @@ class SampleAddPage extends Component {
                 latitude: null,
                 longitude: null,
             },
+            //newSample : {},
+        };
+        //console.log(this.state.newSample);
 
+    };
+
+    handleSubmitSamplePress = () => {
+        //put form entries into database
+        const newSample = {
+            title: this.state.title,
+            latitude: this.state.latitude,
+            longitude: this.state.longitude,
+            dateAndTime: new Date(),
+            description: this.state.description,
         };
 
-    }
+        Meteor.call('FakeSamples.addOne', newSample, (err, res) => {
+            console.log('FakeSamples.addOne', err, res);
+        });
+        //close modal
+        this.props.navigation.dispatch(backAction)
+        ;
+    };
+
     componentDidMount() {
         navigator.geolocation.getCurrentPosition(
             (position) => {
@@ -39,89 +64,63 @@ class SampleAddPage extends Component {
 
 
     render() {
-        /*let myLat = value.toString(this.state.latitude);
-        console.log(myLat)*/
-
         return (
             <Container>
-                <Content>
-                    <Form>
-                        <Item floatingLabel>
-                            <Label>Sample Name</Label>
-                            <Input />
-                        </Item>
-                        <Item disabled>
-                            <Label>Latitude</Label>
-                            <Input disabled placeholder={String(this.state.latitude)}/>
-                        </Item>
-                        <Item disabled>
-                            <Label>Longitude</Label>
-                            <Input disabled placeholder={String(this.state.longitude)}/>
-                        </Item>
-                        <Item floatingLabel last>
-                            <Label>Details</Label>
-                            <Input />
-                        </Item>
-                    </Form>
-                </Content>
-                <Button icon rounded
+                <Header style = {styles.header}>
+                    <Button transparent light
+                            onPress={() => this.props.navigation.dispatch(backAction)}
+                            title='Go back to Map Page'>
+                        <Icon name='arrow-back' />
+                    </Button>
+                    <Body>
+                        <Title style = {styles.headerTitle}>Add Sample</Title>
+                    </Body>
+                </Header>
+                <Content
+                    style = {styles.contentStyle}>
+                    <Card
+                        style={styles.cardStyle}>
+                        <Form>
+                            <Item floatingLabel>
+                                <Label>Sample Name</Label>
+                                <Input
+                                    onChangeText={(text) => {this.setState({title: text})}}
+                                />
+                            </Item>
+                            <Item disabled stackedLabel>
+                                <Label>Date and Time</Label>
+                                <Input disabled placeholder={moment(new Date()).format("MMM Do YYYY, h:mm a")}/>
+                            </Item>
+                            <Item disabled stackedLabel>
+                                <Label>Latitude</Label>
+                                <Input disabled placeholder={String(this.state.latitude)} value={String(this.state.latitude)}/>
+                            </Item>
+                            <Item disabled stackedLabel>
+                                <Label>Longitude</Label>
+                                <Input disabled placeholder={String(this.state.longitude)} value={String(this.state.longitude)}/>
+                            </Item>
+                            <Item floatingLabel last>
+                                <Label>Details</Label>
+                                <Input
+                                    onChangeText={(text) => {this.setState({description: text})}}
+                                />
+                            </Item>
+                        </Form>
+
+                <Button block style={styles.buttonBlock}
                         onPress = {() => {
-                            this.handleAddSamplePress()
+                            this.handleSubmitSamplePress()
                         }}>
-                    <Icon name='md-add' />
+
+                    <Text>Submit Sample</Text>
+                    <Icon name='checkmark' />
                 </Button>
+                    </Card>
+            </Content>
             </Container>
+
         );
     }
 };
-
-const styles = StyleSheet.create({
-    container: {
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-        justifyContent: 'flex-end',
-        alignItems: 'center',
-    },
-    map: {
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-    },
-    button:{
-        borderRadius: 10,
-        padding: 10,
-        backgroundColor: '#f7c05b',
-        borderColor: '#515356',
-        borderWidth: 2,
-        margin: 50,
-    },
-    buttonText: {
-        color: '#515356',
-        fontWeight: 'bold',
-        textAlign: 'center',
-    },
-    headerText : {
-        fontSize: 30,
-        color: '#515356',
-        fontWeight: 'bold',
-    },
-    fieldNameText: {
-        fontSize: 20,
-        color: '#515356',
-        paddingTop: 20,
-    },
-    inputText: {
-        fontSize: 15,
-        textDecorationLine: 'underline',
-        color: '#a7abb2',
-
-    },
-});
-
 
 export default SampleAddPage

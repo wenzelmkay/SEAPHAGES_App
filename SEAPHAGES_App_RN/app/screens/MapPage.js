@@ -3,20 +3,12 @@
 import MapView, {Marker} from 'react-native-maps';
 import React, { Component } from 'react';
 import {
-    AppRegistry,
-    StyleSheet,
     View,
     Dimensions,
-    Navigator,
-    TouchableHighlight,
-    Text,
-    Alert,
-    TouchableOpacity,
-    Modal,
-    TextInput,
 } from 'react-native';
-import { Container, Content, Button, Icon,} from 'native-base';
+import { Container, Content, Button, Icon, Header, Body, Title, Form, Item, Input, Label, Text } from 'native-base';
 import Meteor, { createContainer } from 'react-native-meteor';
+import styles from '../config/styles';
 
 
 //const is like a variable but it can not be reassigned
@@ -24,11 +16,12 @@ const {width, height} = Dimensions.get('window');
 const ASPECT_RATIO = width / height;
 const LATITUDE_DELTA = 0.03;
 const LONGITUDE_DELTA = LATITUDE_DELTA * ASPECT_RATIO;
+import moment from 'moment';
 
 
 class MapPage extends React.Component {
-    handleAddSamplePress = () => {
-        this.props.navigation.navigate('Settings');
+    handleOpenModalPress = () => {
+        this.props.navigation.navigate('modalCall');
     };
 
     //set initial properties & states for the whole app
@@ -86,42 +79,44 @@ class MapPage extends React.Component {
     render() {
         const { samples } = this.props;
         return (
-            <View style ={styles.container}>
+            <View style ={styles.containerMap}>
                 <MapView
                     //styles.map is very important! it lets the map display!
-                    style = {styles.map}
+                    style = {styles.stylesMap}
+                    showsCompass = {true}
                     ref = "map"
                     mapType = {"standard"}
                     region={this.state.currentRegion}
                     onRegionChange={this.onRegionChange}
-                    //displays a dot at user's location
-                    //showsUserLocation = {true}
-                    showsCompass = {true}>
+                    showsUserLocation = {true}
+                    >
 
                     {samples.map((marker, i) => (
                         <MapView.Marker key={i}
-                                        pinColor={"orange"}
+                                        pinColor={"blue"}
                                         coordinate={{latitude: marker.latitude, longitude: marker.longitude}}
-                                        title={marker.sampleName}
-                                        description={marker.details}>
-                            <View style={styles.pin}>
-                            </View>
+                                        //title={marker.title}
+                                        //description={marker.description}
+                                        >
+                            <MapView.Callout>
+                                <View style={styles.callout}>
+                                    <Text>{marker.title}</Text>
+                                    <Text>{moment(marker.dateAndTime).format("MMM Do YYYY, h:mm a")}</Text>
+                                    <Text>{marker.description}</Text>
+                                </View>
+                            </MapView.Callout>
                         </MapView.Marker>
                     ))}
 
                 </MapView>
 
-                <Container>
-
-                    <Content>
-                        <Button icon rounded
-                                         onPress = {() => {
-                                             this.handleAddSamplePress()
-                                         }}>
-                            <Icon name='md-add' />
-                        </Button>
-                    </Content>
-                </Container>
+                <Button style={styles.buttonRound}
+                    icon rounded
+                     onPress = {() => {
+                         this.handleOpenModalPress()
+                     }}>
+                    <Icon name='md-add' />
+                </Button>
             </View>
 
         );
@@ -131,47 +126,6 @@ class MapPage extends React.Component {
         navigator.geolocation.clearWatch(this.watchID);
     }
 };
-
-//const is like a variable but it can not be reassigned; Routes assigns a title and index number to each scene in app.
-const styles = StyleSheet.create({
-    container: {
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-        justifyContent: 'flex-end',
-        alignItems: 'center',
-    },
-    map: {
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-    },
-    buttonContainer:{
-        position: 'absolute',
-        bottom:0,
-        left:0,
-    },
-    headerText : {
-        fontSize: 30,
-        color: '#515356',
-        fontWeight: 'bold',
-    },
-    fieldNameText: {
-        fontSize: 20,
-        color: '#515356',
-        paddingTop: 20,
-    },
-    inputText: {
-        fontSize: 15,
-        textDecorationLine: 'underline',
-        color: '#a7abb2',
-
-    },
-});
 
 export default createContainer(() => {
     Meteor.subscribe('fakeSamples');
