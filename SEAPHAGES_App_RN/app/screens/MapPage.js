@@ -101,6 +101,7 @@ class MapPage extends React.Component {
                                     <Text>{marker.title}</Text>
                                     <Text>{moment(marker.dateAndTime).format("MMM Do YYYY, h:mm a")}</Text>
                                     <Text>{marker.description}</Text>
+                                    <Text>{marker.state.name}</Text>
                                 </View>
                             </MapView.Callout>
                         </MapView.Marker>
