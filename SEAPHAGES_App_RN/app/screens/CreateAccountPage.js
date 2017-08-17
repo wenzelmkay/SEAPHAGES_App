@@ -89,7 +89,7 @@ class CreateAccountPage extends Component {
             );
         }
 
-        return Accounts.createUser({ name, username, email, password }, (err) => {
+        return Accounts.createUser({ username, email, password }, (err) => {
             if (err) {
                 console.log("There is a problem!")
             } else {
@@ -99,6 +99,16 @@ class CreateAccountPage extends Component {
                         NavigationActions.navigate({ routeName: 'signedInStackCall' }),
                     ],
                 });
+                return (
+                    Alert.alert(
+                        'Account Creation Successful!',
+                        'Click OK to continue to main page and log in.',
+                        [
+                            {text: 'Okay!', onPress: () => console.log('OK Pressed')},
+                        ],
+                        { cancelable: false }
+                    )
+                ),
                 this.props.navigation.dispatch(backAction);
             }
         });
