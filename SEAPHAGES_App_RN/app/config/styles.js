@@ -60,5 +60,13 @@ export default styles = StyleSheet.create({
         marginRight: 10,
         marginBottom: 10
     },
-
+    cardHeaderText:{
+        color: colors.textDark,
+    },
+    cardPrimaryText:{
+        color: colors.textDark,
+    },
+    cardSecondaryText:{
+        color: colors.textMedium,
+    },
 });

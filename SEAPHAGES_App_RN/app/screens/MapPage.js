@@ -35,10 +35,70 @@ class MapPage extends React.Component {
                 latitudeDelta: LATITUDE_DELTA,
                 longitudeDelta: LONGITUDE_DELTA,
             },
+            pinColor: null,
 
         };
 
     }
+
+    setPinColor() {
+            if (sample.owner === this.props.user._id) {
+            //return("blue")
+                console.log("success" + this.props.samples.owner + this.props.user._id)
+        } else {
+            //return("yellow")
+                console.log("failure" + this.props.samples.owner + this.props.user._id)
+        }
+    }
+
+    renderMarkers = () => {
+        return this.props.samples.map((sample) => (
+            <MapView.Marker key={sample._id}
+                            pinColor={"blue"}
+                            coordinate={{latitude: sample.lat, longitude: sample.lng}}>
+                <MapView.Callout>
+                    <View style={styles.callout}>
+                        <Text>{sample.title}</Text>
+                        <Text>{moment(sample.date).format("MMM Do YYYY, h:mm a")}</Text>
+                        <Text>{sample.description}</Text>
+                    </View>
+                </MapView.Callout>
+            </MapView.Marker>
+        ));
+    };
+
+    gggg = () => {
+        if (this.props.samples.owner === this.props.user._id) {
+            return this.props.samples.map((sample) => (
+                <MapView.Marker key={sample._id}
+                                pinColor={"blue"}
+                                coordinate={{latitude: sample.lat, longitude: sample.lng}}>
+                    <MapView.Callout>
+                        <View style={styles.callout}>
+                            <Text>{sample.title}</Text>
+                            <Text>{moment(sample.date).format("MMM Do YYYY, h:mm a")}</Text>
+                            <Text>{sample.description}</Text>
+                        </View>
+                    </MapView.Callout>
+                </MapView.Marker>
+            ));
+        }
+        else {
+            return this.props.samples.map((sample) => (
+                <MapView.Marker key={sample._id}
+                                pinColor={"yellow"}
+                                coordinate={{latitude: sample.lat, longitude: sample.lng}}>
+                    <MapView.Callout>
+                        <View style={styles.callout}>
+                            <Text>{sample.title}</Text>
+                            <Text>{moment(sample.date).format("MMM Do YYYY, h:mm a")}</Text>
+                            <Text>{sample.description}</Text>
+                        </View>
+                    </MapView.Callout>
+                </MapView.Marker>
+            ));
+        }
+    };
 
     //callback whenever the location changes so that it automatically refreshes.
     //watchID: ?number = null;
@@ -77,7 +137,6 @@ class MapPage extends React.Component {
     }
 // Render tells the app that something is about to be displayed; return says what that is.
     render() {
-        const { samples } = this.props;
         return (
             <View style ={styles.containerMap}>
                 <MapView
@@ -90,24 +149,7 @@ class MapPage extends React.Component {
                     onRegionChange={this.onRegionChange}
                     showsUserLocation = {true}
                     >
-
-                    {samples.map((marker, i) => (
-                        <MapView.Marker key={i}
-                                        pinColor={"blue"}
-                                        coordinate={{latitude: marker.latitude, longitude: marker.longitude}}
-                                        //title={marker.title}
-                                        //description={marker.description}
-                                        >
-                            <MapView.Callout>
-                                <View style={styles.callout}>
-                                    <Text>{marker.title}</Text>
-                                    <Text>{moment(marker.dateAndTime).format("MMM Do YYYY, h:mm a")}</Text>
-                                    <Text>{marker.description}</Text>
-                                </View>
-                            </MapView.Callout>
-                        </MapView.Marker>
-                    ))}
-
+                    {this.renderMarkers()}
                 </MapView>
 
                 <Button style={styles.buttonRound}
@@ -131,6 +173,7 @@ export default createContainer(() => {
     Meteor.subscribe('fakeSamples');
 
     return {
+        user: Meteor.user(),
         samples: Meteor.collection('fakeSamples').find(),
     };
 }, MapPage);
