@@ -33,10 +33,10 @@ class CreateAccountPage extends Component {
         if (email.length === 0 || username.length === 0 || password.length === 0 || password !== passwordConfirm) {
             return (
                 Alert.alert(
-                    'There is a problem!',
-                    'It looks like you are missing some info. Please make sure you have filled all fields!',
+                    'Missing information',
+                    'Username, email, and password are required',
                     [
-                        {text: 'Okay!', onPress: () => console.log('OK Pressed')},
+                        {text: 'OK', onPress: () => console.log('OK Pressed')},
                     ],
                     { cancelable: false }
                 )
@@ -46,10 +46,10 @@ class CreateAccountPage extends Component {
         if (password !== passwordConfirm) {
             return (
                 Alert.alert(
-                    'There is a problem!',
-                    'Your passwords do not match.',
+                    'Password mismatch',
+                    'Your passwords do not match',
                     [
-                        {text: 'Okay!', onPress: () => console.log('OK Pressed')},
+                        {text: 'OK', onPress: () => console.log('OK Pressed')},
                     ],
                     { cancelable: false }
                 )
@@ -60,10 +60,10 @@ class CreateAccountPage extends Component {
         if (emailValidator.test(email) === false) {
             return (
                 Alert.alert(
-                    'There is a problem!',
-                    'Make sure you are using a valid .edu email.',
+                    'Only .edu emails accepted',
+                    'Make sure you are using a valid .edu email',
                     [
-                        {text: 'Okay!', onPress: () => console.log('OK Pressed')},
+                        {text: 'OK', onPress: () => console.log('OK Pressed')},
                     ],
                     { cancelable: false }
                 )
@@ -79,10 +79,10 @@ class CreateAccountPage extends Component {
         if (passwordValidator.test(password) === false) {
             return (
                 Alert.alert(
-                    'There is a problem!',
+                    'Insecure password',
                     'Please make sure that your password contains: 8-20 characters, 1 lowercase, 1 uppercase, 1 digit, and 1 symbol.',
                     [
-                        {text: 'Okay!', onPress: () => console.log('OK Pressed')},
+                        {text: 'OK', onPress: () => console.log('OK Pressed')},
                     ],
                     { cancelable: false }
                 )
@@ -91,7 +91,18 @@ class CreateAccountPage extends Component {
 
         return Accounts.createUser({ username, email, password }, (err) => {
             if (err) {
-                console.log("There is a problem!")
+                console.log("Account creation failed")
+                return (
+                    Alert.alert(
+                        'Account creation failed',
+                        err.reason,
+                        [
+                            {text: 'OK', onPress: () => console.log('OK Pressed')},
+                        ],
+                        { cancelable: false }
+                    )
+                ),
+                this.props.navigation.dispatch(backAction);
             } else {
                 const resetAction = NavigationActions.reset({
                     index: 0,
@@ -101,10 +112,10 @@ class CreateAccountPage extends Component {
                 });
                 return (
                     Alert.alert(
-                        'Account Creation Successful!',
+                        'Account creation successful',
                         'Click OK to continue to main page and log in.',
                         [
-                            {text: 'Okay!', onPress: () => console.log('OK Pressed')},
+                            {text: 'OK', onPress: () => console.log('OK Pressed')},
                         ],
                         { cancelable: false }
                     )
