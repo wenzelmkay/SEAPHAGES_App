@@ -72,15 +72,18 @@ class SignInPage extends Component {
                         <Item floatingLabel>
                             <Label>Username or Email</Label>
                             <Input
+                                autoCapitalize = {'none'}
+                                autoCorrect = {false}
                                 onChangeText={(usernameOrEmail) => this.setState({ usernameOrEmail })}
                                 value={this.state.usernameOrEmail}/>
                         </Item>
                         <Item floatingLabel
                               last>
                             <Label>Password</Label>
-                            <Input secureTextEntry={true}
-                                   onChangeText={(password) => this.setState({ password })}
-                                   value={this.state.password}
+                            <Input
+                                secureTextEntry={true}
+                                onChangeText={(password) => this.setState({ password })}
+                                value={this.state.password}
                             />
                         </Item>
                     </Form>

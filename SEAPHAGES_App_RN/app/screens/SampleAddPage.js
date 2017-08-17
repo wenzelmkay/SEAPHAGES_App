@@ -5,9 +5,11 @@
 import React, { Component } from 'react';
 import { Container, Header, Body, Title, Content, Form, Item, Input, Label, Button, Icon, Card, Text } from 'native-base';
 import { goBack, NavigationOptions, NavigationActions } from 'react-navigation';
-import Meteor from 'react-native-meteor';
+import Meteor, { createContainer } from 'react-native-meteor';
+import { Alert } from 'react-native';
 import styles from '../config/styles';
 import moment from 'moment';
+
 
 const backAction = NavigationActions.back({
     key: null
@@ -23,20 +25,39 @@ class SampleAddPage extends Component {
                 latitude: null,
                 longitude: null,
             },
-            //newSample : {},
+            title: '',
+            lat: '',
+            lng: '',
+            date: '',
+            description: '',
+            owner: '',
         };
-        //console.log(this.state.newSample);
 
     };
 
     handleSubmitSamplePress = () => {
-        //put form entries into database
+
+
+        if (this.state.title.length === 0 || this.state.description.length === 0) {
+            return (
+                Alert.alert(
+                    'There is a problem!',
+                    'It looks like you are missing some info. Please make sure you have filled all fields!',
+                    [
+                        {text: 'Okay!', onPress: () => console.log('OK Pressed')},
+                    ],
+                    { cancelable: false }
+                )
+            );
+        }
+
         const newSample = {
             title: this.state.title,
-            latitude: this.state.latitude,
-            longitude: this.state.longitude,
-            dateAndTime: new Date(),
+            lat: this.state.latitude,
+            lng: this.state.longitude,
+            date: new Date(),
             description: this.state.description,
+            owner: this.props.user._id,
         };
 
         Meteor.call('FakeSamples.addOne', newSample, (err, res) => {
@@ -78,8 +99,7 @@ class SampleAddPage extends Component {
                 </Header>
                 <Content
                     style = {styles.contentStyle}>
-                    <Card
-                        style={styles.cardStyle}>
+                    <Card>
                         <Form>
                             <Item floatingLabel>
                                 <Label>Sample Name</Label>
@@ -123,4 +143,9 @@ class SampleAddPage extends Component {
     }
 };
 
-export default SampleAddPage
+export default createContainer(() => {
+
+    return {
+        user: Meteor.user(),
+    };
+}, SampleAddPage);

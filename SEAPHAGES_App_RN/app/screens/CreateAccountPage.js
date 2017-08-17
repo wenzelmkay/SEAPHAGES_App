@@ -12,8 +12,6 @@ import Meteor, { Accounts, createContainer } from 'react-native-meteor';
 
 const backAction = NavigationActions.back({key: null});
 
-const missingInfoAlert = () => {
-};
 
 class CreateAccountPage extends Component {
 
@@ -21,7 +19,7 @@ class CreateAccountPage extends Component {
         super(props);
 
         this.state = {
-            name: '',
+            //name: '',
             email: '',
             username: '',
             password: '',
@@ -30,9 +28,9 @@ class CreateAccountPage extends Component {
     }
 
     createAccount = () => {
-        const { name, username, email, password, passwordConfirm } = this.state;
+        const { username, email, password, passwordConfirm } = this.state;
 
-        if (name.length === 0 || email.length === 0 || username.length === 0 || password.length === 0 || password !== passwordConfirm) {
+        if (email.length === 0 || username.length === 0 || password.length === 0 || password !== passwordConfirm) {
             return (
                 Alert.alert(
                     'There is a problem!',
@@ -41,9 +39,53 @@ class CreateAccountPage extends Component {
                         {text: 'Okay!', onPress: () => console.log('OK Pressed')},
                     ],
                     { cancelable: false }
-                ),
+                )
+            );
+        }
 
-                console.log({name, username, email, password, passwordConfirm})
+        if (password !== passwordConfirm) {
+            return (
+                Alert.alert(
+                    'There is a problem!',
+                    'Your passwords do not match.',
+                    [
+                        {text: 'Okay!', onPress: () => console.log('OK Pressed')},
+                    ],
+                    { cancelable: false }
+                )
+            );
+        }
+
+        const emailValidator = /(?=.*@)(?=.*edu)/;
+        if (emailValidator.test(email) === false) {
+            return (
+                Alert.alert(
+                    'There is a problem!',
+                    'Make sure you are using a valid .edu email.',
+                    [
+                        {text: 'Okay!', onPress: () => console.log('OK Pressed')},
+                    ],
+                    { cancelable: false }
+                )
+            );
+        }
+
+        const passwordValidator = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{8,20}$/;
+        //regex verifies that password matches:
+        //8-20 characters
+        //1 lowercase, 1 uppercase
+        //1 digit, 1 symbol
+
+        if (passwordValidator.test(password) === false) {
+            return (
+                Alert.alert(
+                    'There is a problem!',
+                    'Please make sure that your password contains: 8-20 characters, 1 lowercase, 1 uppercase, 1 digit, and 1 symbol.',
+                    [
+                        {text: 'Okay!', onPress: () => console.log('OK Pressed')},
+                    ],
+                    { cancelable: false }
+                )
             );
         }
 
@@ -57,7 +99,7 @@ class CreateAccountPage extends Component {
                         NavigationActions.navigate({ routeName: 'signedInStackCall' }),
                     ],
                 });
-                this.props.navigation.dispatch(resetAction);
+                this.props.navigation.dispatch(backAction);
             }
         });
 
@@ -84,25 +126,23 @@ class CreateAccountPage extends Component {
                         style={styles.cardStyle}>
                         <Form>
                             <Item floatingLabel>
-                                <Label>Full Name</Label>
-                                <Input
-                                    onChangeText={(name) => this.setState({ name })}
-                                    value={this.state.name}/>
-                            </Item>
-                            <Item floatingLabel>
                                 <Label>Username</Label>
                                 <Input
+                                    autoCapitalize = {'none'}
+                                    autoCorrect = {false}
                                     onChangeText={(username) => this.setState({ username })}
                                     value={this.state.username}/>
                             </Item>
                             <Item floatingLabel>
-                                <Label>Email</Label>
+                                <Label>Email (please use your '.edu' account)</Label>
                                 <Input
+                                    autoCapitalize = {'none'}
+                                    autoCorrect = {false}
                                     onChangeText={(email) => this.setState({ email })}
                                     value={this.state.email}/>
                             </Item>
                             <Item floatingLabel>
-                                <Label>Password</Label>
+                                <Label>Password (8-20 characters, 1 lowercase, 1 uppercase, 1 digit, 1 symbol)</Label>
                                 <Input
                                     secureTextEntry={true}
                                     onChangeText={(password) => this.setState({ password })}
@@ -135,3 +175,11 @@ class CreateAccountPage extends Component {
 
 
 export default CreateAccountPage;
+
+//removed 'Full Name' input since info is not adding to database currently
+/*<Item floatingLabel>
+    <Label>Full Name</Label>
+    <Input
+        onChangeText={(name) => this.setState({ name })}
+        value={this.state.name}/>
+</Item>*/
