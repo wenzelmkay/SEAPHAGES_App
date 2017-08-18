@@ -593,6 +593,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1011,6 +1012,18 @@
 				660F4AD2FF79461686C9E29A /* Octicons.ttf in Resources */,
 				4735CBA66ADC460A93333C14 /* SimpleLineIcons.ttf in Resources */,
 				EBA508C1C22642E2A4E9ABDC /* Zocial.ttf in Resources */,
+				E8170E0EE809404DBECB5EE9 /* Entypo.ttf in Resources */,
+				A84321BBAECB44178648E524 /* EvilIcons.ttf in Resources */,
+				A9BC4E10763541F3BA3D336F /* FontAwesome.ttf in Resources */,
+				4E61C39ED08A498FB228C20E /* Foundation.ttf in Resources */,
+				8990D0E2D6AC4231B9D03360 /* Ionicons.ttf in Resources */,
+				0043836A08894A7A994897B8 /* MaterialIcons.ttf in Resources */,
+				517B7B922FF64AA8854372D2 /* Octicons.ttf in Resources */,
+				EBC94509763F4AE8A843B6BE /* Roboto_medium.ttf in Resources */,
+				87D70F16F459454A84649CC6 /* Roboto.ttf in Resources */,
+				ADE5A4EA7ACF4A41B56FECDF /* rubicon-icon-font.ttf in Resources */,
+				71D4663244E64044BB46281E /* SimpleLineIcons.ttf in Resources */,
+				A5413944D896490392BDC776 /* Zocial.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
