@@ -3,7 +3,7 @@
  */
 
 import React, { Component } from 'react';
-import { Container, Header, Body, Title, Content, Form, Item, Input, Label, Button, Icon, Left, Card, Text } from 'native-base';
+import { Container, Header, Body, Title, Content, Form, Item, Input, Label, Button, Icon, Left, Card, CardItem, Text } from 'native-base';
 import { Alert } from 'react-native';
 import styles from '../config/styles';
 import { NavigationActions, } from 'react-navigation';
@@ -155,24 +155,39 @@ class CreateAccountPage extends Component {
                                     value={this.state.username}/>
                             </Item>
                             <Item floatingLabel>
-                                <Label>Email (please use your '.edu' account)</Label>
+                                <Label>Email</Label>
                                 <Input
                                     autoCapitalize = {'none'}
                                     autoCorrect = {false}
                                     onChangeText={(email) => this.setState({ email })}
                                     value={this.state.email}/>
                             </Item>
+                        </Form>
+                        <CardItem>
+                            <Text
+                                style = {styles.cardTertiaryText}
+                                small>
+                                (please use your '.edu' account)</Text>
+                        </CardItem>
+                        <Form>
                             <Item floatingLabel>
-                                <Label>Password (8-20 characters, 1 lowercase, 1 uppercase, 1 digit, 1 symbol)</Label>
+                                <Label>Password</Label>
                                 <Input
                                     secureTextEntry={true}
                                     onChangeText={(password) => this.setState({ password })}
                                     value={this.state.password}
                                 />
                             </Item>
+                        </Form>
+                        <CardItem>
+                            <Text
+                                style = {styles.cardTertiaryText}
+                                small>
+                                (8-20 characters, 1 lowercase, 1 uppercase, 1 digit, 1 symbol)</Text>
+                        </CardItem>
+                        <Form>
                             <Item
-                                floatingLabel
-                                last>
+                                floatingLabel>
                                 <Label>Confirm Password</Label>
                                 <Input
                                     secureTextEntry={true}
@@ -180,6 +195,7 @@ class CreateAccountPage extends Component {
                                     value={this.state.passwordConfirm}/>
                             </Item>
                         </Form>
+                        <CardItem></CardItem>
                       </Card>
                 </Content>
                 <Button block

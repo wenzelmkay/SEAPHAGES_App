@@ -3,7 +3,7 @@
  */
 
 import React, { Component } from 'react';
-import { Container, Header, Body, Title, Content, Form, Item, Input, Label, Button, Icon, Card, Text } from 'native-base';
+import { Container, Header, Body, Title, Content, Form, Item, Input, Label, Button, Icon, Card, CardItem, Text } from 'native-base';
 import styles from '../config/styles';
 import { Alert } from 'react-native';
 import Meteor, { createContainer } from 'react-native-meteor';
@@ -43,7 +43,17 @@ class SignInPage extends Component {
         return Meteor.loginWithPassword(usernameOrEmail, password, (err) => {
             this.setState({ loading: false });
             if (err) {
-                console.log('error', 'Error', err.reason);
+                console.log("Sign in failed")
+                return (
+                    Alert.alert(
+                        'Sign in failed',
+                        err.reason,
+                        [
+                            {text: 'OK', onPress: () => console.log('OK Pressed')},
+                        ],
+                        { cancelable: false }
+                    )
+                )
             } else {
                 /*const resetAction = NavigationActions.reset({
                     index: 0,
@@ -77,8 +87,7 @@ class SignInPage extends Component {
                                 onChangeText={(usernameOrEmail) => this.setState({ usernameOrEmail })}
                                 value={this.state.usernameOrEmail}/>
                         </Item>
-                        <Item floatingLabel
-                              last>
+                        <Item floatingLabel>
                             <Label>Password</Label>
                             <Input
                                 secureTextEntry={true}
@@ -87,7 +96,8 @@ class SignInPage extends Component {
                             />
                         </Item>
                     </Form>
-              
+                    <CardItem></CardItem>
+
                     <Button
                         icon
                         block

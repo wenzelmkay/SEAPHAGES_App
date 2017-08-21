@@ -3,7 +3,7 @@
  */
 
 import React, { Component } from 'react';
-import { Container, Header, Body, Title, Content, Form, Item, Input, Label, Button, Icon, Card, Text } from 'native-base';
+import { Container, Header, Body, Title, Content, Form, Item, Input, Label, Button, Icon, Card, CardItem, Text } from 'native-base';
 import { goBack, NavigationOptions, NavigationActions } from 'react-navigation';
 import Meteor, { createContainer } from 'react-native-meteor';
 import { Alert } from 'react-native';
@@ -119,24 +119,23 @@ class SampleAddPage extends Component {
                                 <Label>Longitude</Label>
                                 <Input disabled placeholder={String(this.state.longitude)} value={String(this.state.longitude)}/>
                             </Item>
-                            <Item floatingLabel last>
+                            <Item floatingLabel>
                                 <Label>Details</Label>
                                 <Input
                                     onChangeText={(text) => {this.setState({description: text})}}
                                 />
                             </Item>
                         </Form>
-
-                <Button block style={styles.buttonBlock}
-                        onPress = {() => {
-                            this.handleSubmitSamplePress()
-                        }}>
-
-                    <Text>Submit Sample</Text>
-                    <Icon name='checkmark' />
-                </Button>
+                        <CardItem></CardItem>
                     </Card>
             </Content>
+            <Button block style={styles.buttonBlock}
+                    onPress = {() => {
+                        this.handleSubmitSamplePress()
+                    }}>
+                <Text>Submit Sample</Text>
+                <Icon name='checkmark' />
+            </Button>
             </Container>
 
         );

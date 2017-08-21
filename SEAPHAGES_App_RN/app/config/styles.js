@@ -69,4 +69,11 @@ export default styles = StyleSheet.create({
     cardSecondaryText:{
         color: colors.textMedium,
     },
+    cardTertiaryText:{
+        color: colors.textLight,
+    },
+    extraPadding:{
+        paddingBottom: 10,
+    },
+
 });
