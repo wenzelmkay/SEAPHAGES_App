@@ -60,6 +60,15 @@ export default styles = StyleSheet.create({
         marginRight: 10,
         marginBottom: 10
     },
+    link:{
+      flex: 1,
+      color: colors.link,
+      justifyContent: 'center',
+      paddingRight: 10,
+      paddingTop: 10,
+      marginLeft: 10,
+      marginTop: 10
+    },
     cardHeaderText:{
         color: colors.textDark,
     },
