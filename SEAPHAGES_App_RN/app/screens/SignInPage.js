@@ -3,7 +3,7 @@
  */
 
 import React, { Component } from 'react';
-import { Container, Header, Body, Title, Content, Form, Item, Input, Label, Button, Icon, Card, Text } from 'native-base';
+import { Container, Header, Body, Title, Content, Form, Item, Input, Label, Button, Icon, Card, CardItem, Text } from 'native-base';
 import styles from '../config/styles';
 import { Alert, Linking } from 'react-native';
 import Meteor, { createContainer } from 'react-native-meteor';
@@ -85,8 +85,7 @@ class SignInPage extends Component {
                                 onChangeText={(usernameOrEmail) => this.setState({ usernameOrEmail })}
                                 value={this.state.usernameOrEmail}/>
                         </Item>
-                        <Item floatingLabel
-                              last>
+                        <Item floatingLabel>
                             <Label>Password</Label>
                             <Input
                                 secureTextEntry={true}
