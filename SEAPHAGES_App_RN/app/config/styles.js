@@ -44,6 +44,9 @@ export default styles = StyleSheet.create({
     buttonBorderedText: {
         color: colors.secondary,
     },
+    buttonTransparent: {
+        color: colors.secondary,
+    },
     header: {
         backgroundColor: colors.primary
     },

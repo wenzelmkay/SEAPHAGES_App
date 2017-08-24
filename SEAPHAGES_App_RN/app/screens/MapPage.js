@@ -6,7 +6,7 @@ import {
     View,
     Dimensions,
 } from 'react-native';
-import { Container, Content, Button, Icon, Header, Body, Title, Form, Item, Input, Label, Text } from 'native-base';
+import { Container, Content, Button, Icon, Header, Body, Title, Form, Item, Input, Label, Text, Fab } from 'native-base';
 import Meteor, { createContainer } from 'react-native-meteor';
 import styles from '../config/styles';
 
@@ -41,33 +41,7 @@ class MapPage extends React.Component {
 
     }
 
-    setPinColor() {
-            if (sample.owner === this.props.user._id) {
-            //return("blue")
-                console.log("success" + this.props.samples.owner + this.props.user._id)
-        } else {
-            //return("yellow")
-                console.log("failure" + this.props.samples.owner + this.props.user._id)
-        }
-    }
-
-    renderMarkers = () => {
-        return this.props.samples.map((sample) => (
-            <MapView.Marker key={sample._id}
-                            pinColor={"blue"}
-                            coordinate={{latitude: sample.lat, longitude: sample.lng}}>
-                <MapView.Callout>
-                    <View style={styles.callout}>
-                        <Text>{sample.title}</Text>
-                        <Text>{moment(sample.date).format("MMM Do YYYY, h:mm a")}</Text>
-                        <Text>{sample.description}</Text>
-                    </View>
-                </MapView.Callout>
-            </MapView.Marker>
-        ));
-    };
-
-    gggg = () => {
+    /*colorCoding = () => {
         if (this.props.samples.owner === this.props.user._id) {
             return this.props.samples.map((sample) => (
                 <MapView.Marker key={sample._id}
@@ -99,6 +73,33 @@ class MapPage extends React.Component {
             ));
         }
     };
+
+    setPinColor() {
+            if (sample.owner === this.props.user._id) {
+            //return("blue")
+                console.log("success" + this.props.samples.owner + this.props.user._id)
+        } else {
+            //return("yellow")
+                console.log("failure" + this.props.samples.owner + this.props.user._id)
+        }
+    }*/
+
+    renderMarkers = () => {
+        return this.props.samples.map((sample) => (
+            <MapView.Marker key={sample._id}
+                            pinColor={"blue"}
+                            coordinate={{latitude: sample.lat, longitude: sample.lng}}>
+                <MapView.Callout>
+                    <View style={styles.callout}>
+                        <Text>{sample.title}</Text>
+                        <Text>{moment(sample.date).format("MMM Do YYYY, h:mm a")}</Text>
+                        <Text>{sample.description}</Text>
+                    </View>
+                </MapView.Callout>
+            </MapView.Marker>
+        ));
+    };
+
 
     //callback whenever the location changes so that it automatically refreshes.
     //watchID: ?number = null;
@@ -152,7 +153,7 @@ class MapPage extends React.Component {
                     {this.renderMarkers()}
                 </MapView>
 
-                <Button style={styles.buttonRound}
+                <Button style = {styles.buttonRound}
                     icon rounded
                      onPress = {() => {
                          this.handleOpenModalPress()
@@ -170,10 +171,10 @@ class MapPage extends React.Component {
 };
 
 export default createContainer(() => {
-    Meteor.subscribe('fakeSamples');
+    Meteor.subscribe('samples');
 
     return {
         user: Meteor.user(),
-        samples: Meteor.collection('fakeSamples').find(),
+        samples: Meteor.collection('samples').find(),
     };
 }, MapPage);

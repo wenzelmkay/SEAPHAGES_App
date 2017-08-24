@@ -96,10 +96,10 @@ class UserAccountPage extends Component {
 
 
 export default createContainer(() => {
-    Meteor.subscribe('fakeSamples');
+    Meteor.subscribe('samples');
     return {
         user: Meteor.user(),
-        samples: Meteor.collection('fakeSamples').find({"owner" : Meteor.user()._id}),
+        samples: Meteor.collection('samples').find({"owner" : Meteor.user()._id}),
     };
 }, UserAccountPage);
 

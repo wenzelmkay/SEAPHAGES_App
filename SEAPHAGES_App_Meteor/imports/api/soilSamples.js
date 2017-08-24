@@ -4,17 +4,16 @@
 
 import { Mongo } from 'meteor/mongo';
 
-const FakeSamples = new Mongo.Collection('fakeSamples');
+const Samples = new Mongo.Collection('samples');
 
 Meteor.methods({
-    'FakeSamples.addOne': ( newSample ) => {
-        return FakeSamples.insert( newSample );
+    'Samples.addOne': ( newSample ) => {
+        return Samples.insert( newSample );
     },
 });
 
-Meteor.publish('fakeSamples', () => {
-    return FakeSamples.find();
+Meteor.publish('samples', () => {
+    return Samples.find();
 });
 
-export default ( FakeSamples );
-
+export default ( Samples );

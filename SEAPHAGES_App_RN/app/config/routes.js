@@ -10,6 +10,7 @@ import SampleAddPage from '../screens/SampleAddPage.js';
 import UserAccountPage from '../screens/UserAccountPage.js';
 import SignInPage from '../screens/SignInPage.js';
 import CreateAccountPage from '../screens/CreateAccountPage.js';
+import AcknowledgementScreen from '../screens/AcknowledgementScreen.js';
 import colors from '../config/colors';
 
 
@@ -104,6 +105,9 @@ export const Root = StackNavigator({
     },
     modalCall: {
         screen: SampleAddStack,
+    },
+    acknowledgementCall: {
+        screen: AcknowledgementScreen,
     },
 }, {
     mode: 'card',
