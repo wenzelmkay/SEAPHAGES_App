@@ -120,7 +120,7 @@ class MapPage extends React.Component {
 
             },
  (error) => console.log(new Date(), error),
-                    {enableHighAccuracy: true, timeout: 10000, maximumAge: 3000}
+//                    { enableHighAccuracy: true, timeout: 10000, maximumAge: 3000}
         );
 
         this.watchID = navigator.geolocation.watchPosition((position) => {
