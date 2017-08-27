@@ -7,8 +7,10 @@ import { Container, Header, Body, Title, Content, Form, Item, Input, Label, Butt
 import { goBack, NavigationOptions, NavigationActions } from 'react-navigation';
 import Meteor, { createContainer } from 'react-native-meteor';
 import { Alert } from 'react-native';
-import styles from '../config/styles';
 import moment from 'moment';
+
+import styles from '../config/styles';
+//import weatherCall from '../api/weatherCall.js'
 
 
 const backAction = NavigationActions.back({
@@ -60,13 +62,48 @@ class SampleAddPage extends Component {
             owner: this.props.user._id,
         };
 
-        Meteor.call('FakeSamples.addOne', newSample, (err, res) => {
-            console.log('FakeSamples.addOne', err, res);
+        Meteor.call('Samples.addOne', newSample, (err, res) => {
+
+            if (err) {
+                console.log("Sample Addition Failed")
+                return (
+                    Alert.alert(
+                        'Your sample was not added.',
+                        err.reason,
+                        [
+                            {text: 'OK', onPress: () => console.log('OK Pressed')},
+                        ],
+                        { cancelable: false }
+                    )
+                )
+            } else {
+                    this.props.navigation.dispatch(backAction);
+            }
         });
-        //close modal
-        this.props.navigation.dispatch(backAction)
-        ;
     };
+
+    /*weatherGet() {
+        weatherCall(this.state.lat, this.state.lng).then((response) => {
+            let weatherList = response.list[0]
+
+            // Store nextColor, since we'd like to start next time with it.
+            var current = this.state.nextColor;
+
+            // Reset animation
+            this.state.val.setValue(0);
+
+            this.setState({
+                temperature: weatherList.main.temp,
+                city: weatherList.name,
+                country: weatherList.sys.country,
+                weatherType: weatherList.weather[0].main,
+                currentColor: current,
+                nextColor: this._randomColor(),
+                icon: weatherIcon(weatherList.weather[0].icon)
+            });
+
+        });
+    };*/
 
     componentDidMount() {
         navigator.geolocation.getCurrentPosition(
