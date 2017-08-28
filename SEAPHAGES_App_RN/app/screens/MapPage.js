@@ -6,7 +6,7 @@ import {
     View,
     Dimensions,
 } from 'react-native';
-import { Container, Content, Button, Icon, Header, Body, Title, Form, Item, Input, Label, Text, Fab } from 'native-base';
+import { Container, Content, Button, Fab, Icon, Header, Body, Title, Form, Item, Input, Label, Text } from 'native-base';
 import Meteor, { createContainer } from 'react-native-meteor';
 import styles from '../config/styles';
 
@@ -121,7 +121,7 @@ class MapPage extends React.Component {
 
             },
  (error) => console.log(new Date(), error),
-                    {enableHighAccuracy: true, timeout: 10000, maximumAge: 3000}
+//                    { enableHighAccuracy: true, timeout: 10000, maximumAge: 3000}
         );
 
         this.watchID = navigator.geolocation.watchPosition((position) => {
@@ -153,13 +153,18 @@ class MapPage extends React.Component {
                     {this.renderMarkers()}
                 </MapView>
 
-                <Button style = {styles.buttonRound}
-                    icon rounded
-                     onPress = {() => {
-                         this.handleOpenModalPress()
-                     }}>
-                    <Icon name='md-add' />
-                </Button>
+
+                <Fab
+                        active={this.state.active}
+                        direction="right"
+                        containerStyle={{ marginLeft: 10 }}
+                        style={{ backgroundColor: '#009688' }}
+                        position="bottomRight"
+                        onPress = {() => {
+                            this.handleOpenModalPress()
+                        }}>
+                        <Icon name="md-add" />
+                    </Fab>
             </View>
 
         );

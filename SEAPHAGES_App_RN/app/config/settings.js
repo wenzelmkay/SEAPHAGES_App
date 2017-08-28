@@ -1,6 +1,7 @@
 //Created by wenzelmk on 5/18/17.
 
-let METEOR_URL = 'ws://134.126.106.92:3000/websocket';
+let METEOR_URL = 'ws://phamerator.org:3000/websocket';
+//let METEOR_URL = 'ws://localhost:3000/websocket';
 if (process.env.NODE_ENV === 'production') {
     METEOR_URL = ''; // your production server url
 }
@@ -11,4 +12,3 @@ export const settings = {
 };
 
 export default settings;
-
