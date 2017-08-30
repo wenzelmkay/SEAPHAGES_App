@@ -11,6 +11,7 @@ import UserAccountPage from '../screens/UserAccountPage.js';
 import SignInPage from '../screens/SignInPage.js';
 import CreateAccountPage from '../screens/CreateAccountPage.js';
 import AcknowledgementScreen from '../screens/AcknowledgementScreen.js';
+import PrivacyPolicy from '../screens/PrivacyPolicy.js';
 import colors from '../config/colors';
 
 
@@ -108,6 +109,9 @@ export const Root = StackNavigator({
     },
     acknowledgementCall: {
         screen: AcknowledgementScreen,
+    },
+    privacyPolicyCall: {
+        screen: PrivacyPolicy,
     },
 }, {
     mode: 'card',
