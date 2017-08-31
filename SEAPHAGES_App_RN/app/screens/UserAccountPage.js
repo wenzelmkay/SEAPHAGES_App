@@ -52,13 +52,8 @@ class UserAccountPage extends Component {
         return (
             <Container>
                 <Header style = {styles.header}>
-                    <Button transparent light
-                            onPress={() => this.props.navigation.dispatch(backAction)}
-                            title='Go Back'>
-                        <Icon name='arrow-back' />
-                    </Button>
                     <Body>
-                    <Title style = {styles.headerTitle}>Account Settings</Title>
+                    <Title style = {styles.headerTitle}>User</Title>
                     </Body>
                 </Header>
                 <Content style = {styles.contentStyle}>

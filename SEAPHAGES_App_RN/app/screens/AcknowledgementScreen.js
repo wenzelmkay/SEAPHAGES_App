@@ -19,13 +19,16 @@ class AcknowledgementScreen extends Component {
                         <Icon name='arrow-back' />
                     </Button>
                     <Body>
-                    <Title style = {styles.headerTitle}>Create an Account</Title>
+                    <Title style = {styles.headerTitle}>Meet the Team</Title>
                     </Body>
                 </Header>
                 <Content style = {styles.contentStyle}>
                     <Card>
-                        <CardItem header>
-                            <Text>Coming Soon!</Text>
+                        <CardItem>
+                            <Text style ={{fontSize: 20,}}>The SEA-PHAGES App is developed by the Cresawn lab in James Madison University's Center for Genome and Metagenome Studies. </Text>
+                        </CardItem>
+                        <CardItem>
+                            <Text style ={{fontSize: 18,}}>The coding team includes: Melissa "Mia" Wenzel, Roxana Behrooz, Joseph Colman, Kelly Degnon, Kaleigh Jaeger, Brie Lewis, and Steven Cresawn.</Text>
                         </CardItem>
                     </Card>
 
