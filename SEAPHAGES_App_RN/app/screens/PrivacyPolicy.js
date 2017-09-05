@@ -33,6 +33,9 @@ class PrivacyPolicy extends Component {
                             <Text style={{fontSize: 16}}>Privacy Policy</Text>
                         </CardItem>
                         <CardItem>
+                            <Text style={{fontSize: 14}}>Date of last revision: August 30, 2017</Text>
+                        </CardItem>
+                        <CardItem>
                             <Body><Text>Our Privacy Policy explains what information we collect, how and why we collect it, how we use that information, and with whom we share that information.
                             </Text></Body>
                         </CardItem>
