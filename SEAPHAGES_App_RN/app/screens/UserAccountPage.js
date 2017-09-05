@@ -3,7 +3,7 @@
  */
 
 import React, { Component } from 'react';
-import { Container, Header, Body, Title, Content, Form, Item, Input, Label, Button, Icon, Card, CardItem, Text } from 'native-base';
+import { Container, Header, Body, Title, Content, Form, Item, Input, Label, Button, Icon, Card, CardItem, Right, Text } from 'native-base';
 import { NavigationActions } from 'react-navigation';
 import styles from '../config/styles';
 import Meteor, { createContainer } from 'react-native-meteor';
@@ -25,6 +25,9 @@ class UserAccountPage extends Component {
             });
             this.props.navigation.dispatch(resetAction);
         });
+    };
+    handlePrivacyPolicyPress = () => {
+        this.props.navigation.navigate('privacyPolicyCall');
     };
 
     renderSamples = () => {
@@ -75,7 +78,13 @@ class UserAccountPage extends Component {
                         {this.renderSamples()}
                     </Card>
 
+
                 </Content>
+                <Button
+                    transparent
+                    onPress={() =>  this.handlePrivacyPolicyPress()}>
+                    <Text style={styles.cardPrimaryText}>Privacy Policy</Text>
+                </Button>
                 <Button block
                         style={styles.buttonBlock}
                         onPress={this.handleSignOutPress}>

@@ -33,6 +33,9 @@ class PrivacyPolicy extends Component {
                             <Text style={{fontSize: 16}}>Privacy Policy</Text>
                         </CardItem>
                         <CardItem>
+                            <Text style={{fontSize: 14}}>Date of last revision: August 30, 2017</Text>
+                        </CardItem>
+                        <CardItem>
                             <Body><Text>Our Privacy Policy explains what information we collect, how and why we collect it, how we use that information, and with whom we share that information.
                             </Text></Body>
                         </CardItem>
@@ -73,8 +76,7 @@ class PrivacyPolicy extends Component {
                             <Text style={{fontSize: 16}}>Information we share</Text>
                         </CardItem>
                         <CardItem>
-                            <Body><Text>We do not share personal information with companies, organizations and individuals outside of SEA-PHAGES unless one of the following circumstances applies:{"\n"}{"\n"}
-                                With your consent: {"\n"}{"\n"} We will share personal information with companies, organizations or individuals outside of SEA-PHAGES when we have your consent to do so. We may share non-personally identifiable information publicly. For example, we may share information publicly to show trends about the general use of our services.
+                            <Body><Text>We do not share personal information with companies, organizations and individuals outside of SEA-PHAGES without your consent. We may share non-personally identifiable information publicly. For example, we may share information publicly to show trends about the general use of our services.
                             </Text></Body>
                         </CardItem>
 

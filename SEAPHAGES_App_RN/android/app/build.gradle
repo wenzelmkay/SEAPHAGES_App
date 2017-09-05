@@ -94,7 +94,7 @@ android {
     buildToolsVersion "23.0.1"
 
     defaultConfig {
-        applicationId "org.cresawnlab.seaphages"
+        applicationId "org.cresawnlab.seaphages_app_rn"
         minSdkVersion 16
         targetSdkVersion 22
         versionCode 1
@@ -106,11 +106,11 @@ android {
 
     signingConfigs {
         release {
-            if (project.hasProperty ('SEAPHAGES_APP_RELEASE_STORE_FILE')) {
-                storeFile file(SEAPHAGES_APP_RELEASE_STORE_FILE)
-                storePassword SEAPHAGES_APP_RELEASE_STORE_PASSWORD
-                keyAlias SEAPHAGES_APP_RELEASE_KEY_ALIAS
-                keyPassword SEAPHAGES_APP_RELEASE_KEY_PASSWORD
+            if (project.hasProperty ('SEAPHAGES_RELEASE_STORE_FILE')) {
+                storeFile file(SEAPHAGES_RELEASE_STORE_FILE)
+                storePassword SEAPHAGES_RELEASE_STORE_PASSWORD
+                keyAlias SEAPHAGES_RELEASE_KEY_ALIAS
+                keyPassword SEAPHAGES_RELEASE_KEY_PASSWORD
             }
         }
     }

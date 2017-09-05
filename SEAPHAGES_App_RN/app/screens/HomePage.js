@@ -9,9 +9,7 @@ class HomePage extends Component {
     handleAcknowledgementPress = () => {
         this.props.navigation.navigate('acknowledgementCall');
     };
-    handlePrivacyPolicyPress = () => {
-        this.props.navigation.navigate('privacyPolicyCall');
-    };
+
     render () {
         return (
             <Container>
@@ -29,28 +27,15 @@ class HomePage extends Component {
                     <Text style = {{fontSize: 20, paddingTop: 40, paddingBottom: 40, color: colors.textDark, textAlign: 'center'}}>
                         A mobile tool for in-the-field collection of soil sample data.
                     </Text>
-                    <Card>
-                        <CardItem>
-                            <Button
-                                transparent
-                                onPress={() =>  this.handleAcknowledgementPress()}>
-                                <Text style={styles.cardSecondaryText}>Meet the Team that made the App</Text>
-                            </Button>
-                            <Right>
-                                <Icon name="arrow-forward" />
-                            </Right>
-                        </CardItem>
-                        <CardItem>
-                            <Button
-                                transparent
-                                onPress={() =>  this.handlePrivacyPolicyPress()}>
-                                <Text style={styles.cardSecondaryText}>Read our Privacy Policy</Text>
-                            </Button>
-                            <Right>
-                                <Icon name="arrow-forward" />
-                            </Right>
-                        </CardItem>
-                    </Card>
+
+                    <Button
+                    block
+                    iconLeft
+                    style={styles.buttonBlock}
+                    onPress={() =>  this.handleAcknowledgementPress()}>
+                      <Icon name='people' />
+                        <Text>Meet the team behind the app</Text>
+                      </Button>
                 </Content>
 
             </Container>

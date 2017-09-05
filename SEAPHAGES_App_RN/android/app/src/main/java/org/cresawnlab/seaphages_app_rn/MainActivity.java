@@ -1,4 +1,4 @@
-package org.cresawnlab.seaphages;
+package org.cresawnlab.seaphages_app_rn;
 
 import com.facebook.react.ReactActivity;
 
