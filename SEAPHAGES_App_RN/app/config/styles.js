@@ -13,6 +13,7 @@ export default styles = StyleSheet.create({
         bottom: 0,
         justifyContent: 'flex-end',
     },
+   bgContainer: { flex:1, width: null, height: null },
    stylesMap: {
         position: 'absolute',
         top: 0,
