@@ -19,7 +19,7 @@ const LONGITUDE_DELTA = LATITUDE_DELTA * ASPECT_RATIO;
 import moment from 'moment';
 
 
-class MapPage extends React.Component {
+class MapPage extends Component {
     handleOpenModalPress = () => {
         this.props.navigation.navigate('modalCall');
     };
@@ -85,9 +85,12 @@ class MapPage extends React.Component {
     }*/
 
     renderMarkers = () => {
+          const { samples } = this.props;
+          const { user } = this.props;
+
         return this.props.samples.map((sample) => (
             <MapView.Marker key={sample._id}
-                            pinColor={"blue"}
+                            pinColor={sample.owner === user._id ? "purple" : "yellow"}
                             coordinate={{latitude: sample.lat, longitude: sample.lng}}>
                 <MapView.Callout>
                     <View style={styles.callout}>
@@ -175,7 +178,7 @@ class MapPage extends React.Component {
     }
 };
 
-export default createContainer(() => {
+export default createContainer(params => {
     Meteor.subscribe('samples');
 
     return {
