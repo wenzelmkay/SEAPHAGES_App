@@ -9,7 +9,7 @@ import {
     View
 } from 'react-native';
 
-class SplashPage extends Component {
+class Splash extends Component {
     render() {
         return (
             <View style={styles.container}>
@@ -43,4 +43,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default SplashPage;
+export default Splash;

@@ -1,6 +1,7 @@
 
 //import different pages
 import MapView, {Marker} from 'react-native-maps';
+
 import React, { Component } from 'react';
 import {
     View,
@@ -10,7 +11,6 @@ import { Container, Content, Button, Fab, Icon, Header, Body, Title, Form, Item,
 import Meteor, { createContainer } from 'react-native-meteor';
 import styles from '../config/styles';
 
-
 //const is like a variable but it can not be reassigned
 const {width, height} = Dimensions.get('window');
 const ASPECT_RATIO = width / height;
@@ -18,10 +18,9 @@ const LATITUDE_DELTA = 0.03;
 const LONGITUDE_DELTA = LATITUDE_DELTA * ASPECT_RATIO;
 import moment from 'moment';
 
-
-class MapPage extends Component {
+class Map extends Component {
     handleOpenModalPress = () => {
-        this.props.navigation.navigate('modalCall');
+        this.props.navigation.navigate('SampleAdd');
     };
 
     //set initial properties & states for the whole app
@@ -40,49 +39,6 @@ class MapPage extends Component {
         };
 
     }
-
-    /*colorCoding = () => {
-        if (this.props.samples.owner === this.props.user._id) {
-            return this.props.samples.map((sample) => (
-                <MapView.Marker key={sample._id}
-                                pinColor={"blue"}
-                                coordinate={{latitude: sample.lat, longitude: sample.lng}}>
-                    <MapView.Callout>
-                        <View style={styles.callout}>
-                            <Text>{sample.title}</Text>
-                            <Text>{moment(sample.date).format("MMM Do YYYY, h:mm a")}</Text>
-                            <Text>{sample.description}</Text>
-                        </View>
-                    </MapView.Callout>
-                </MapView.Marker>
-            ));
-        }
-        else {
-            return this.props.samples.map((sample) => (
-                <MapView.Marker key={sample._id}
-                                pinColor={"yellow"}
-                                coordinate={{latitude: sample.lat, longitude: sample.lng}}>
-                    <MapView.Callout>
-                        <View style={styles.callout}>
-                            <Text>{sample.title}</Text>
-                            <Text>{moment(sample.date).format("MMM Do YYYY, h:mm a")}</Text>
-                            <Text>{sample.description}</Text>
-                        </View>
-                    </MapView.Callout>
-                </MapView.Marker>
-            ));
-        }
-    };
-
-    setPinColor() {
-            if (sample.owner === this.props.user._id) {
-            //return("blue")
-                console.log("success" + this.props.samples.owner + this.props.user._id)
-        } else {
-            //return("yellow")
-                console.log("failure" + this.props.samples.owner + this.props.user._id)
-        }
-    }*/
 
     renderMarkers = () => {
           const { samples } = this.props;
@@ -109,6 +65,7 @@ class MapPage extends Component {
 
     //stage in the React Component Lifecycle; called after render() method has been executed; allows for manipulation of the dom
     // lines 104-137: this is where we are extracting geolocation data from the phone
+
     componentDidMount() {
         navigator.geolocation.getCurrentPosition(
             (position) => {
@@ -136,8 +93,6 @@ class MapPage extends Component {
                     longitudeDelta: LONGITUDE_DELTA,
                 }});
         });
-
-
     }
 // Render tells the app that something is about to be displayed; return says what that is.
     render() {
@@ -185,4 +140,4 @@ export default createContainer(params => {
         user: Meteor.user(),
         samples: Meteor.collection('samples').find(),
     };
-}, MapPage);
+}, Map);

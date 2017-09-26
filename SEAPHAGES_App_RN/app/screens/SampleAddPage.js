@@ -17,7 +17,7 @@ const backAction = NavigationActions.back({
     key: null
     });
 
-class SampleAddPage extends Component {
+class SampleAdd extends Component {
     //lines establish whether or not the modal window is visible, and write a function to make the modal visible (this is called later on lines 172 & 205
     constructor(props) {
         super(props);
@@ -184,4 +184,4 @@ export default createContainer(() => {
     return {
         user: Meteor.user(),
     };
-}, SampleAddPage);
+}, SampleAdd);

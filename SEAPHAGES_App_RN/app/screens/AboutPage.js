@@ -5,7 +5,7 @@ import { Button, Header, Title, Body, Content, Card, CardItem, Container, Icon, 
 import styles from '../config/styles';
 import colors from '../config/colors';
 
-class HomePage extends Component {
+class About extends Component {
     handleAcknowledgementPress = () => {
         this.props.navigation.navigate('acknowledgementCall');
     }
@@ -13,18 +13,14 @@ class HomePage extends Component {
     render () {
         return (
             <Container>
-                <Header style = {styles.header}>
-                    <Body>
-                    <Title style = {styles.headerTitle}>Home</Title>
-                    </Body>
-                </Header>
+
                 <Content >
-                <View>
+                <View style={{backgroundColor: 'white', flex: 0.5}}>
                   <Image
                     style={{height: 100}}
                     source={{uri: 'https://seaphages.org/static/images/logos/SEAPHAGES_Logo_270x80.png'}}
+                    resizeMode='contain'
                   />
-                </View>
                     <Text style = {{fontSize: 20, paddingTop: 40, paddingBottom: 40, color: colors.textDark, textAlign: 'center'}}>
                         A mobile tool for in-the-field collection of soil sample data.
                     </Text>
@@ -37,6 +33,8 @@ class HomePage extends Component {
                       <Icon name='people' />
                         <Text>Meet the team behind the app</Text>
                       </Button>
+                      </View>
+
                 </Content>
 
             </Container>
@@ -44,4 +42,4 @@ class HomePage extends Component {
     }
 }
 
-export default HomePage;
+export default About;

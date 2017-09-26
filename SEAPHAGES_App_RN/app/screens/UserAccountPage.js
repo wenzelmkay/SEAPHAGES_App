@@ -13,17 +13,19 @@ import moment from 'moment';
 
 const backAction = NavigationActions.back({key: null});
 
-class UserAccountPage extends Component {
+class UserAccount extends Component {
 
     handleSignOutPress = () => {
         Meteor.logout(() => {
             const resetAction = NavigationActions.reset({
                 index: 0,
                 actions: [
-                    NavigationActions.navigate({ routeName: 'signInStack' }),
+                    //NavigationActions.navigate({ routeName: 'SignInStack' }),
                 ],
             });
-            this.props.navigation.dispatch(resetAction);
+            this.props.navigation.dispatch({ type: 'Navigation/BACK' })
+
+            //this.props.navigation.dispatch(resetAction);
         });
     };
     handlePrivacyPolicyPress = () => {
@@ -56,7 +58,7 @@ class UserAccountPage extends Component {
             <Container>
                 <Header style = {styles.header}>
                     <Body>
-                    <Title style = {styles.headerTitle}>User</Title>
+                    <Title style = {styles.headerTitle}>Profile</Title>
                     </Body>
                 </Header>
                 <Content style = {styles.contentStyle}>
@@ -105,6 +107,6 @@ export default createContainer(() => {
         user: Meteor.user(),
         samples: Meteor.collection('samples').find({"owner" : Meteor.user()._id}),
     };
-}, UserAccountPage);
+}, UserAccount);
 
 //export default UserAccountPage;

@@ -13,8 +13,7 @@ import Meteor, { Accounts, createContainer } from 'react-native-meteor';
 const backAction = NavigationActions.back({key: null});
 
 
-class CreateAccountPage extends Component {
-
+class CreateAccount extends Component {
     constructor(props) {
         super(props);
 
@@ -56,12 +55,12 @@ class CreateAccountPage extends Component {
             );
         }
 
-        const emailValidator = /(?=.*@)(?=.*edu)/;
+        const emailValidator = /(?=.*@)(.*edu|.*org)/;
         if (emailValidator.test(email) === false) {
             return (
                 Alert.alert(
-                    'Only .edu emails accepted',
-                    'Make sure you are using a valid .edu email',
+                    'Only .edu or .org emails accepted',
+                    'Make sure you are using a valid .edu or .org email',
                     [
                         {text: 'OK', onPress: () => console.log('OK Pressed')},
                     ],
@@ -167,7 +166,7 @@ class CreateAccountPage extends Component {
                             <Text
                                 style = {styles.cardTertiaryText}
                                 small>
-                                (please use your '.edu' account)</Text>
+                                (please use your '.edu' or '.org' account)</Text>
                         </CardItem>
                         <Form>
                             <Item floatingLabel>
@@ -211,7 +210,7 @@ class CreateAccountPage extends Component {
 }
 
 
-export default CreateAccountPage;
+export default CreateAccount;
 
 //removed 'Full Name' input since info is not adding to database currently
 /*<Item floatingLabel>

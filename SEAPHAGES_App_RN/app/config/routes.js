@@ -4,42 +4,114 @@ import React from 'react';
 
 import { TabNavigator, StackNavigator, } from 'react-navigation';
 import { Icon } from 'native-base';
-import HomePage from '../screens/HomePage.js';
-import MapPage from '../screens/MapPage.js';
-import SampleAddPage from '../screens/SampleAddPage.js';
-import UserAccountPage from '../screens/UserAccountPage.js';
-import SignInPage from '../screens/SignInPage.js';
-import CreateAccountPage from '../screens/CreateAccountPage.js';
-import AcknowledgementScreen from '../screens/AcknowledgementScreen.js';
+import About from '../screens/AboutPage.js';
+import Map from '../screens/MapPage.js';
+import SampleAdd from '../screens/SampleAddPage.js';
+import UserAccount from '../screens/UserAccountPage.js';
+import SignIn from '../screens/SignInPage.js';
+import CreateAccount from '../screens/CreateAccountPage.js';
+import Acknowledgement from '../screens/AcknowledgementScreen.js';
 import PrivacyPolicy from '../screens/PrivacyPolicy.js';
 import colors from '../config/colors';
 
+export const SignInStack = StackNavigator({
+    SignIn: {
+        screen: SignIn,
+        navigationOptions: {
+            title: "Sign In"
+        }
+    },
+    SignUp: {
+        screen: CreateAccount,
+        navigationOptions: {
+            title: "Sign Up"
+        }
+    },
+    createAccountPageCall: {
+        screen: CreateAccount,
+    },
+}, {
+    headerMode: 'none',
+});
+
+export const AboutStack = StackNavigator({
+  About: {
+    screen: About,
+  },
+  acknowledgementCall: {
+      screen: Acknowledgement,
+      navigationOptions: {
+          title: "Credits"
+      }
+  },
+},
+{
+    headerMode: 'none',
+});
+
+export const SampleAddStack = StackNavigator({
+    SampleAddPage: {
+        screen: SampleAdd,
+        navigationOptions: {
+            title: 'Add Sample',
+        },
+    },
+}, {
+    headerMode: 'none',
+});
+
+export const MapStack = StackNavigator({
+  Map: {
+    screen: Map,
+    navigationOptions: {
+        tabBarLabel: 'Map',
+        tabBarIcon: <Icon style={[styles.icon, {color: '#ebeeff'}]} name="ios-map" />,
+    }
+  },
+  SampleAdd: {
+    screen: SampleAddStack,
+  }
+},
+{
+    headerMode: 'none',
+});
+
+export const UserAccountStack = StackNavigator({
+  UserAccount: {
+    screen: UserAccount
+  },
+  privacyPolicyCall: {
+      screen: PrivacyPolicy,
+  },
+},
+{
+    headerMode: 'none',
+})
 
 export const Tabs = TabNavigator(
     {
-        HomePage: {
-            screen: HomePage,
-            navigationOptions: {
-                tabBarLabel: 'Home',
-                tabBarIcon: <Icon style={[styles.icon, {color: '#ebeeff'}]} name="ios-home" />,
-            }
-        },
         MapPage: {
-            screen: MapPage,
+            screen: MapStack,
             navigationOptions: {
                 tabBarLabel:'Map',
-                tabBarIcon: <Icon style={[styles.icon, {color: '#ebeeff'}]} name="ios-pin" />,
+                tabBarIcon: <Icon style={[styles.icon, {color: '#ebeeff'}]} name="md-pin" />,
             }
         },
         UserAccountPage: {
-            screen: UserAccountPage,
+            screen: UserAccountStack,
             navigationOptions: {
                 tabBarLabel:'User',
-                tabBarIcon: <Icon style={[styles.icon, {color: '#ebeeff'}]} name="ios-person" />,
+                tabBarIcon: <Icon style={[styles.icon, {color: '#ebeeff'}]} name="md-person" />,
             }
         },
+        About: {
+            screen: AboutStack,
+            navigationOptions: {
+                tabBarLabel: 'About',
+                tabBarIcon: <Icon style={[styles.icon, {color: '#ebeeff'}]} name="md-information-circle" />,
+            }
         },
-
+      },
     {
         tabBarPosition: 'bottom',
         tabBarOptions: {
@@ -55,40 +127,9 @@ export const Tabs = TabNavigator(
     },
 );
 
-export const SignInStack = StackNavigator({
-    SignIn: {
-        screen: SignInPage,
-        navigationOptions: {
-            title: "Sign In"
-        }
-    },
-    SignUp: {
-        screen: CreateAccountPage,
-        navigationOptions: {
-            title: "Sign Up"
-        }
-    },
-}, {
-    headerMode: 'none',
-});
-
 export const SignedInStack = StackNavigator({
     Tabs: {
         screen: Tabs,
-    },
-    signInStack: {
-        screen: SignInStack,
-    },
-}, {
-    headerMode: 'none',
-});
-
-export const SampleAddStack = StackNavigator({
-    SampleAddPage: {
-        screen: SampleAddPage,
-        navigationOptions: {
-            title: 'Add Sample',
-        },
     },
 }, {
     headerMode: 'none',
@@ -99,7 +140,7 @@ export const Root = StackNavigator({
       screen: SignInStack,
     },
     createAccountPageCall: {
-        screen: CreateAccountPage,
+        screen: CreateAccount,
     },
     signedInStackCall:{
       screen: SignedInStack,
@@ -108,7 +149,7 @@ export const Root = StackNavigator({
         screen: SampleAddStack,
     },
     acknowledgementCall: {
-        screen: AcknowledgementScreen,
+        screen: Acknowledgement,
     },
     privacyPolicyCall: {
         screen: PrivacyPolicy,
@@ -117,14 +158,3 @@ export const Root = StackNavigator({
     mode: 'card',
     headerMode: 'none',
 });
-
-
-
-
-
-
-
-
-
-
-
