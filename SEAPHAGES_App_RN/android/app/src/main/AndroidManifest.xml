@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="org.cresawnlab.seaphages_app_rn"
-    android:versionCode="1"
-    android:versionName="1.0">
+    android:versionCode="1.1"
+    android:versionName="1.1">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
@@ -30,10 +30,10 @@
         </intent-filter>
       </activity>
       <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
-        <!--use google API key to access google maps-->
-        <meta-data
-                android:name="com.google.android.geo.API_KEY"
-                android:value=":)" />
+      <!--use google API key to access google maps-->
+      <meta-data
+              android:name="com.google.android.geo.API_KEY"
+              android:value="AIzaSyB3iCG2pmwbG1uoCnxVZFq-eDqbLAH-ynI" />
     </application>
 
 </manifest>

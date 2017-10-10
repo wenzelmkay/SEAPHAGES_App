@@ -14,7 +14,7 @@ import styles from '../config/styles';
 //const is like a variable but it can not be reassigned
 const {width, height} = Dimensions.get('window');
 const ASPECT_RATIO = width / height;
-const LATITUDE_DELTA = 0.03;
+const LATITUDE_DELTA = 0.0043;
 const LONGITUDE_DELTA = LATITUDE_DELTA * ASPECT_RATIO;
 import moment from 'moment';
 
@@ -29,20 +29,23 @@ class Map extends Component {
         //set the initial region data for the map
         this.state = {
             region: {
-                latitude: null,
-                longitude: null,
+                latitude: 0,
+                longitude: 0,
                 latitudeDelta: LATITUDE_DELTA,
                 longitudeDelta: LONGITUDE_DELTA,
             },
             pinColor: null,
-
+            active: true,
         };
-
+        this.onRegionChange = this.onRegionChange.bind(this);
     }
 
     renderMarkers = () => {
+          console.log("renderMarkers");
+          /*if (this.state.markersRendered === true) { return }*/
           const { samples } = this.props;
           const { user } = this.props;
+          //this.setState({markersRendered: true})
 
         return this.props.samples.map((sample) => (
             <MapView.Marker key={sample._id}
@@ -66,11 +69,12 @@ class Map extends Component {
     //stage in the React Component Lifecycle; called after render() method has been executed; allows for manipulation of the dom
     // lines 104-137: this is where we are extracting geolocation data from the phone
 
-    componentDidMount() {
+    componentWillMount() {
         navigator.geolocation.getCurrentPosition(
             (position) => {
+                //console.log("getCurrentPosition: ", position);
                 this.setState(
-                    {currentRegion: {
+                    {region: {
                         latitude: position.coords.latitude,
                         longitude: position.coords.longitude,
                         latitudeDelta: LATITUDE_DELTA,
@@ -85,8 +89,9 @@ class Map extends Component {
         );
 
         this.watchID = navigator.geolocation.watchPosition((position) => {
+          //console.log("watchPosition");
             this.setState(
-                {newRegion: {
+                {region: {
                     latitude: position.coords.latitude,
                     longitude: position.coords.longitude,
                     latitudeDelta: LATITUDE_DELTA,
@@ -95,18 +100,45 @@ class Map extends Component {
         });
     }
 // Render tells the app that something is about to be displayed; return says what that is.
+
+onRegionChange(region) {
+  console.log("region change complete");
+  console.log("region:", region);
+  var lat = region.latitude;
+  var lng = region.longitude;
+  this.setState({region})
+  /*this.setState({
+    region: {
+      latitude: lat,
+      longitude: lng,
+      latitudeDelta: LATITUDE_DELTA,
+      longitudeDelta: LONGITUDE_DELTA,
+   }
+ })*/
+}
     render() {
+      if (this.state.region.lat === 0 || this.state.region.lng === 0) {
+        return <Loading />;
+      }
+
         return (
             <View style ={styles.containerMap}>
                 <MapView
                     //styles.map is very important! it lets the map display!
                     style = {styles.stylesMap}
                     showsCompass = {true}
-                    ref = "map"
+                    //ref = "map"
                     mapType = {"standard"}
-                    region={this.state.currentRegion}
+                    //initialRegion={this.state.region}
+                    region={this.state.region}
                     onRegionChange={this.onRegionChange}
+                    //onRegionChangeComplete={this.onRegionChange}
+                    onPress={() => {console.log('triggering onPress')}}
+                    onPanDrag={() => {console.log('triggering onPanDrag')}}
                     showsUserLocation = {true}
+                    followsUserLocation = {false}
+                    showsMyLocationButton = {true}
+                    //scrollEnabled = { false }
                     >
                     {this.renderMarkers()}
                 </MapView>

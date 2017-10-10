@@ -1287,7 +1287,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.cresawnlab.seaphages;
+				PRODUCT_BUNDLE_IDENTIFIER = org.seaphages.signals;
 				PRODUCT_NAME = SEAPHAGES_App_RN;
 				PROVISIONING_PROFILE = "26eae9de-3c17-4177-90ed-a94d71f2b97d";
 				PROVISIONING_PROFILE_SPECIFIER = "match Development org.cresawnlab.seaphages";
@@ -1318,10 +1318,10 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.cresawnlab.seaphages;
+				PRODUCT_BUNDLE_IDENTIFIER = org.seaphages.signals;
 				PRODUCT_NAME = SEAPHAGES_App_RN;
-				PROVISIONING_PROFILE = "e5d80b4e-345e-4cce-97c4-d0d2632062a3";
-				PROVISIONING_PROFILE_SPECIFIER = "match AppStore org.cresawnlab.seaphages";
+				PROVISIONING_PROFILE = "2115f95b-80eb-4697-a3ad-d8927a391cc9";
+				PROVISIONING_PROFILE_SPECIFIER = org.seaphages.signals;
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 			};

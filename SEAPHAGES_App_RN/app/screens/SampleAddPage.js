@@ -43,10 +43,23 @@ class SampleAdd extends Component {
         if (this.state.title.length === 0 || this.state.description.length === 0) {
             return (
                 Alert.alert(
-                    'There is a problem!',
-                    'It looks like you are missing some info. Please make sure you have filled all fields!',
+                    'Error adding sample',
+                    'It looks like you are missing some info. Please make sure you have filled all fields.',
                     [
-                        {text: 'Okay!', onPress: () => console.log('OK Pressed')},
+                        {text: 'OK', onPress: () => console.log('OK Pressed')},
+                    ],
+                    { cancelable: false }
+                )
+            );
+        }
+
+        if (this.state.latitude === 0 || this.state.longitude === 0) {
+            return (
+                Alert.alert(
+                    'Error determining your location',
+                    'Please make sure the app has permission to access your location and try again.',
+                    [
+                        {text: 'OK', onPress: () => console.log('OK Pressed')},
                     ],
                     { cancelable: false }
                 )
