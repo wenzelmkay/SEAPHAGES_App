@@ -14,4 +14,5 @@ export default {
     accent: '#BDBDBD',
     red: '#F44336',
     link: '#0000FF',
+    background: '#F5F2F9',
 };

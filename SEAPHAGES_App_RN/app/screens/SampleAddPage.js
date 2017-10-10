@@ -17,7 +17,7 @@ const backAction = NavigationActions.back({
     key: null
     });
 
-class SampleAddPage extends Component {
+class SampleAdd extends Component {
     //lines establish whether or not the modal window is visible, and write a function to make the modal visible (this is called later on lines 172 & 205
     constructor(props) {
         super(props);
@@ -43,10 +43,23 @@ class SampleAddPage extends Component {
         if (this.state.title.length === 0 || this.state.description.length === 0) {
             return (
                 Alert.alert(
-                    'There is a problem!',
-                    'It looks like you are missing some info. Please make sure you have filled all fields!',
+                    'Error adding sample',
+                    'It looks like you are missing some info. Please make sure you have filled all fields.',
                     [
-                        {text: 'Okay!', onPress: () => console.log('OK Pressed')},
+                        {text: 'OK', onPress: () => console.log('OK Pressed')},
+                    ],
+                    { cancelable: false }
+                )
+            );
+        }
+
+        if (this.state.latitude === 0 || this.state.longitude === 0) {
+            return (
+                Alert.alert(
+                    'Error determining your location',
+                    'Please make sure the app has permission to access your location and try again.',
+                    [
+                        {text: 'OK', onPress: () => console.log('OK Pressed')},
                     ],
                     { cancelable: false }
                 )
@@ -184,4 +197,4 @@ export default createContainer(() => {
     return {
         user: Meteor.user(),
     };
-}, SampleAddPage);
+}, SampleAdd);

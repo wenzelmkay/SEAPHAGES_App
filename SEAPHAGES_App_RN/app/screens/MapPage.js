@@ -1,6 +1,7 @@
 
 //import different pages
 import MapView, {Marker} from 'react-native-maps';
+
 import React, { Component } from 'react';
 import {
     View,
@@ -10,18 +11,16 @@ import { Container, Content, Button, Fab, Icon, Header, Body, Title, Form, Item,
 import Meteor, { createContainer } from 'react-native-meteor';
 import styles from '../config/styles';
 
-
 //const is like a variable but it can not be reassigned
 const {width, height} = Dimensions.get('window');
 const ASPECT_RATIO = width / height;
-const LATITUDE_DELTA = 0.03;
+const LATITUDE_DELTA = 0.0043;
 const LONGITUDE_DELTA = LATITUDE_DELTA * ASPECT_RATIO;
 import moment from 'moment';
 
-
-class MapPage extends React.Component {
+class Map extends Component {
     handleOpenModalPress = () => {
-        this.props.navigation.navigate('modalCall');
+        this.props.navigation.navigate('SampleAdd');
     };
 
     //set initial properties & states for the whole app
@@ -30,64 +29,27 @@ class MapPage extends React.Component {
         //set the initial region data for the map
         this.state = {
             region: {
-                latitude: null,
-                longitude: null,
+                latitude: 0,
+                longitude: 0,
                 latitudeDelta: LATITUDE_DELTA,
                 longitudeDelta: LONGITUDE_DELTA,
             },
             pinColor: null,
-
+            active: true,
         };
-
+        this.onRegionChange = this.onRegionChange.bind(this);
     }
 
-    /*colorCoding = () => {
-        if (this.props.samples.owner === this.props.user._id) {
-            return this.props.samples.map((sample) => (
-                <MapView.Marker key={sample._id}
-                                pinColor={"blue"}
-                                coordinate={{latitude: sample.lat, longitude: sample.lng}}>
-                    <MapView.Callout>
-                        <View style={styles.callout}>
-                            <Text>{sample.title}</Text>
-                            <Text>{moment(sample.date).format("MMM Do YYYY, h:mm a")}</Text>
-                            <Text>{sample.description}</Text>
-                        </View>
-                    </MapView.Callout>
-                </MapView.Marker>
-            ));
-        }
-        else {
-            return this.props.samples.map((sample) => (
-                <MapView.Marker key={sample._id}
-                                pinColor={"yellow"}
-                                coordinate={{latitude: sample.lat, longitude: sample.lng}}>
-                    <MapView.Callout>
-                        <View style={styles.callout}>
-                            <Text>{sample.title}</Text>
-                            <Text>{moment(sample.date).format("MMM Do YYYY, h:mm a")}</Text>
-                            <Text>{sample.description}</Text>
-                        </View>
-                    </MapView.Callout>
-                </MapView.Marker>
-            ));
-        }
-    };
-
-    setPinColor() {
-            if (sample.owner === this.props.user._id) {
-            //return("blue")
-                console.log("success" + this.props.samples.owner + this.props.user._id)
-        } else {
-            //return("yellow")
-                console.log("failure" + this.props.samples.owner + this.props.user._id)
-        }
-    }*/
-
     renderMarkers = () => {
+          console.log("renderMarkers");
+          /*if (this.state.markersRendered === true) { return }*/
+          const { samples } = this.props;
+          const { user } = this.props;
+          //this.setState({markersRendered: true})
+
         return this.props.samples.map((sample) => (
             <MapView.Marker key={sample._id}
-                            pinColor={"blue"}
+                            pinColor={sample.owner === user._id ? "purple" : "yellow"}
                             coordinate={{latitude: sample.lat, longitude: sample.lng}}>
                 <MapView.Callout>
                     <View style={styles.callout}>
@@ -106,11 +68,13 @@ class MapPage extends React.Component {
 
     //stage in the React Component Lifecycle; called after render() method has been executed; allows for manipulation of the dom
     // lines 104-137: this is where we are extracting geolocation data from the phone
-    componentDidMount() {
+
+    componentWillMount() {
         navigator.geolocation.getCurrentPosition(
             (position) => {
+                //console.log("getCurrentPosition: ", position);
                 this.setState(
-                    {currentRegion: {
+                    {region: {
                         latitude: position.coords.latitude,
                         longitude: position.coords.longitude,
                         latitudeDelta: LATITUDE_DELTA,
@@ -125,30 +89,56 @@ class MapPage extends React.Component {
         );
 
         this.watchID = navigator.geolocation.watchPosition((position) => {
+          //console.log("watchPosition");
             this.setState(
-                {newRegion: {
+                {region: {
                     latitude: position.coords.latitude,
                     longitude: position.coords.longitude,
                     latitudeDelta: LATITUDE_DELTA,
                     longitudeDelta: LONGITUDE_DELTA,
                 }});
         });
-
-
     }
 // Render tells the app that something is about to be displayed; return says what that is.
+
+onRegionChange(region) {
+  console.log("region change complete");
+  console.log("region:", region);
+  var lat = region.latitude;
+  var lng = region.longitude;
+  this.setState({region})
+  /*this.setState({
+    region: {
+      latitude: lat,
+      longitude: lng,
+      latitudeDelta: LATITUDE_DELTA,
+      longitudeDelta: LONGITUDE_DELTA,
+   }
+ })*/
+}
     render() {
+      if (this.state.region.lat === 0 || this.state.region.lng === 0) {
+        return <Loading />;
+      }
+
         return (
             <View style ={styles.containerMap}>
                 <MapView
                     //styles.map is very important! it lets the map display!
                     style = {styles.stylesMap}
                     showsCompass = {true}
-                    ref = "map"
+                    //ref = "map"
                     mapType = {"standard"}
-                    region={this.state.currentRegion}
+                    //initialRegion={this.state.region}
+                    region={this.state.region}
                     onRegionChange={this.onRegionChange}
+                    //onRegionChangeComplete={this.onRegionChange}
+                    onPress={() => {console.log('triggering onPress')}}
+                    onPanDrag={() => {console.log('triggering onPanDrag')}}
                     showsUserLocation = {true}
+                    followsUserLocation = {false}
+                    showsMyLocationButton = {true}
+                    //scrollEnabled = { false }
                     >
                     {this.renderMarkers()}
                 </MapView>
@@ -175,11 +165,11 @@ class MapPage extends React.Component {
     }
 };
 
-export default createContainer(() => {
+export default createContainer(params => {
     Meteor.subscribe('samples');
 
     return {
         user: Meteor.user(),
         samples: Meteor.collection('samples').find(),
     };
-}, MapPage);
+}, Map);

@@ -9,8 +9,7 @@ import { Alert, Linking } from 'react-native';
 import Meteor, { createContainer } from 'react-native-meteor';
 import { NavigationActions, } from 'react-navigation';
 
-class SignInPage extends Component {
-
+class SignIn extends Component {
     constructor(props) {
         super(props);
 
@@ -39,9 +38,9 @@ class SignInPage extends Component {
                 ))
         }
 
-        this.setState({ loading: true });
+        //this.setState({ loading: true });
         return Meteor.loginWithPassword(usernameOrEmail, password, (err) => {
-            this.setState({ loading: false });
+            //this.setState({ loading: false });
             if (err) {
                 console.log('error', 'Error', err.reason);
                 Alert.alert(
@@ -60,6 +59,7 @@ class SignInPage extends Component {
                     ],
                 });
                 this.props.navigation.dispatch(resetAction);*/
+                console.log("sign in successful");
                 this.props.navigation.navigate('signedInStackCall')
             }
         });
@@ -132,4 +132,4 @@ class SignInPage extends Component {
     }
 }
 
-export default SignInPage;
+export default SignIn;
