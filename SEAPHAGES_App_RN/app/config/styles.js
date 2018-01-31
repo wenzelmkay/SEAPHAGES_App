@@ -13,6 +13,7 @@ export default styles = StyleSheet.create({
         bottom: 0,
         justifyContent: 'flex-end',
     },
+   bgContainer: { flex:1, width: null, height: null },
    stylesMap: {
         position: 'absolute',
         top: 0,
@@ -44,6 +45,9 @@ export default styles = StyleSheet.create({
     buttonBorderedText: {
         color: colors.secondary,
     },
+    buttonTransparent: {
+        color: colors.secondary,
+    },
     header: {
         backgroundColor: colors.primary
     },
@@ -59,6 +63,30 @@ export default styles = StyleSheet.create({
         paddingBottom: 10,
         marginRight: 10,
         marginBottom: 10
+    },
+    link:{
+      flex: 1,
+      color: colors.link,
+      justifyContent: 'center',
+      paddingRight: 10,
+      paddingTop: 10,
+      marginLeft: 10,
+      marginTop: 10
+    },
+    cardHeaderText:{
+        color: colors.textDark,
+    },
+    cardPrimaryText:{
+        color: colors.textDark,
+    },
+    cardSecondaryText:{
+        color: colors.textMedium,
+    },
+    cardTertiaryText:{
+        color: colors.textLight,
+    },
+    extraPadding:{
+        paddingBottom: 10,
     },
 
 });

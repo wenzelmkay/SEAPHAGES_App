@@ -3,62 +3,90 @@
  */
 
 import React, { Component } from 'react';
-import Image from 'react-native';
-import { Container, Header, Body, Title, Content, Form, Item, Input, Label, Button, Icon, Card, CardItem, Text } from 'native-base';
+import { Container, Header, Body, Title, Content, Form, Item, Input, Label, Button, Icon, Card, CardItem, Right, Text } from 'native-base';
 import { NavigationActions } from 'react-navigation';
 import styles from '../config/styles';
-import Meteor from 'react-native-meteor';
+import Meteor, { createContainer } from 'react-native-meteor';
+import moment from 'moment';
 
 
 
 const backAction = NavigationActions.back({key: null});
 
-class UserAccountPage extends Component {
+class UserAccount extends Component {
 
     handleSignOutPress = () => {
         Meteor.logout(() => {
             const resetAction = NavigationActions.reset({
                 index: 0,
                 actions: [
-                    NavigationActions.navigate({ routeName: 'signInStack' }),
+                    //NavigationActions.navigate({ routeName: 'SignInStack' }),
                 ],
             });
-            this.props.navigation.dispatch(resetAction);
+            this.props.navigation.dispatch({ type: 'Navigation/BACK' })
+
+            //this.props.navigation.dispatch(resetAction);
         });
+    };
+    handlePrivacyPolicyPress = () => {
+        this.props.navigation.navigate('privacyPolicyCall');
+    };
+
+    renderSamples = () => {
+        if (this.props.samples.length === 0) {
+            return (
+            <CardItem>
+                <Body>
+                    <Text style = {styles.cardPrimaryText}>You have not collected any samples yet.</Text>
+                </Body>
+            </CardItem>
+            );
+        }
+        return this.props.samples.map((item) => (
+            <CardItem
+                key={item._id}>
+                <Body>
+                    <Text style = {styles.cardPrimaryText}>{item.title}</Text>
+                    <Text style = {styles.cardSecondaryText}>{moment(item.date).format("MMM Do YYYY, h:mm a")}</Text>
+                </Body>
+            </CardItem>
+        ));
     };
 
     render() {
         return (
             <Container>
                 <Header style = {styles.header}>
-                    <Button transparent light
-                            onPress={() => this.props.navigation.dispatch(backAction)}
-                            title='Go Back'>
-                        <Icon name='arrow-back' />
-                    </Button>
                     <Body>
-                    <Title style = {styles.headerTitle}>Account Settings</Title>
+                    <Title style = {styles.headerTitle}>Profile</Title>
                     </Body>
                 </Header>
                 <Content style = {styles.contentStyle}>
                     <Card>
+                        <CardItem header>
+                            <Text>User Information</Text>
+                        </CardItem>
                         <CardItem>
                             <Body>
-                            <Text> Name </Text>
-                            <Text> Username </Text>
-                            <Text> E-mail </Text>
+                                <Text>Username: {this.props.user.username}</Text>
+                                <Text>Email: {this.props.user.emails[0].address}</Text>
                             </Body>
                         </CardItem>
                     </Card>
                     <Card>
-                        <CardItem>
-                            <Body>
-                            <Text> Samples </Text>
-                            </Body>
+                        <CardItem header>
+                            <Text>Samples</Text>
                         </CardItem>
+                        {this.renderSamples()}
                     </Card>
 
+
                 </Content>
+                <Button
+                    transparent
+                    onPress={() =>  this.handlePrivacyPolicyPress()}>
+                    <Text style={styles.cardPrimaryText}>Privacy Policy</Text>
+                </Button>
                 <Button block
                         style={styles.buttonBlock}
                         onPress={this.handleSignOutPress}>
@@ -73,4 +101,12 @@ class UserAccountPage extends Component {
 }
 
 
-export default UserAccountPage;
+export default createContainer(() => {
+    Meteor.subscribe('samples');
+    return {
+        user: Meteor.user(),
+        samples: Meteor.collection('samples').find({"owner" : Meteor.user()._id}),
+    };
+}, UserAccount);
+
+//export default UserAccountPage;

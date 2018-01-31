@@ -3,14 +3,13 @@
  */
 
 import React, { Component } from 'react';
-import { Container, Header, Body, Title, Content, Form, Item, Input, Label, Button, Icon, Card, Text } from 'native-base';
+import { Container, Header, Body, Title, Content, Form, Item, Input, Label, Button, Icon, Card, CardItem, Text } from 'native-base';
 import styles from '../config/styles';
-import { Alert } from 'react-native';
+import { Alert, Linking } from 'react-native';
 import Meteor, { createContainer } from 'react-native-meteor';
 import { NavigationActions, } from 'react-navigation';
 
-class SignInPage extends Component {
-
+class SignIn extends Component {
     constructor(props) {
         super(props);
 
@@ -30,20 +29,28 @@ class SignInPage extends Component {
         if (usernameOrEmail.length === 0 || password.length ===0) {
             return (
                 Alert.alert(
-                    'There is a problem!',
-                    'Please make sure you have filled in all fields!',
+                    'Missing information',
+                    'Please make sure you have filled in all fields.',
                     [
-                        {text: 'Okay!', onPress: () => console.log('OK Pressed')},
+                        {text: 'OK', onPress: () => console.log('OK Pressed')},
                     ],
                     { cancelable: false }
                 ))
         }
 
-        this.setState({ loading: true });
+        //this.setState({ loading: true });
         return Meteor.loginWithPassword(usernameOrEmail, password, (err) => {
-            this.setState({ loading: false });
+            //this.setState({ loading: false });
             if (err) {
                 console.log('error', 'Error', err.reason);
+                Alert.alert(
+                    'Error signing in',
+                    err.reason,
+                    [
+                        {text: 'OK', onPress: () => console.log('OK Pressed')},
+                    ],
+                    { cancelable: false }
+                )
             } else {
                 /*const resetAction = NavigationActions.reset({
                     index: 0,
@@ -52,6 +59,7 @@ class SignInPage extends Component {
                     ],
                 });
                 this.props.navigation.dispatch(resetAction);*/
+                console.log("sign in successful");
                 this.props.navigation.navigate('signedInStackCall')
             }
         });
@@ -72,19 +80,34 @@ class SignInPage extends Component {
                         <Item floatingLabel>
                             <Label>Username or Email</Label>
                             <Input
+                                autoCapitalize = {'none'}
+                                autoCorrect = {false}
                                 onChangeText={(usernameOrEmail) => this.setState({ usernameOrEmail })}
                                 value={this.state.usernameOrEmail}/>
                         </Item>
-                        <Item floatingLabel
-                              last>
+                        <Item floatingLabel>
                             <Label>Password</Label>
-                            <Input secureTextEntry={true}
-                                   onChangeText={(password) => this.setState({ password })}
-                                   value={this.state.password}
+                            <Input
+                                secureTextEntry={true}
+                                onChangeText={(password) => this.setState({ password })}
+                                value={this.state.password}
                             />
                         </Item>
+                          <Text style={styles.link}
+                          onPress={() => {
+                            return (
+                                Alert.alert(
+                                    'Password Reset',
+                                    'This app shares an account system with phamerator.org. You will be redirected there to reset your password. When finished, check your email and then return here to sign in.',
+                                    [
+                                        {text: 'Reset Password', onPress: () => Linking.openURL("http://phamerator.org/forgot-password").catch(err => console.error('An error occurred', err))},
+                                    ],
+                                    { cancelable: true }
+                                ))
+                            }}
+                          >Forgot your password?</Text>
                     </Form>
-              
+
                     <Button
                         icon
                         block
@@ -109,4 +132,4 @@ class SignInPage extends Component {
     }
 }
 
-export default SignInPage;
+export default SignIn;

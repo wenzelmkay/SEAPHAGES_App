@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="51d08ce6-2daa-4c63-8c1c-39a682de2955" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/SEAPHAGES_App.iml" afterPath="$PROJECT_DIR$/.idea/SEAPHAGES_App.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/meteor_packages_auto_import_browser.xml" afterPath="$PROJECT_DIR$/.idea/libraries/meteor_packages_auto_import_browser.xml" />
@@ -11,6 +12,17 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SEAPHAGES_App_RN/android/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/SEAPHAGES_App_RN/android/app/src/main/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/MapPage.js" afterPath="$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/MapPage.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SEAPHAGES_App_RN/ios/SEAPHAGES_App_RN.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/SEAPHAGES_App_RN/ios/SEAPHAGES_App_RN.xcodeproj/project.pbxproj" />
+=======
+    <list default="true" id="bfc9904c-4f6e-45fd-9969-1b20c23c4941" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SEAPHAGES_App_RN/app/config/styles.js" afterPath="$PROJECT_DIR$/SEAPHAGES_App_RN/app/config/styles.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/CreateAccountPage.js" afterPath="$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/CreateAccountPage.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/HomePage.js" afterPath="$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/HomePage.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/MapPage.js" afterPath="$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/MapPage.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/SampleAddPage.js" afterPath="$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/SampleAddPage.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/SignInPage.js" afterPath="$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/SignInPage.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/UserAccountPage.js" afterPath="$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/UserAccountPage.js" />
+>>>>>>> wenzelmk/master
     </list>
     <ignored path="SEAPHAGES_App.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,16 +41,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< HEAD
       <file leaf-file-name="settings.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/config/settings.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
               <caret line="2" column="32" lean-forward="false" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
               <folding />
+=======
+      <file leaf-file-name="CreateAccountPage.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/CreateAccountPage.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="468">
+              <caret line="144" column="48" lean-forward="true" selection-start-line="144" selection-start-column="48" selection-end-line="144" selection-end-column="48" />
+              <folding>
+                <element signature="e#44#85#0" expanded="true" />
+              </folding>
+>>>>>>> wenzelmk/master
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="UserAccountPage.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/UserAccountPage.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -47,10 +71,19 @@
               <folding>
                 <element signature="e#44#85#0" expanded="true" />
               </folding>
+=======
+      <file leaf-file-name="styles.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/config/styles.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="626">
+              <caret line="70" column="6" lean-forward="false" selection-start-line="70" selection-start-column="6" selection-end-line="70" selection-end-column="6" />
+              <folding />
+>>>>>>> wenzelmk/master
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="CreateAccountPage.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/CreateAccountPage.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -59,10 +92,19 @@
               <folding>
                 <element signature="e#44#85#0" expanded="true" />
               </folding>
+=======
+      <file leaf-file-name="soilSamples.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_Meteor/imports/api/soilSamples.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="15" column="30" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+              <folding />
+>>>>>>> wenzelmk/master
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="SignInPage.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/SignInPage.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -71,6 +113,24 @@
               <folding>
                 <element signature="e#44#85#0" expanded="true" />
               </folding>
+=======
+      <file leaf-file-name="accounts.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_Meteor/imports/startup/server/accounts.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="6" column="60" lean-forward="false" selection-start-line="6" selection-start-column="60" selection-end-line="6" selection-end-column="60" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SignInPage.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/SignInPage.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="249">
+              <caret line="75" column="53" lean-forward="false" selection-start-line="75" selection-start-column="53" selection-end-line="75" selection-end-column="53" />
+              <folding />
+>>>>>>> wenzelmk/master
             </state>
           </provider>
         </entry>
@@ -78,19 +138,35 @@
       <file leaf-file-name="SampleAddPage.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/SampleAddPage.js">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="840">
               <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+=======
+            <state relative-caret-position="167">
+              <caret line="101" column="25" lean-forward="false" selection-start-line="101" selection-start-column="25" selection-end-line="101" selection-end-column="25" />
+>>>>>>> wenzelmk/master
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="MapPage.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/MapPage.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1440">
               <caret line="104" column="39" lean-forward="false" selection-start-line="104" selection-start-column="39" selection-end-line="104" selection-end-column="39" />
               <folding />
+=======
+      <file leaf-file-name="UserAccountPage.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/UserAccountPage.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="900">
+              <caret line="101" column="86" lean-forward="true" selection-start-line="101" selection-start-column="86" selection-end-line="101" selection-end-column="86" />
+              <folding>
+                <element signature="e#44#85#0" expanded="true" />
+              </folding>
+>>>>>>> wenzelmk/master
             </state>
           </provider>
         </entry>
@@ -110,6 +186,17 @@
       <find>settings</find>
       <find>newSample</find>
       <find>coordinat</find>
+<<<<<<< HEAD
+=======
+      <find>tabBar</find>
+      <find>pizz</find>
+      <find>text</find>
+      <find>creat</find>
+      <find>backa</find>
+      <find>datean</find>
+      <find>date</find>
+      <find>color</find>
+>>>>>>> wenzelmk/master
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -124,12 +211,16 @@
         <option value="$PROJECT_DIR$/SEAPHAGES_App_Meteor/server/main.js" />
         <option value="$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/DetailScreen.js" />
         <option value="$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/SplashPage.js" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/HomePage.js" />
         <option value="$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/UserAccountPage.js" />
+=======
+>>>>>>> wenzelmk/master
         <option value="$PROJECT_DIR$/SEAPHAGES_App_Meteor/imports/api/soilSamples.js" />
         <option value="$PROJECT_DIR$/SEAPHAGES_App_RN/app/Components/FloatingButton/index.js" />
         <option value="$PROJECT_DIR$/SEAPHAGES_App_RN/app/Components/FloatingButton/FloatingButton.js" />
         <option value="$PROJECT_DIR$/SEAPHAGES_App_RN/app/Components/FloatingButton/styles.js" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/SEAPHAGES_App_RN/android/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/SEAPHAGES_App_RN/app/config/routes.js" />
         <option value="$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/SignInPage.js" />
@@ -138,6 +229,20 @@
         <option value="$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/SampleAddPage.js" />
         <option value="$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/CreateAccountPage.js" />
         <option value="$PROJECT_DIR$/SEAPHAGES_App_RN/app/config/settings.js" />
+=======
+        <option value="$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/styles.js" />
+        <option value="$PROJECT_DIR$/SEAPHAGES_App_RN/android/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/SEAPHAGES_App_RN/app/config/settings.js" />
+        <option value="$PROJECT_DIR$/SEAPHAGES_App_RN/app/config/routes.js" />
+        <option value="$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/HomePage.js" />
+        <option value="$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/SampleAddPage.js" />
+        <option value="$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/UserAccountPage.js" />
+        <option value="$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/MapPage.js" />
+        <option value="$PROJECT_DIR$/SEAPHAGES_App_RN/app/config/styles.js" />
+        <option value="$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/SignInPage.js" />
+        <option value="$PROJECT_DIR$/SEAPHAGES_App_Meteor/imports/startup/server/accounts.js" />
+        <option value="$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/CreateAccountPage.js" />
+>>>>>>> wenzelmk/master
       </list>
     </option>
   </component>
@@ -159,10 +264,17 @@
     <handled-path value="$PROJECT_DIR$/SEAPHAGES_App_RN/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
+<<<<<<< HEAD
     <option name="x" value="224" />
     <option name="y" value="144" />
     <option name="width" value="1216" />
     <option name="height" value="703" />
+=======
+    <option name="x" value="4" />
+    <option name="y" value="23" />
+    <option name="width" value="1100" />
+    <option name="height" value="877" />
+>>>>>>> wenzelmk/master
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -183,6 +295,7 @@
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
+<<<<<<< HEAD
           <expand>
             <path>
               <item name="SEAPHAGES_App" type="b2602c69:ProjectViewProjectNode" />
@@ -221,6 +334,149 @@
       <pane id="AndroidView">
         <subPane />
       </pane>
+=======
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SEAPHAGES_App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SEAPHAGES_App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SEAPHAGES_App_RN" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SEAPHAGES_App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SEAPHAGES_App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SEAPHAGES_App_RN" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SEAPHAGES_App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SEAPHAGES_App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SEAPHAGES_App_RN" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="screens" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SEAPHAGES_App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SEAPHAGES_App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SEAPHAGES_App_RN" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SEAPHAGES_App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SEAPHAGES_App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SEAPHAGES_App_Meteor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SEAPHAGES_App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SEAPHAGES_App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SEAPHAGES_App_Meteor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="imports" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="startup" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SEAPHAGES_App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SEAPHAGES_App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SEAPHAGES_App_Meteor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="imports" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+>>>>>>> wenzelmk/master
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -273,18 +529,35 @@
       <workItem from="1500516673450" duration="431000" />
       <workItem from="1500568163214" duration="1355000" />
       <workItem from="1500575191911" duration="8576000" />
+<<<<<<< HEAD
       <workItem from="1502217848292" duration="11177000" />
       <workItem from="1502818499822" duration="50000" />
       <workItem from="1502818955280" duration="9020000" />
       <workItem from="1502997541377" duration="59000" />
+=======
+      <workItem from="1501175707101" duration="10292000" />
+      <workItem from="1501261692318" duration="368000" />
+      <workItem from="1501782519941" duration="1237000" />
+      <workItem from="1501808984811" duration="35000" />
+      <workItem from="1502218250358" duration="2162000" />
+      <workItem from="1502227217779" duration="10813000" />
+      <workItem from="1502909822257" duration="11665000" />
+>>>>>>> wenzelmk/master
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="65736000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="224" y="144" width="1216" height="703" extended-state="0" />
+=======
+    <option name="totallyTimeSpent" value="82002000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="4" y="23" width="1100" height="877" extended-state="0" />
+>>>>>>> wenzelmk/master
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2870066" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -556,6 +829,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/SplashPage.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -585,18 +859,56 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="18" column="31" lean-forward="false" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+=======
+    <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/SplashPage.js" />
+    <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_Meteor/imports/api/items.js" />
+    <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/Components/FloatingButton/FloatingButton.js" />
+    <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/Components/FloatingButton/index.js" />
+    <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/Components/FloatingButton/styles.js" />
+    <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/android/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/android/app/src/main/AndroidManifest.xml">
+    <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/index.js">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="7" lean-forward="false" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
+          <folding>
+            <element signature="e#36#75#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/config/routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="776">
+          <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+          <folding>
+            <element signature="e#35#61#0" expanded="false" />
+          </folding>
+>>>>>>> wenzelmk/master
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/HomePage.js">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="510">
           <caret line="34" column="70" lean-forward="false" selection-start-line="34" selection-start-column="70" selection-end-line="34" selection-end-column="70" />
+=======
+        <state relative-caret-position="105">
+          <caret line="8" column="56" lean-forward="false" selection-start-line="8" selection-start-column="56" selection-end-line="8" selection-end-column="56" />
+          <folding />
+>>>>>>> wenzelmk/master
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/package-lock.json">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="-7897">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
@@ -610,50 +922,88 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/config/styles.js">
+=======
+        <state relative-caret-position="150">
+          <caret line="12" column="12" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#42#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/config/settings.js">
+>>>>>>> wenzelmk/master
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="885">
           <caret line="60" column="24" lean-forward="false" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="24" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/SignInPage.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1455">
           <caret line="104" column="20" lean-forward="false" selection-start-line="104" selection-start-column="20" selection-end-line="104" selection-end-column="20" />
           <folding>
             <element signature="e#44#85#0" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/MapPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="54" column="51" lean-forward="true" selection-start-line="54" selection-start-column="51" selection-end-line="54" selection-end-column="51" />
+          <folding>
+            <element signature="e#26#76#0" expanded="false" />
+>>>>>>> wenzelmk/master
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/UserAccountPage.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="300">
           <caret line="27" column="6" lean-forward="false" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
+=======
+        <state relative-caret-position="900">
+          <caret line="101" column="86" lean-forward="true" selection-start-line="101" selection-start-column="86" selection-end-line="101" selection-end-column="86" />
+>>>>>>> wenzelmk/master
           <folding>
             <element signature="e#44#85#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/MapPage.js">
+    <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/config/styles.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="1440">
           <caret line="104" column="39" lean-forward="false" selection-start-line="104" selection-start-column="39" selection-end-line="104" selection-end-column="39" />
+=======
+        <state relative-caret-position="626">
+          <caret line="70" column="6" lean-forward="false" selection-start-line="70" selection-start-column="6" selection-end-line="70" selection-end-column="6" />
+>>>>>>> wenzelmk/master
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/SampleAddPage.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="840">
           <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+=======
+    <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_Meteor/imports/api/soilSamples.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="15" column="30" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+>>>>>>> wenzelmk/master
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/CreateAccountPage.js">
+    <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_Meteor/imports/startup/server/accounts.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="225">
           <caret line="22" column="22" lean-forward="false" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
           <folding>
@@ -666,9 +1016,42 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="32" lean-forward="false" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+=======
+        <state relative-caret-position="60">
+          <caret line="6" column="60" lean-forward="false" selection-start-line="6" selection-start-column="60" selection-end-line="6" selection-end-column="60" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/SampleAddPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="101" column="25" lean-forward="false" selection-start-line="101" selection-start-column="25" selection-end-line="101" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/SignInPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="75" column="53" lean-forward="false" selection-start-line="75" selection-start-column="53" selection-end-line="75" selection-end-column="53" />
+>>>>>>> wenzelmk/master
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/SEAPHAGES_App_RN/app/screens/CreateAccountPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="144" column="48" lean-forward="true" selection-start-line="144" selection-start-column="48" selection-end-line="144" selection-end-column="48" />
+          <folding>
+            <element signature="e#44#85#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+>>>>>>> wenzelmk/master
   </component>
 </project>

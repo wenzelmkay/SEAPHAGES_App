@@ -13,4 +13,6 @@ export default {
     textDark: '#212121',
     accent: '#BDBDBD',
     red: '#F44336',
+    link: '#0000FF',
+    background: '#F5F2F9',
 };
