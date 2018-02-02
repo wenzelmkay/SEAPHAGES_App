@@ -31,6 +31,10 @@ class UserAccount extends Component {
     handlePrivacyPolicyPress = () => {
         this.props.navigation.navigate('privacyPolicyCall');
     };
+    handleSampleEditPress = (sampleDetails) => {
+        this.props.navigation.navigate('sampleEditCall', {sampleDetails} );
+        console.log("button pressed")
+    };
 
     renderSamples = () => {
         if (this.props.samples.length === 0) {
@@ -49,6 +53,12 @@ class UserAccount extends Component {
                     <Text style = {styles.cardPrimaryText}>{item.title}</Text>
                     <Text style = {styles.cardSecondaryText}>{moment(item.date).format("MMM Do YYYY, h:mm a")}</Text>
                 </Body>
+                <Right>
+                    <Button
+                            onPress={() => this.handleSampleEditPress( item )}>
+                        <Text>Edit me!</Text>
+                    </Button>
+                </Right>
             </CardItem>
         ));
     };
