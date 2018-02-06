@@ -12,6 +12,7 @@ import SignIn from '../screens/SignInPage.js';
 import CreateAccount from '../screens/CreateAccountPage.js';
 import Acknowledgement from '../screens/AcknowledgementScreen.js';
 import PrivacyPolicy from '../screens/PrivacyPolicy.js';
+import SampleEdit from '../screens/SampleEditPage.js';
 import colors from '../config/colors';
 
 export const SignInStack = StackNavigator({
@@ -83,6 +84,12 @@ export const UserAccountStack = StackNavigator({
   privacyPolicyCall: {
       screen: PrivacyPolicy,
   },
+    sampleEditCall: {
+        screen: SampleEdit,
+        navigationOptions: {
+            title: 'Edit Sample',
+        },
+    },
 },
 {
     headerMode: 'none',

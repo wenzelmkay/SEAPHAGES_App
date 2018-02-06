@@ -1,6 +1,6 @@
 
 //import different pages
-import MapView, {Marker} from 'react-native-maps';
+import MapView, {Marker, Image} from 'react-native-maps';
 
 import React, { Component } from 'react';
 import {
@@ -40,17 +40,17 @@ class Map extends Component {
         this.onRegionChange = this.onRegionChange.bind(this);
     }
 
+
     renderMarkers = () => {
-          console.log("renderMarkers");
-          /*if (this.state.markersRendered === true) { return }*/
-          const { samples } = this.props;
-          const { user } = this.props;
-          //this.setState({markersRendered: true})
+        console.log("renderMarkers");
+        const { user } = this.props;
 
         return this.props.samples.map((sample) => (
             <MapView.Marker key={sample._id}
                             pinColor={sample.owner === user._id ? "purple" : "yellow"}
-                            coordinate={{latitude: sample.lat, longitude: sample.lng}}>
+                            coordinate={{latitude: sample.lat, longitude: sample.lng}}
+
+            >
                 <MapView.Callout>
                     <View style={styles.callout}>
                         <Text>{sample.title}</Text>
@@ -190,6 +190,7 @@ export default createContainer(params => {
 
     return {
         user: Meteor.user(),
+        userInfo: Meteor.collection('users').find(),
         samples: Meteor.collection('samples').find(),
     };
 }, Map);
