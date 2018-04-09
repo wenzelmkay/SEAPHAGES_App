@@ -11,7 +11,7 @@ import moment from 'moment';
 
 import styles from '../config/styles';
 //import weatherCall from '../api/weatherCall.js'
-
+import fetchWeather from "../components/api.js"
 
 const backAction = NavigationActions.back({
     key: null
@@ -26,9 +26,17 @@ class SampleAdd extends Component {
                 latitude: null,
                 longitude: null,
             },
+            condition: {
+                temperature: null,
+                weather: null,
+                humidity: null,
+            },
             title: '',
             lat: '',
             lng: '',
+            temp: '',
+            weath: '',
+            humid: '',
             date: '',
             description: '',
             phageName: null,
@@ -66,10 +74,26 @@ class SampleAdd extends Component {
             );
         }
 
+        if (this.state.temperature === 0 || this.state.weather === 0 || this.state.humidity === 0) {
+            return (
+                Alert.alert(
+                    'Error determining the current weather conditions',
+                    'Please make sure the app has permission to access your location and try again.',
+                    [
+                        {text: 'OK', onPress: () => console.log('OK Pressed')},
+                    ],
+                    { cancelable: false }
+                )
+            );
+        }
+
         const newSample = {
             title: this.state.title,
             lat: this.state.latitude,
             lng: this.state.longitude,
+            temp: this.state.temperature,
+            weath: this.state.weather,
+            humid: this.state.humidity,
             date: new Date(),
             description: this.state.description,
             phageName: this.state.phageName,
@@ -130,9 +154,15 @@ class SampleAdd extends Component {
                         longitude: position.coords.longitude,
                     },
                 );
-
+                fetchWeather(position.coords.latitude, position.coords.longitude).then((response) => {
+                    let weatherList = response;
+                    this.setState({
+                        temperature: weatherList.main.temp,
+                        weather: weatherList.weather[0].main,
+                        humidity: weatherList.main.humidity
+                    });
+                });
             },
-
         );
     }
 
@@ -172,6 +202,18 @@ class SampleAdd extends Component {
                                 <Label>Longitude</Label>
                                 <Input disabled placeholder={String(this.state.longitude)} value={String(this.state.longitude)}/>
                             </Item>
+                            <Item disabled stackedLabel>
+                                <Label>Temperature (C)</Label>
+                                <Input disabled placeholder={String(this.state.temperature)} value={String(this.state.temperature)}/>
+                            </Item>
+                            <Item disabled stackedLabel>
+                                <Label>Weather</Label>
+                                <Input disabled placeholder={String(this.state.weather)} value={String(this.state.weather)}/>
+                            </Item>
+                            <Item disabled stackedLabel>
+                                <Label>Humidity (%)</Label>
+                            <Input disabled placeholder={String(this.state.humidity)} value={String(this.state.humidity)}/>
+                        </Item>
                             <Item floatingLabel>
                                 <Label>Details</Label>
                                 <Input

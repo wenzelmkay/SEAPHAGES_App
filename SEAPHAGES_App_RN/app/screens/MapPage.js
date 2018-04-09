@@ -56,6 +56,9 @@ class Map extends Component {
                         <Text>{sample.title}</Text>
                         <Text>{moment(sample.date).format("MMM Do YYYY, h:mm a")}</Text>
                         <Text>{sample.description}</Text>
+                        <Text>{'Temperature (C): ' + sample.temp}</Text>
+                        <Text>{'Weather: ' + sample.weath}</Text>
+                        <Text>{'Humidity (%): ' + sample.humid}</Text>
                     </View>
                 </MapView.Callout>
             </MapView.Marker>
@@ -143,26 +146,7 @@ onRegionChange(region) {
                     {this.renderMarkers()}
                 </MapView>
 
-<<<<<<< HEAD
-                    {samples.map((marker, i) => (
-                        <MapView.Marker key={i}
-                                        pinColor={"blue"}
-                                        coordinate={{latitude: marker.latitude, longitude: marker.longitude}}
-                                        //title={marker.title}
-                                        //description={marker.description}
-                                        >
-                            <MapView.Callout>
-                                <View style={styles.callout}>
-                                    <Text>{marker.title}</Text>
-                                    <Text>{moment(marker.dateAndTime).format("MMM Do YYYY, h:mm a")}</Text>
-                                    <Text>{marker.description}</Text>
-                                    <Text>{marker.state.name}</Text>
-                                </View>
-                            </MapView.Callout>
-                        </MapView.Marker>
-                    ))}
-=======
->>>>>>> wenzelmk/master
+
 
                 <Fab
                         active={this.state.active}
