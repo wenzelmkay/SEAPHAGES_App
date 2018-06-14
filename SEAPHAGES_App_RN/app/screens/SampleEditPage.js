@@ -27,6 +27,9 @@ class SampleEdit extends Component {
             title: sampleDetails.title,
             lat: sampleDetails.lat,
             lng: sampleDetails.lng,
+            temp: sampleDetails.temp,
+            weath: sampleDetails.weath,
+            humid: sampleDetails.humid,
             date: sampleDetails.date,
             description: sampleDetails.description,
             phageName: sampleDetails.phageName,
@@ -42,6 +45,9 @@ class SampleEdit extends Component {
             title: this.state.title,
             lat: Number(this.state.lat),
             lng: Number(this.state.lng),
+            temp: this.state.temp,
+            weath: this.state.weath,
+            humid: this.state.humid,
             date: this.state.date,
             description: this.state.description,
             phageName: this.state.phageName,
@@ -66,6 +72,19 @@ class SampleEdit extends Component {
             return (
                 Alert.alert(
                     'Error determining your location',
+                    'Please make sure the app has permission to access your location and try again.',
+                    [
+                        {text: 'OK', onPress: () => console.log('OK Pressed')},
+                    ],
+                    { cancelable: false }
+                )
+            );
+        }
+
+        if (this.state.temperature === 0 || this.state.weather === 0 || this.state.humidity === 0) {
+            return (
+                Alert.alert(
+                    'Error determining the weather conditions',
                     'Please make sure the app has permission to access your location and try again.',
                     [
                         {text: 'OK', onPress: () => console.log('OK Pressed')},
@@ -192,6 +211,24 @@ class SampleEdit extends Component {
                                 <Input
                                     placeholder={String(this.state.lng)}
                                     onChangeText={(text) => {this.setState({lng: text})}}/>
+                            </Item>
+                            <Item stackedLabel>
+                                <Label>Temperature (C)</Label>
+                                <Input
+                                    placeholder={String(this.state.temp)}
+                                    onChangeText={(text) => {this.setState({temp: text})}}/>
+                            </Item>
+                            <Item stackedLabel>
+                                <Label>Weather</Label>
+                                <Input
+                                    placeholder={String(this.state.weath)}
+                                    onChangeText={(text) => {this.setState({weath: text})}}/>
+                            </Item>
+                            <Item stackedLabel>
+                                <Label>Humidity (%)</Label>
+                                <Input
+                                    placeholder={String(this.state.humid)}
+                                    onChangeText={(text) => {this.setState({humid: text})}}/>
                             </Item>
                             <Item stackedLabel>
                                 <Label>Details</Label>

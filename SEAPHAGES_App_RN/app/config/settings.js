@@ -7,7 +7,7 @@ if (process.env.NODE_ENV === 'production') {
 }*/
 
 
-let METEOR_URL = 'ws://localhost:3000/websocket';
+let METEOR_URL = 'ws://100.64.2.43:3000/websocket';
 if (process.env.NODE_ENV === 'production') {
     METEOR_URL = 'ws://phamerator.org:3000/websocket'; // your production server url
 }

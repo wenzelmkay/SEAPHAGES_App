@@ -56,6 +56,9 @@ class Map extends Component {
                         <Text>{sample.title}</Text>
                         <Text>{moment(sample.date).format("MMM Do YYYY, h:mm a")}</Text>
                         <Text>{sample.description}</Text>
+                        <Text>{'Temperature (C): ' + sample.temp}</Text>
+                        <Text>{'Weather: ' + sample.weath}</Text>
+                        <Text>{'Humidity (%): ' + sample.humid}</Text>
                     </View>
                 </MapView.Callout>
             </MapView.Marker>
@@ -142,6 +145,7 @@ onRegionChange(region) {
                     >
                     {this.renderMarkers()}
                 </MapView>
+
 
 
                 <Fab
